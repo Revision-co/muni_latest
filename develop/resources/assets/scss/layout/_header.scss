@@ -1,9 +1,158 @@
-
 @media (--large) {
 
 }
+
 //end @media (--large)
 
 @media (--mobile) {
 }
-//end @media (--mobile)
+
+.p-top {
+  .l-header {
+    position: absolute;
+    z-index: 2;
+    padding: 2rem 0 0 2rem;
+    background-color: transparent;
+  }
+}
+
+.l-header {
+  padding: 4rem 4rem 7rem;
+  background-color: #325537;
+
+  &-logo {
+    width: 7.5rem;
+
+    @media (min-width: 850px) {
+      display: none;
+    }
+  }
+}
+
+.hamburger {
+  position: fixed;
+  top: 3rem;
+  right: 50%;
+  z-index: 11;
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: #325537;
+  transform: translateX(50%) translateX(21rem);
+
+  @media (--mobile) {
+    top: 0;
+  }
+
+  // @media (min-width: 768px) and (max-width: 790px) {
+  //   top: 7.6rem;
+  // }
+
+  @media (min-width: 850px) {
+    display: none;
+  }
+
+  &.active {
+    background-color: #fff;
+
+    span {
+      background-color: #325537 !important;
+
+      &:nth-child(1) {
+        top: 3rem;
+        background: #fff;
+        transform: translateX(-50%) rotate(-45deg);
+      }
+
+      &:nth-child(2) {
+        top: 3rem;
+        background: #fff;
+        transform: translateX(-50%) rotate(45deg);
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    left: 0.6rem;
+    display: block;
+    width: 2.1rem;
+    height: 0.1rem;
+    background: #fff;
+    transition: 0.3s ease-in-out;
+
+    &:nth-child(1) {
+      top: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:nth-child(2) {
+      top: 3.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* メニュー背景　*/
+nav.globalMenuSp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  transition: all 0.6s;
+  transform: translateX(100%);
+
+  & > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  ul {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+
+    li {
+      width: 100%;
+      padding: 0;
+      font-size: 1.8rem;
+      list-style-type: none;
+      transition: 0.4s all;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      a {
+        display: block;
+        padding: 1em 0;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .instagram {
+    width: 2.7rem;
+    margin: 6rem auto 0;
+  }
+}
+
+/* クリックでjQueryで追加・削除 */
+nav.globalMenuSp.active {
+  display: block;
+  background-color: #325537;
+
+  // opacity: 100;
+  transform: translateX(0%);
+}

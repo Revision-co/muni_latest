@@ -1,9 +1,140 @@
-@media (--large) {
+.p-lawer {
+  .l-footer {
+    padding-top: 15rem;
 
+    &::before {
+      top: 10rem;
+    }
+
+    &::after {
+      top: 10rem;
+    }
+  }
 }
-//end @media (--large)
 
-@media (--mobile) {
+.l-footer {
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  background-color: #325537;
 
+  &::before {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 9.9rem;
+    height: 16.8rem;
+    content: "";
+    background: url(../images/common/footer-deco-left.png);
+    background-size: cover;
+  }
+
+  &::after {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    width: 12.6rem;
+    height: 17.4rem;
+    content: "";
+    background: url(../images/common/footer-deco-right.png);
+    background-size: cover;
+  }
+
+  &__logo {
+    width: 13rem;
+    margin: 0 auto;
+  }
+
+  &__insta {
+    width: 2.3rem;
+    margin: 3rem auto 0;
+
+    a {
+      transition: 0.3s opacity;
+
+      @media (--large) {
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  &-contact {
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 40rem;
+      height: 12rem;
+      margin: 4rem auto 0;
+      color: #fff;
+      border: 0.1rem solid #fff;
+      transition: 0.3s all;
+
+      @media (--large) {
+        &:hover {
+          color: #325537;
+          background-color: #fff;
+
+          svg {
+            path {
+              fill: #325537;
+            }
+          }
+        }
+      }
+
+      svg {
+        width: 3rem;
+        margin-right: 0.3rem;
+      }
+
+      .title {
+        font-size: 2.8rem;
+      }
+
+      .text {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+
+  &-nav {
+    width: 40rem;
+    margin: 5rem auto 0;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        width: 50%;
+        text-align: center;
+
+        a {
+          font-size: 1.6rem;
+          color: #fff;
+          transition: 0.3s opacity;
+
+          @media (--large) {
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-copyright {
+    margin-top: 5rem;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+  }
 }
-//end @media (--mobile)

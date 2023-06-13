@@ -2,7 +2,7 @@ html {
   font-size: 62.5%; //1.0rem = 10px
 
   @media (--mobile) {
-    font-size: calc(10vw / 375 * 100);
+    font-size: calc(10vw / 480 * 100);
   }
 }
 
@@ -10,6 +10,7 @@ body {
   font-family: $fontfamily;
   font-size: 1rem;
   font-feature-settings: "palt";
+  color: #222;
   letter-spacing: 0;
 }
 

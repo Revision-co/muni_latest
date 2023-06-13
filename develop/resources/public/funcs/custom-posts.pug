@@ -1,2 +1,26 @@
 :php
-  
+  function create_post_type_news() {
+    register_post_type( 'news',
+      array(
+        'label' => 'お知らせ',
+        'public' => true,
+        'has_archive' => 'news',
+        'menu_position' => 1,
+        'show_in_rest' => true,
+        'supports' => array('title', 'editor', 'thumbnail'),
+      )
+    );
+    register_taxonomy('news_cat','news',
+      array(
+        'label' => 'カテゴリー',
+        'public' => true,
+        'show_ui' => true,
+        'show_in_nav_menus' => true,
+        'show_admin_column' => true,
+        'hierarchical' => true,
+        'query_var' => true
+      )
+    );
+  }
+  add_action( 'init', 'create_post_type_news' );
+  add_theme_support( 'post-thumbnails' );

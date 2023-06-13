@@ -1,1 +1,23 @@
 footer.l-footer.js-footer
+  .l-footer__logo 
+    a(href!="<?php echo home_url( '/' ); ?>") 
+      include ../svg/logo.svg
+  //- .l-footer__insta
+  //-   a(href="") 
+  //-     include ../svg/insta.svg
+
+  .l-footer-contact 
+    a(href!="<?php echo home_url( '/' ); ?>contact/") 
+      .title.en 
+        include ../svg/ic_mail.svg
+        |CONTACT 
+      .text お問い合わせはこちら
+
+  .l-footer-nav
+    ul 
+      li.en 
+        a(href!="<?php echo home_url( '/' ); ?>news/") NEWS
+      li.en 
+        a(href!="<?php echo home_url( '/' ); ?>contact/") CONTACT        
+
+  .l-footer-copyright Copyright © cobble

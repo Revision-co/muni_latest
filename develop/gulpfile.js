@@ -2,7 +2,7 @@
 const themeNmae = 'muni';
 
 //MAMPで設定したURL
-const url = 'http://muni:8888';
+const url = 'http://localhost:8888/';
 
 /**
 * gulpfile.js is Revision. for develop
