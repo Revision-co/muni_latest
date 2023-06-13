@@ -1,0 +1,18 @@
+doctype html
+html(lang="ja")
+  head
+    include /elements/head-property
+    include /elements/head-assets
+    include /mixin/meta
+    +meta({
+        title:"website title"
+    })
+    :php wp_head();
+  body
+    include /elements/body-preppend
+    include /elements/header
+    .l-main
+      main
+
+    include /elements/footer
+    include /elements/body-append
