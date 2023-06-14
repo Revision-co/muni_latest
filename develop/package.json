@@ -25,6 +25,7 @@
     "luxy.js": "^0.1.0",
     "modaal": "^0.4.4",
     "normalize.css": "8.0.1",
+    "slick-carousel": "^1.8.1",
     "swiper": "^6.4.8"
   },
   "devDependencies": {

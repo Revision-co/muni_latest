@@ -30,11 +30,22 @@ html(lang="ja")
               br
               a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
               br
+              a(href!="<?php echo home_url( '/' ); ?>#plan").en Plan
+              br
               a(href!="<?php echo home_url( '/' ); ?>news/").en News
               br
               a(href!="<?php echo home_url( '/' ); ?>#access").en Access
+              //- br
+              //- a(href!="<?php echo home_url( '/' ); ?>#qa").en Q&A
               br
               a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
+              br
+              .p-anchor__contact
+                a(href!="<?php echo home_url( '/' ); ?>contact/")
+                  .p-anchor__contact-wrap
+                    p.en RESARVE
+                    include ../assets/pug/svg/ic_reserve_green.svg
+                  span ご予約
 
             .p-cr.en © cobble
 
@@ -60,10 +71,32 @@ html(lang="ja")
                 .p-top-desc__text.en.js-inview(data-inview="fade-top")
                   |Let’s rock it!<br>OYA stone village
                   span 北関東最大級！石の里・大谷のBBQビレッジ
+                .p-top-desc__news.js-inview(data-inview="fade-top")
+                  .p-top-desc__news-title NEWS
+                  | <?php
+                  |  $tax_query = '';
+                  |  if( !empty($_GET["cat"]) && $_GET['cat'] ) {
+                  |   $tax_query = array('taxonomy' => 'news_cat','field' => 'name','terms' => $_GET['cat']);
+                  |  }
+                  |  $args = array(
+                  |   'post_type' => 'news', // 投稿タイプのスラッグを指定
+                  |   'posts_per_page' => 1, // 投稿件数の指定
+                  |   'paged' => $paged,
+                  |   'tax_query' => array(
+                  |     $tax_query,
+                  |   )
+                  |  );
+                  |  $the_query = new WP_Query($args); if($the_query->have_posts()): ?>
+                  .p-top-desc__news-item 
+                    | <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+                    a(href!="<?php the_permalink(); ?>")
+                      .date.en <?php echo the_time('Y.m.d'); ?>
+                      .text <?php the_title(); ?>
+                    |<?php endwhile; ?>
+                  |<?php endif; ?>
                 .p-top-desc__content.js-inview(data-inview="fade-top")
                   .p-top-desc__scroll.en 
                     |SCROLL
-
 
             #concept.p-top-concept.js-inview-each.js-inview  
               .c-i-inner
@@ -72,12 +105,12 @@ html(lang="ja")
                 .p-top-concept__mainTxt.js-inview(data-inview="fade-top") 大自然を五感で堪能！<br>全天候型アウトドアフィールド
                 .p-top-concept__text.js-inview(data-inview="fade-top") 
                   p 人里離れた景勝地「大谷」で過ごす非日常。<br>切り立った岩肌と木々を望む絶景の里で<br>仲間と最高の思い出をつくりませんか？
-                .p-top-concept__link.js-inview(data-inview="fade-top") 
-                  .c-btn01
-                    a(href="")
-                      p VIWE ALL
-                      span
-                        include ../assets/pug/svg/arrow-white.svg
+                //- .p-top-concept__link.js-inview(data-inview="fade-top") 
+                //-   .c-btn01
+                //-     a(href="")
+                //-       p VIWE ALL
+                //-       span
+                //-         include ../assets/pug/svg/arrow-white.svg
             .p-top-facility.js-inview-each.js-inview 
               .p-top-facility__cell.js-inview(data-inview="fade-top")
                 .p-top-facility__img 
@@ -96,12 +129,12 @@ html(lang="ja")
 
                 .p-top-facility__text.js-inview(data-inview="fade-top") 
                   p 開放感あふれるcobble〜OYA stone village〜には、旬の食材を味わえるBBQはもちろんのこと、小さなお子様も楽しめるトレジャーハントや岩肌を感じられるクライミング、大自然の中でリフレッシュできる屋外サウナがあります。すべての人が楽しめる、全天候型総合体験施設です。
-                .p-top-facility__link.js-inview(data-inview="fade-top") 
-                  .c-btn02
-                    a(href="")
-                      p VIWE ALL
-                      span
-                        include ../assets/pug/svg/arrow-white.svg
+                //- .p-top-facility__link.js-inview(data-inview="fade-top") 
+                //-   .c-btn02
+                //-     a(href="")
+                //-       p VIWE ALL
+                //-       span
+                //-         include ../assets/pug/svg/arrow-white.svg
               .p-top-facility__cell.js-inview(data-inview="fade-top")
                 .p-top-facility__pct
                   img(src!="<?php echo get_template_directory_uri(); ?>/common/images/top/img-facility01.png", alt="みんなで食べるとやっぱり楽しい。")
@@ -115,7 +148,7 @@ html(lang="ja")
                   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/top/img-facility05.jpg', alt='')
                   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/top/img-facility06.jpg', alt='')
 
-            .p-top-plan.js-inview-each.js-inview 
+            #plan.p-top-plan.js-inview-each.js-inview 
               .p-top-plan__inner.c-i-inner
                 .p-top-plan__title.js-inview(data-inview="fade-top") PLAN
                   span 料金プラン
@@ -198,13 +231,12 @@ html(lang="ja")
                     p TEL：028-666-6240
                       br
                       |FAX：028-666-6244
-                .p-top-access__link
-                  .p-top-access__link.js-inview(data-inview="fade-top") 
-                    .c-btn01
-                      a(href="")
-                        p VIWE ALL
-                        span
-                          include ../assets/pug/svg/arrow-white.svg
+                //- .p-top-access__link.js-inview(data-inview="fade-top") 
+                //-   .c-btn01
+                //-     a(href="")
+                //-       p VIWE ALL
+                //-       span
+                //-         include ../assets/pug/svg/arrow-white.svg
             
             .p-top-reserve.js-inview-each.js-inview 
               .p-top-reserve__inner.c-i-inner
@@ -215,7 +247,7 @@ html(lang="ja")
                 .p-top-reserve__link.js-inview(data-inview="fade-top") 
                   a(href="")
                     .wrap
-                      include ../assets/pug/svg/icon-reserve.svg
+                      include ../assets/pug/svg/new_icon-reserve.svg
                       p RESARVE
                     span ご予約はこちらから
 

@@ -1,6 +1,7 @@
 //=include jquery/dist/jquery.min.js
-//*=include swiper/swiper-bundle.min.js
+//=include swiper/swiper-bundle.min.js
 //*=include velocity-animate/velocity.min.js
+//=include slick-carousel/slick/slick.min.js
 //=include gsap/dist/gsap.min.js
 //*=include gsap/dist/ScrollToPlugin.min.js
 //=include gsap/dist/ScrollTrigger.min.js

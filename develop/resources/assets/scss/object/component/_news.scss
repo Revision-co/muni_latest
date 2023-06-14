@@ -223,6 +223,10 @@
               font-weight: bold;
               line-height: 2;
               color: #fff;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
             }
           }
         }

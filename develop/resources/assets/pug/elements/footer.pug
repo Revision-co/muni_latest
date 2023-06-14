@@ -6,6 +6,12 @@ footer.l-footer.js-footer
   //-   a(href="") 
   //-     include ../svg/insta.svg
 
+  //- .l-footer-qa
+  //-   a(href!="<?php echo home_url( '/' ); ?>qa/") 
+  //-     .title.en 
+  //-       include ../svg/ic_qa.svg
+  //-       |Q＆A
+  //-     .text よくあるご質問についてはこちら
   .l-footer-contact 
     a(href!="<?php echo home_url( '/' ); ?>contact/") 
       .title.en 
@@ -15,9 +21,25 @@ footer.l-footer.js-footer
 
   .l-footer-nav
     ul 
-      li.en 
-        a(href!="<?php echo home_url( '/' ); ?>news/") NEWS
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>") TOP     
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>reserve/") RESERVE    
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>concept/") CONCEPT      
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>access/") ACCESS        
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>facility/") FACILITY        
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>qa/") Q&A        
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>plan/") PLAN
       li.en 
         a(href!="<?php echo home_url( '/' ); ?>contact/") CONTACT        
-
+      li.en 
+        a(href!="<?php echo home_url( '/' ); ?>news/") NEWS
+    //- .l-footer-nav__company
+    //-   p.en 
+    //-     a(href!="<?php echo home_url( '/' ); ?>company/") COMPANY
   .l-footer-copyright Copyright © cobble
