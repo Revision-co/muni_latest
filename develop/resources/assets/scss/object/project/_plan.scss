@@ -1,6 +1,6 @@
 .p-plan {
-
   &__heading {
+    margin-top: 15rem;
     padding:  0 4rem;
 
     &-btn {
@@ -17,6 +17,13 @@
         width: 100%;
         padding: 2rem 0;
         text-align: center;
+        transition: .3s;
+        @media (--large){
+          &:hover {
+            color: #fff;
+            background-color: #325537;
+          }
+        }
       }
       p {
         position: relative;
@@ -34,8 +41,8 @@
           bottom: -1.6rem;
           transform: translateX(-50%);
           border-top: 1.8rem solid #325537;
-          border-right: 0.8rem solid transparent;
-          border-left: 0.8rem solid transparent; 
+          border-right: 1rem solid transparent;
+          border-left: 1rem solid transparent; 
         }
       }
     }
@@ -43,7 +50,7 @@
 
   .s-bbq {
     margin-top: 8rem;
-
+    margin-bottom: 15rem;
     &__title {
       h2 {
         @include font(3, 500, 0.05, 1.4);
@@ -61,6 +68,59 @@
 
     &__item {
       
+    }
+    &__img01 {
+      margin-top: 5rem;
+      img {
+        position: relative;
+        object-fit: contain;
+        &:first-child {
+          left: 50%;
+          transform: translateX(-50%);
+          width: 32rem;
+        }
+        &:nth-of-type(2) {
+          left: 50%;
+          transform: translateX(-50%) translateX(14rem) translateY(2rem);
+          width: 20rem;
+        }
+        &:last-child {
+          left: 50%;
+          transform: translateX(-50%) translateX(-11rem) translateY(-10rem);
+          width: 26rem;
+        }
+      }
+    }
+    &__img02 {
+      margin-top: 2rem;
+      border-top: 1px solid #325537;
+      padding-top: 2rem;
+      img {
+        position: relative;
+        object-fit: contain;
+      }
+    }
+
+    &__link {
+      width: 22rem;
+      margin: 5rem auto;
+      a {
+        @include font(1.6, 700, 0.08, 1.4);
+        color: #fff;
+        text-align: center;
+        padding: 1.3rem 0;
+        width: 100%;
+        background-color: #325537;
+        display: block;
+        border: 1px solid #325537;
+        transition: .3s;
+        @media (--large){
+          &:hover {
+            background-color: #fff;
+            color: #325537;
+          }
+        }
+      }
     }
   }
 }

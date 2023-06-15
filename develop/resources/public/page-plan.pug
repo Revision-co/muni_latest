@@ -54,31 +54,32 @@ html(lang="ja")
             //- .c-heading 
             //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/common/heading-img.png', alt='背景').u-background
             //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/common/u-logo.png', alt='ロゴ').u-logo
-            .p-plan__heading
-              .c-ttl01
+            .p-plan__heading.js-inview-each.js-inview 
+              .c-ttl01.js-inview(data-inview="fade-top")
                 h1.en PLAN
                 small プラン
-              .p-plan__heading-btn 
-                a(href="") ACTIVITY
+              .p-plan__heading-btn.js-inview(data-inview="fade-top")
+                //- a(href="") ACTIVITY
                 p BBQ
             section
-              .s-bbq 
+              .s-bbq.js-inview-each.js-inview 
                 .c-u-inner
-                  .s-bbq__title 
-                    h2.en BBQ
-                  .s-bbq__text 
-                    p 
+                  .s-bbq__title.js-inview(data-inview="fade-top")
+                    h2
+                      |BBQ
+                  .s-bbq__text.js-inview(data-inview="fade-top")
+                    p
                       |BBQサイトをご利用の方はお1人様1セットプランのご予約をお願いいたします。
                       br
                       |利用時間はお1人様3時間までとなります。
-                  .c-ttl02.u-mt-6
+                  .c-ttl02.u-mt-6.js-inview(data-inview="fade-top")
                     .c-ttl02-wrap
                       h3.en SET PLAN
                       span 要予約
                     p セットプラン
-                  .s-bbq__item 
+                  .s-bbq__item.js-accordion.js-inview(data-inview="fade-top")
                     .c-acc
-                      .c-acc__head
+                      .c-acc__head.a-trigger.close
                         .c-acc__head-title
                           p.name 栃木満喫スタンダードプラン
                           p.price
@@ -86,7 +87,7 @@ html(lang="ja")
                             span (tax)
                         span.arrow
                           include ../assets/pug/svg/ic-arrow-white.svg
-                      ul.c-acc__list 
+                      ul.c-acc__list.a-area.open
                         li 
                           p 牛串
                           p 2本
@@ -99,8 +100,184 @@ html(lang="ja")
                         li 
                           p 野菜串
                           p 2本
+                    .c-acc
+                      .c-acc__head.a-trigger
+                        .c-acc__head-title
+                          p.name 肉＆海鮮プラン
+                          p.price
+                            |￥4,500
+                            span (tax)
+                        span.arrow
+                          include ../assets/pug/svg/ic-arrow-white.svg
+                      ul.c-acc__list.a-area
+                        li 
+                          p 牛串
+                          p 2本
+                        li 
+                          p 豚串
+                          p 2本
+                        li 
+                          p 鶏串
+                          p 1本
+                        li 
+                          p 野菜串
+                          p 1本
+                        li 
+                          p エビ、ホタテ、タコ串
+                          p 1本
+                    .c-acc
+                      .c-acc__head.a-trigger
+                        .c-acc__head-title
+                          p.name 栃木満喫ボリュームプラン
+                          p.price
+                            |￥5,000
+                            span (tax)
+                        span.arrow
+                          include ../assets/pug/svg/ic-arrow-white.svg
+                      ul.c-acc__list.a-area
+                        li 
+                          p 牛串
+                          p 2本
+                        li 
+                          p 豚串
+                          p 2本
+                        li 
+                          p 鶏串
+                          p 1本
+                        li 
+                          p 野菜串
+                          p 1本
+                        li.none
+                          p スペアリブ
+                        li.none
+                          p 牛カルビ
+                        li.none
+                          p 骨付きソーセージ
+                  .s-bbq__img01.js-inview(data-inview="fade-top")
+                    img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/img01.jpg', alt='')
+                    img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/img02.jpg', alt='')
+                    img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/img03.jpg', alt='')
+                  .c-ttl02.u-mt-0.js-inview(data-inview="fade-top")
+                    .c-ttl02-wrap
+                      h3.en OPTION MENU
+                    p オプションメニュー
+                    p 当日現地にてご注文ください。
+                  .s-bbq__item.js-accordion.js-inview(data-inview="fade-top")
+                    .c-acc
+                      .c-acc__head.a-trigger.close
+                        .c-acc__head-title
+                          p.fs20 調理メニュー
+                          p.text 実際に調理を体験いただけます。
+                        span.arrow
+                          include ../assets/pug/svg/ic-arrow-white.svg
+                      ul.c-acc__list.a-area.open
+                        li.none
+                          p 宇都宮焼きそば
+                        li.none
+                          p グルメ餃子バーガー
+                        li.none 
+                          p 大谷石窯ピザ
+                    .c-acc
+                      .c-acc__head.a-trigger
+                        .c-acc__head-title
+                          p.fs20 単品メニュー
+                        span.arrow
+                          include ../assets/pug/svg/ic-arrow-white.svg
+                      ul.c-acc__list.a-area
+                        li.none  
+                          p スーパーロングウインナー
+                        li.none 
+                          p 大谷産とうもろこし
+                        li.none  
+                          p 肉巻きおにぎり
+                        li.none  
+                          p じゃがバター
+                        li.none  
+                          p ガーリックライス
+                        li.none  
+                          p スキレットスモア
+                        li.none  
+                          p ポップコーン
+                    .c-acc
+                      .c-acc__head.a-trigger
+                        .c-acc__head-title
+                          p.name 単品メニュー(プラン内追加)
+                          p.price
+                            |￥4,500
+                            span (tax)
+                        span.arrow
+                          include ../assets/pug/svg/ic-arrow-white.svg
+                      ul.c-acc__list.a-area
+                        li.none  
+                          p 牛串
+                        li.none 
+                          p 豚串
+                        li.none  
+                          p 鶏串
+                        li.none  
+                          p 野菜串
+                        li.none  
+                          p スペアリブ
+                        li.none  
+                          p 骨付きソーセージ
+                        li.none  
+                          p 有頭海老
+                        li.none  
+                          p 殻付きホタテ
+                        li.none  
+                          p イカ串
+                        li.none  
+                          p タコ串
+                        li.none  
+                          p 焼きおにぎり
+                        li.none  
+                          p バターコーン（ホイル焼き）
+                  .c-ttl02.u-mt-6.js-inview(data-inview="fade-top")
+                    .c-ttl02-wrap
+                      h3.en DRINK
+                    p ドリンク
+                    p 当日現地にてご注文ください。
+                  .s-bbq__item.js-accordion.js-inview(data-inview="fade-top")
+                    .s-bbq__img02
+                      img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/img04.jpg', alt='ドリンク')
+                    .c-acc
+                      .c-acc__head.a-trigger
+                        .c-acc__head-title
+                          p.fs20 アルコール
+                        span.arrow
+                          include ../assets/pug/svg/ic-arrow-white.svg
+                      ul.c-acc__list.a-area
+                        li.none  
+                          p 生ビール
+                        li.none 
+                          p キリン一番搾りサーバー（3Ｌ）
+                        li.none  
+                          p 各瓶ビール
+                        li.none  
+                          p ハイボール
+                        li.none  
+                          p 各種サワー
+                        li.none  
+                          p 各種リキュール（ジン、カシス、ピーチ、ウォッカ等）
+                    .c-acc
+                      .c-acc__head.a-trigger
+                        .c-acc__head-title
+                          p.fs20 ソフトドリンク
+                        span.arrow
+                          include ../assets/pug/svg/ic-arrow-white.svg
+                      ul.c-acc__list.a-area
+                        li.none  
+                          p オレンジ
+                        li.none 
+                          p コーラ
+                        li.none  
+                          p ジンジャーエール
+                        li.none  
+                          p カルピス
+                        li.none  
+                          p グレープフルーツ
+                  //- .s-bbq__link.js-inview(data-inview="fade-top")
+                  //-   a(href="" target="_blank") ACTIVITY PLANを見る
 
-
-              
             include /elements/footer
     include /elements/body-append

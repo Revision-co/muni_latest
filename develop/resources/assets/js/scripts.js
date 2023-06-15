@@ -22,6 +22,7 @@ $(window).on('loading', () => {
   let slideAnime = new SlideAnime('.hamburger');
   let imgParallax = new ImgParallax('js-parallax');
   let inviewEvent = new InviewEvent('.js-inview');
+  let Accordion = new AccordionEvent('.js-accordion');
   // let newsTab = new NewsTab('.c-news');
   $(".slider")
     // 現在のスライドに"add-zoom"のclassを付与(data-slick-index="0"が現在のスライド)

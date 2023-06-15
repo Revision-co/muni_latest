@@ -1,3 +1,5 @@
+:php
+  if (is_front_page()) : 
 footer.l-footer.js-footer
   .l-footer__logo 
     a(href!="<?php echo home_url( '/' ); ?>") 
@@ -24,7 +26,7 @@ footer.l-footer.js-footer
       //- li.en 
       //-   a(href!="<?php echo home_url( '/' ); ?>") TOP     
       //- li.en 
-      //-   a(href!="<?php echo home_url( '/' ); ?>reserve/") RESERVE    
+      //-   a(href!="https://reserva.be/munibbq/aikotoba" target="_blank") RESERVE      
       //- li.en 
       //-   a(href!="<?php echo home_url( '/' ); ?>concept/") CONCEPT      
       //- li.en 
@@ -43,3 +45,64 @@ footer.l-footer.js-footer
     //-   p.en 
     //-     a(href!="<?php echo home_url( '/' ); ?>company/") COMPANY
   .l-footer-copyright Copyright © cobble
+:php
+  else :
+footer.l-footer.js-footer.u-footer 
+  .u-footer-reserve.js-inview-each.js-inview 
+    .u-footer-reserve__inner.c-i-inner
+      .u-footer-reserve__title.en.js-inview(data-inview="fade-top") RESERVE
+        span 予約
+      .u-footer-reserve__text.js-inview(data-inview="fade-top") 
+        p cobble〜OYA stone village〜のプランは事前予約を承っております。当日受付も可能です。事前予約をご利用の際は以下の予約フォームからお問い合わせください。石の里「大谷」で最高の1日をお過ごしください。
+      .u-footer-reserve__link.js-inview(data-inview="fade-top") 
+        a(href="")
+          .wrap
+            include ../svg/new_icon-reserve.svg
+            p RESARVE
+          span ご予約はこちらから
+  .l-footer__logo 
+    a(href!="https://reserva.be/munibbq/aikotoba" target="_blank") 
+      include ../svg/logo.svg
+  //- .l-footer__insta
+  //-   a(href="") 
+  //-     include ../svg/insta.svg
+
+  //- .l-footer-qa
+  //-   a(href!="<?php echo home_url( '/' ); ?>qa/") 
+  //-     .title.en 
+  //-       include ../svg/ic_qa.svg
+  //-       |Q＆A
+  //-     .text よくあるご質問についてはこちら
+  .l-footer-contact 
+    a(href!="<?php echo home_url( '/' ); ?>contact/") 
+      .title.en 
+        include ../svg/ic_mail.svg
+        |CONTACT 
+      .text お問い合わせはこちら
+
+  .l-footer-nav
+    ul 
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>") TOP     
+      //- li.en 
+      //-   a(href!="https://reserva.be/munibbq/aikotoba" target="_blank") RESERVE    
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>concept/") CONCEPT      
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>access/") ACCESS        
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>facility/") FACILITY        
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>qa/") Q&A        
+      //- li.en 
+      //-   a(href!="<?php echo home_url( '/' ); ?>plan/") PLAN
+      li.en 
+        a(href!="<?php echo home_url( '/' ); ?>contact/") CONTACT        
+      li.en 
+        a(href!="<?php echo home_url( '/' ); ?>news/") NEWS
+    //- .l-footer-nav__company
+    //-   p.en 
+    //-     a(href!="<?php echo home_url( '/' ); ?>company/") COMPANY
+  .l-footer-copyright Copyright © cobble
+:php
+  endif;
