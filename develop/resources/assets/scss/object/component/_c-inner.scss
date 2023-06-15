@@ -1,0 +1,21 @@
+.c-inner {
+  position: relative;
+  z-index: 1;
+  width: 48rem;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+
+  @media (--mobile) {
+    margin: 0;
+  }
+}
+
+.c-i-inner {
+  padding: 0 4rem;
+}
+
+.c-u-inner {
+  padding: 0 6rem;
+}

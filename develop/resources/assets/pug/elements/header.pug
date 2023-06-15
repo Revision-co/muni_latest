@@ -1,3 +1,5 @@
+:php
+  if (is_front_page()) : 
 header.l-header.js-header
   .l-header-logo 
     a(href!="<?php echo home_url( '/' ); ?>") 
@@ -36,5 +38,47 @@ header.l-header.js-header
       //- .instagram
       //-   a(href="")
       //-     include ../svg/insta.svg 
+:php
+  else :
+header.l-header.js-header.u-header
+  .l-header-logo 
+    a(href!="<?php echo home_url( '/' ); ?>") 
+      include ../svg/logo.svg
+
+  .hamburger
+    span
+    span
+    span
+  .reserve.sp
+    a(href="<?php echo home_url( '/' ); ?>qa")
+      include ../svg/ic_reserve_green.svg
+      p.en 予約
+  nav.globalMenuSp
+    div
+      ul
+        li.en
+          a(href!="<?php echo home_url( '/' ); ?>#concept") CONCEPT
+        li.en
+          a(href!="<?php echo home_url( '/' ); ?>#facility") FACILITY
+        li.en
+          a(href!="<?php echo home_url( '/' ); ?>news/") NEWS
+        li.en
+          a(href!="<?php echo home_url( '/' ); ?>#access") ACCESS
+        //- li.en
+        //-   a(href!="<?php echo home_url( '/' ); ?>qa") Q&A
+        li.en
+          a(href!="<?php echo home_url( '/' ); ?>contact/") CONTACT
+        .nav__contact
+          a(href!="<?php echo home_url( '/' ); ?>reserve/")
+            .nav__contact-wrap
+              p.en RESARVE
+              include ../svg/ic_reserve_green.svg
+            span ご予約
+      
+      //- .instagram
+      //-   a(href="")
+      //-     include ../svg/insta.svg 
+:php
+  endif;
     
 

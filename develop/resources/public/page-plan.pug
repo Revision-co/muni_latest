@@ -1,0 +1,106 @@
+doctype html
+html(lang="ja")
+  head
+    include /elements/head-property
+    include /elements/head-assets
+    //- include /mixin/meta
+    //- +meta({
+    //-     title:"website title"
+    //- })
+    |<?php wp_head(); ?>
+  body
+    include /elements/body-preppend
+
+    .l-main.p-plan
+      main
+        .s-pc
+          .p-fixedEle
+            .slider
+              .slider-img.slider-img-01
+              .slider-img.slider-img-02
+
+            //- .p-logo
+              //- include ../assets/pug/svg/logo.svg
+
+            //- .p-insta 
+            //-   include ../assets/pug/svg/insta.svg
+
+            .p-anchor 
+              a(href!="<?php echo home_url( '/' ); ?>#concept").en Concept
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#plan").en Plan
+              br
+              a(href!="<?php echo home_url( '/' ); ?>news/").en News
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#access").en Access
+              //- br
+              //- a(href!="<?php echo home_url( '/' ); ?>#qa").en Q&A
+              br
+              a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
+              br
+              .p-anchor__contact
+                a(href!="<?php echo home_url( '/' ); ?>contact/")
+                  .p-anchor__contact-wrap
+                    p.en RESARVE
+                    include ../assets/pug/svg/ic_reserve_green.svg
+                  span ご予約
+
+            .p-cr.en © cobble
+
+          .c-inner 
+            include /elements/header
+            //- .c-heading 
+            //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/common/heading-img.png', alt='背景').u-background
+            //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/common/u-logo.png', alt='ロゴ').u-logo
+            .p-plan__heading
+              .c-ttl01
+                h1.en PLAN
+                small プラン
+              .p-plan__heading-btn 
+                a(href="") ACTIVITY
+                p BBQ
+            section
+              .s-bbq 
+                .c-u-inner
+                  .s-bbq__title 
+                    h2.en BBQ
+                  .s-bbq__text 
+                    p 
+                      |BBQサイトをご利用の方はお1人様1セットプランのご予約をお願いいたします。
+                      br
+                      |利用時間はお1人様3時間までとなります。
+                  .c-ttl02.u-mt-6
+                    .c-ttl02-wrap
+                      h3.en SET PLAN
+                      span 要予約
+                    p セットプラン
+                  .s-bbq__item 
+                    .c-acc
+                      .c-acc__head
+                        .c-acc__head-title
+                          p.name 栃木満喫スタンダードプラン
+                          p.price
+                            |￥4,000
+                            span (tax)
+                        span.arrow
+                          include ../assets/pug/svg/ic-arrow-white.svg
+                      ul.c-acc__list 
+                        li 
+                          p 牛串
+                          p 2本
+                        li 
+                          p 豚串
+                          p 2本
+                        li 
+                          p 鶏串
+                          p 2本
+                        li 
+                          p 野菜串
+                          p 2本
+
+
+              
+            include /elements/footer
+    include /elements/body-append

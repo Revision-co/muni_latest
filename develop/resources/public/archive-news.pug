@@ -1,0 +1,226 @@
+doctype html
+html(lang="ja")
+  head
+    include /elements/head-property
+    include /elements/head-assets
+    //- include /mixin/meta
+    //- +meta({
+    //-     title:"website title"
+    //- })
+    |<?php wp_head(); ?>
+  body
+    include /elements/body-preppend
+
+    .l-main.p-lawer
+      main
+        .s-pc
+          .p-fixedEle
+            .slider
+              .slider-img.slider-img-01
+              .slider-img.slider-img-02
+
+            .p-logo
+              include ../assets/pug/svg/logo.svg
+
+            //- .p-insta 
+            //-   include ../assets/pug/svg/insta.svg
+
+            .p-anchor 
+              a(href!="<?php echo home_url( '/' ); ?>#concept").en Concept
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
+              br
+              a(href!="<?php echo home_url( '/' ); ?>news/").en News
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#access").en Access
+              br
+              a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
+
+            .p-cr.en © cobble
+
+
+          .c-inner
+            include /elements/header              
+            .p-lawer-inner             
+              .c-news.js-inview-each.js-inview 
+                .c-i-inner
+                  .c-news__title.en.js-inview(data-inview="fade-top") NEWS
+                    span お知らせ
+                  .c-news__category.js-inview(data-inview="fade-top") 
+                    ul 
+                      |<?php 
+                      |  $active = "";
+                      |  $param = "";
+                      |  if( !empty($_GET["cat"]) ) {
+                      |    $param = $_GET["cat"];
+                      |  } else {
+                      |    $active = "active";
+                      |  }
+                      |?>
+                      li(class!="<?php echo $active; ?>")
+                        a(href="./") 全て
+                      |<?php
+                      |  $terms = get_terms('news_cat');
+                      |  foreach( $terms as $term ) {
+                      |   $active = "";
+                      |   if($param == $term->name) {
+                      |    $active = "active";
+                      |   }
+                      |  echo '<li class="' . $active . '"><a href="./?cat=' . $term->name . '">'.$term->name.'</a></li>';
+                      |  }
+                      |?>
+                      //- li 
+                      //-   a(href="#tabInfo") お知らせ 
+                      //- li 
+                      //-   a(href="#tabEvent") イベント 
+                      //- li 
+                      //-   a(href="#tabMedia") メディア 
+                  //- #tabAll.c-news__list.js-inview(data-inview="fade-top") 
+                    //- ul 
+                    //-   | <?php 
+                    //-   |  $args = array(
+                    //-   |   'post_type' => 'news', // 投稿タイプのスラッグを指定
+                    //-   |   'posts_per_page' => 6, // 投稿件数の指定
+                    //-   |   'paged' => $paged,
+                    //-   |  );
+                    //-   |  $the_query = new WP_Query($args); if($the_query->have_posts()):
+                    //-   |  while ($the_query->have_posts()): $the_query->the_post(); ?>
+                    //-   li 
+                    //-     a(href!="<?php the_permalink(); ?>")
+                    //-       .left-content 
+                    //-         .date.en <?php echo the_time('Y.m'); ?>
+                    //-         .day.en <?php echo the_time('d'); ?>
+                    //-       .right-content   
+                    //-         .cat 
+                    //-           |<?php 
+                    //-           |$cat = get_the_terms($post->ID, "news_cat");
+                    //-           |foreach($cat as $val => $value): ?>
+                    //-           |  <?php if($val === array_key_first($cat)): ?>
+                    //-           |    <?php echo $value -> name; ?>
+                    //-           |  <?php endif; ?>
+                    //-           |<?php endforeach; ?>
+                    //-         .title <?php the_title(); ?>      
+                    //-   |<?php endwhile; ?>
+
+
+                  .c-news__list.js-inview(data-inview="fade-top" style="display: block;")
+                    | <?php 
+                    |  $tax_query = '';
+                    |  if( !empty($_GET["cat"]) && $_GET['cat'] ) {
+                    |   $tax_query = array('taxonomy' => 'news_cat','field' => 'name','terms' => $_GET['cat']);
+                    |  }
+                    |  $args = array(
+                    |   'post_type' => 'news', // 投稿タイプのスラッグを指定
+                    |   'posts_per_page' => 6, // 投稿件数の指定
+                    |   'paged' => $paged,
+                    |   'tax_query' => array(
+                    |     $tax_query,
+                    |   )
+                    |  );
+                    |  $the_query = new WP_Query($args); if($the_query->have_posts()): ?>
+                    ul 
+                      | <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+                      li 
+                        a(href!="<?php the_permalink(); ?>")
+                          .left-content 
+                            .date.en <?php echo the_time('Y.m'); ?>
+                            .day.en <?php echo the_time('d'); ?>
+                          .right-content   
+                            .cat 
+                              |<?php 
+                              |$cat = get_the_terms($post->ID, "news_cat");
+                              |foreach($cat as $val => $value): ?>
+                              |  <?php if($val === array_key_first($cat)): ?>
+                              |    <?php echo $value -> name; ?>
+                              |  <?php endif; ?>
+                              |<?php endforeach; ?>
+                            .title <?php the_title(); ?>      
+                      |<?php endwhile; ?>
+
+                    .c-news__pagenav 
+                      |<?php
+                      |  if( function_exists('wp_pagenavi') ) {
+                      |    wp_pagenavi(array('query' => $the_query));
+                      |  }
+                      |?>
+                      |<?php else: ?>
+                      p
+                        |該当するお知らせはありません。
+                      |<?php endif; ?>
+                      |<?php wp_reset_postdata(); ?>
+
+                  //- #tabEvent.c-news__list
+                  //-   | <?php 
+                  //-   |  $tax_query = '';
+                  //-   |  if( !empty($_GET["news_cat"]) && $_GET['news_cat'] ) {
+                  //-   |   $tax_query = array('taxonomy' => 'news_cat','field' => 'slug','terms' => $_GET['news_cat']);
+                  //-   |  }
+                  //-   |  $args = array(
+                  //-   |   'post_type' => 'news', // 投稿タイプのスラッグを指定
+                  //-   |   'news_cat' => 'event',
+                  //-   |   'posts_per_page' => 6, // 投稿件数の指定
+                  //-   |   'paged' => $paged,
+                  //-   |   'tax_query' => array(
+                  //-   |     $tax_query,
+                  //-   |   )
+                  //-   |  );
+                  //-   |  $the_query = new WP_Query($args); if($the_query->have_posts()): ?>
+                  //-   ul 
+                  //-     | <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+                  //-     li 
+                  //-       a(href!="<?php the_permalink(); ?>")
+                  //-         .left-content 
+                  //-           .date.en <?php echo the_time('Y.m'); ?>
+                  //-           .day.en <?php echo the_time('d'); ?>
+                  //-         .right-content   
+                  //-           .cat 
+                  //-             |<?php 
+                  //-             |$cat = get_the_terms($post->ID, "news_cat");
+                  //-             |foreach($cat as $val => $value): ?>
+                  //-             |  <?php if($val === array_key_first($cat)): ?>
+                  //-             |    <?php echo $value -> name; ?>
+                  //-             |  <?php endif; ?>
+                  //-             |<?php endforeach; ?>
+                  //-           .title <?php the_title(); ?>      
+                  //-     |<?php endwhile; ?>
+                  //-   |<?php endif; ?>  
+
+                  //- #tabMedia.c-news__list
+                  //-   | <?php 
+                  //-   |  $tax_query = '';
+                  //-   |  if( !empty($_GET["news_cat"]) && $_GET['news_cat'] ) {
+                  //-   |   $tax_query = array('taxonomy' => 'news_cat','field' => 'slug','terms' => $_GET['news_cat']);
+                  //-   |  }
+                  //-   |  $args = array(
+                  //-   |   'post_type' => 'news', // 投稿タイプのスラッグを指定
+                  //-   |   'news_cat' => 'media',
+                  //-   |   'posts_per_page' => 6, // 投稿件数の指定
+                  //-   |   'paged' => $paged,
+                  //-   |   'tax_query' => array(
+                  //-   |     $tax_query,
+                  //-   |   )
+                  //-   |  );
+                  //-   |  $the_query = new WP_Query($args); if($the_query->have_posts()): ?>
+                  //-   ul 
+                  //-     | <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+                  //-     li 
+                  //-       a(href!="<?php the_permalink(); ?>")
+                  //-         .left-content 
+                  //-           .date.en <?php echo the_time('Y.m'); ?>
+                  //-           .day.en <?php echo the_time('d'); ?>
+                  //-         .right-content   
+                  //-           .cat 
+                  //-             |<?php 
+                  //-             |$cat = get_the_terms($post->ID, "news_cat");
+                  //-             |foreach($cat as $val => $value): ?>
+                  //-             |  <?php if($val === array_key_first($cat)): ?>
+                  //-             |    <?php echo $value -> name; ?>
+                  //-             |  <?php endif; ?>
+                  //-             |<?php endforeach; ?>
+                  //-           .title <?php the_title(); ?>      
+                  //-     |<?php endwhile; ?>
+                  //-   |<?php endif; ?>
+            include /elements/footer
+
+
+    include /elements/body-append

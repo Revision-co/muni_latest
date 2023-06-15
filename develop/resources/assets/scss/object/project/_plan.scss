@@ -1,0 +1,66 @@
+.p-plan {
+
+  &__heading {
+    padding:  0 4rem;
+
+    &-btn {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem;
+      margin-top: 4rem;
+
+      a {
+        @include font(2.4, 500, 0.05, 1.4);
+        color: #325537;
+        background-color: #fff;
+        border: 1px solid #628667;
+        width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+      }
+      p {
+        position: relative;
+        @include font(2.4, 500, 0.05, 1.4);
+        color: #fff;
+        background-color: #325537;
+        margin-top: 2rem;
+        width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+        &::before {
+          position: absolute;
+          content: "";
+          left: 50%;
+          bottom: -1.6rem;
+          transform: translateX(-50%);
+          border-top: 1.8rem solid #325537;
+          border-right: 0.8rem solid transparent;
+          border-left: 0.8rem solid transparent; 
+        }
+      }
+    }
+  }
+
+  .s-bbq {
+    margin-top: 8rem;
+
+    &__title {
+      h2 {
+        @include font(3, 500, 0.05, 1.4);
+        color: #222222;
+      }
+    }
+
+    &__text {
+      margin-top: 1rem;
+      p {
+        @include font(1.4, 700,  0.05, 1.4);
+        color: #222222;
+      }
+    }
+
+    &__item {
+      
+    }
+  }
+}

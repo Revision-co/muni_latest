@@ -1,0 +1,65 @@
+doctype html
+html(lang="ja")
+  head
+    include /elements/head-property
+    include /elements/head-assets
+    //- include /mixin/meta
+    //- +meta({
+    //-     title:"website title"
+    //- })
+    |<?php wp_head(); ?>
+  body
+    include /elements/body-preppend
+
+    .l-main.p-lawer
+      main
+        .s-pc
+          .p-fixedEle
+            .slider
+              .slider-img.slider-img-01
+              .slider-img.slider-img-02
+
+            .p-logo
+              include ../assets/pug/svg/logo.svg
+
+            //- .p-insta 
+            //-   include ../assets/pug/svg/insta.svg
+
+            .p-anchor 
+              a(href!="<?php echo home_url( '/' ); ?>#concept").en Concept
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
+              br
+              a(href!="<?php echo home_url( '/' ); ?>news/").en News
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#access").en Access
+              br
+              a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
+
+            .p-cr.en © cobble
+
+
+          .c-inner
+            include /elements/header              
+            .p-lawer-inner             
+              .c-news-desc.js-inview-each.js-inview 
+                .c-i-inner
+                  .c-news-desc__title.js-inview(data-inview="fade-top") <?php the_title(); ?>
+                  .c-news-desc__sub.js-inview(data-inview="fade-top") 
+                    .date <?php echo the_time('Y.m.d'); ?>
+                    .cat
+                      |<?php 
+                      |$cat = get_the_terms($post->ID, "news_cat");
+                      |foreach($cat as $val => $value): ?>
+                      |  <?php if($val === array_key_first($cat)): ?>
+                      |    <?php echo $value -> name; ?>
+                      |  <?php endif; ?>
+                      |<?php endforeach; ?>
+                  .c-news-desc__inner.js-inview(data-inview="fade-top") 
+                    |<?php the_content(); ?>
+                  .c-news-desc__btn.js-inview(data-inview="fade-top") 
+                    a(href!="<?php echo home_url( '/' ); ?>news/") 一覧へ戻る                                                 
+            include /elements/footer
+
+
+    include /elements/body-append

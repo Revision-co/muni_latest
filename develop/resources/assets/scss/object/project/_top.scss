@@ -88,24 +88,6 @@
   }
 }
 
-.c-inner {
-  position: relative;
-  z-index: 1;
-  width: 48rem;
-  max-width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  background: #fff;
-
-  @media (--mobile) {
-    margin: 0;
-  }
-}
-
-.c-i-inner {
-  padding: 0 4rem;
-}
-
 .p-fixedEle {
   position: fixed;
   top: 0;
@@ -176,6 +158,8 @@
       background-color: #fff;
       padding: 1rem 1.65rem;
       margin-top: 2rem;
+      border: 1px solid #fff;
+      transition: .3s;
       &-wrap {
         display: flex;
         align-items: center;
@@ -183,18 +167,44 @@
           @include font(1.4, 500, 0.1, 1.4);
           color: #628667;
           margin-right: 1rem;
+          transition: .3s
         }
 
         svg {
           
         }
       }
-
       span {
         @include font(1, 700, 0.1, 1.4);
         color: #628667;
         display: block;
         text-align: center;
+        transition: .3s;
+      }
+
+      @media (--large){
+        &:hover {
+          background-color: transparent;
+          .p-anchor__contact-wrap {
+            p {
+              color: #fff;
+            }
+    
+            svg {
+              g {
+                path {
+                  fill: #fff;
+                }
+                rect {
+                  fill: #fff;
+                }
+              }
+            }
+          }
+          span {
+            color: #fff;
+          }
+        }
       }
     }
   }
@@ -453,6 +463,7 @@
             @include font(1.4, 500, 0, 1.4);
             color: #222222;
             margin-left: 0.5rem;
+            transition: .3s;
           }
 
           .text {
@@ -463,6 +474,18 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            transition: .3s;
+          }
+
+          @media (--large){
+            &:hover {
+              .date {
+                opacity: 0.7;
+              }
+              .text {
+                opacity: 0.7;
+              }
+            }
           }
         }
       }
@@ -780,7 +803,7 @@
         content: "";
         background: url(../images/top/icon-news.png);
         background-size: cover;
-        transform: translate(-50%, -50%) translateX(-7rem) translateY(-1rem);
+        transform: translate(-50%, -50%) translateX(-6rem) translateY(-1rem);
       }
     }
   }

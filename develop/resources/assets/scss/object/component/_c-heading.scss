@@ -1,0 +1,19 @@
+.c-heading {
+  position: relative;
+  top: 0;
+  left: 0;
+  img {
+
+    &.u-background {
+      width: 100%;
+    }
+    &.u-logo {
+      position: absolute;
+      top: 50%;
+      left: 3rem;
+      transform: translateY(-50%);
+      width: 8rem;
+      height: 6.5rem;
+    }
+  }
+}

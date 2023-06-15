@@ -1,0 +1,148 @@
+doctype html
+html(lang="ja")
+  head
+    include /elements/head-property
+    include /elements/head-assets
+    //- include /mixin/meta
+    //- +meta({
+    //-     title:"website title"
+    //- })
+    |<?php wp_head(); ?>
+  body
+    include /elements/body-preppend
+
+    .l-main.p-lawer
+      main
+        .s-pc
+          .p-fixedEle
+            .slider
+              .slider-img.slider-img-01
+              .slider-img.slider-img-02
+
+            .p-logo
+              include ../assets/pug/svg/logo.svg
+
+            //- .p-insta 
+            //-   include ../assets/pug/svg/insta.svg
+
+            .p-anchor 
+              a(href!="<?php echo home_url( '/' ); ?>#concept").en Concept
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
+              br
+              a(href!="<?php echo home_url( '/' ); ?>news/").en News
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#access").en Access
+              br
+              a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
+
+            .p-cr.en © cobble
+
+
+          .c-inner
+            include /elements/header              
+            .p-lawer-inner             
+              .p-contact.js-inview-each.js-inview 
+                .c-i-inner
+                  .p-contact__title.en.js-inview(data-inview="fade-top") CONTACT
+                    span お問い合わせ
+                  |<?php echo do_shortcode('[mwform_formkey key="27"]'); ?>
+                  //- .p-contact__text.js-inview(data-inview="fade-top") 
+                  //-   p 該当の問い合わせ先を選択していただき、
+                  //-     br
+                  //-     |下記のフォームに必要事項をご入力ください。
+                  //-     br
+                  //-     |「<span>＊</span>」は必須項目です。
+                  //-     br
+                  //-     |入力に際し、<span>「個人情報の取り扱いについて」</span>を
+                  //-     br
+                  //-     |ご確認ください。
+        
+                  //- .p-contact__form 
+                  //-   .p-contact__mainTit.js-inview(data-inview="fade-top") 問い合わせの種類
+                  //-   .c-f-radio.js-inview(data-inview="fade-top")
+                  //-     span.mwform-radio-field.horizontal-item
+                  //-       label
+                  //-         input(type="radio", name="radio")
+                  //-         span.mwform-radio-field-text ご利用について
+                  //-     span.mwform-radio-field.horizontal-item
+                  //-       label
+                  //-         input(type="radio", name="radio")
+                  //-         span.mwform-radio-field-text ご予約について               
+                  //-     span.mwform-radio-field.horizontal-item
+                  //-       label
+                  //-         input(type="radio", name="radio")
+                  //-         span.mwform-radio-field-text お支払い・キャンセルについて
+                  //-     span.mwform-radio-field.horizontal-item
+                  //-       label
+                  //-         input(type="radio", name="radio")
+                  //-         span.mwform-radio-field-text 設備について                                                                     
+                  //-     span.mwform-radio-field.horizontal-item
+                  //-       label
+                  //-         input(type="radio", name="radio")
+                  //-         span.mwform-radio-field-text その他
+
+                  //-   dl.c-f-txt01.js-inview(data-inview="fade-top") 
+                  //-     dt                       
+                  //-       |お名前
+                  //-       span ＊
+                  //-     dd
+                  //-       input(type="text")
+                  //-   dl.c-f-txt01.js-inview(data-inview="fade-top") 
+                  //-     dt                       
+                  //-       |お名前（フリガナ）
+                  //-       span ＊
+                  //-     dd
+                  //-       input(type="text")
+                  //-   dl.c-f-txt01.js-inview(data-inview="fade-top") 
+                  //-     dt                       
+                  //-       |電話番号
+                  //-     dd
+                  //-       input(type="text")
+                  //-   dl.c-f-txt01.js-inview(data-inview="fade-top") 
+                  //-     dt                       
+                  //-       |メールアドレス
+                  //-       span ＊
+                  //-     dd
+                  //-       input(type="text")
+                  //-   dl.c-f-txtarea.js-inview(data-inview="fade-top")
+                  //-     dt                       
+                  //-       |お問い合わせ内容
+                  //-       span ＊
+                  //-     dd
+                  //-       |<textarea></textarea>
+
+                  //-   .c-f-privacy.js-inview(data-inview="fade-top") 
+                  //-     .container
+                  //-       .title プライバシーポリシー / 個人情報にかかる保護方針について
+                  //-       dl 
+                  //-         dt 1.プライバシーポリシー
+                  //-         dd 弊社は、個人情報の入手を適法かつ公正な手段によって行い、ご本人の意思に反する不正な方法により入手致しません。そのために、個人情報の収集、利用目的については、ご本人の同意を頂くか、当サイト上に必要事項を告知いたします。
+                  //-         dt 2.個人情報の適用範囲
+                  //-         dd 平素は、当サイトをご利用頂き誠にありがとうございます。当サイトでは、個人情報保護法及びその他の関連法令並びに各ガイドラインを遵守し、MUNIが業務上使用するお客様の個人情報について、以下のようにその保護に厳重な注意を払ってまいります。
+                  //-         dt 3.個人情報の取得方法
+                  //-         dd 当サイト上にあるサービスを利用する上で、弊社が取得した個人情報は、このプライバシーポリシーに従って管理されます。但し、当サイトのサービスからバナー画像等をリンクして到達したウェブサイトを利用した結果、残された個人情報については、弊社で直接管理することができない為、個人情報保護の適用範囲外といたします。なお、個人情報とは、以下のような内容を指します。<br>・お名前、郵便番号、住所、電話番号など<br>・メールアドレス、通信履歴など
+                  //-         dt 4.お客様の個人情報の第三者提供
+                  //-         dd 弊社は、お客様の事前承認なく、お客様の個人情報を第三者に開示・提供することはありません。第三者との間での共同利用や業務委託先に個人情報を提供する場合は、別途、提供先について調査し、守秘義務契約など必要な契約を締結し、個人情報の適切な処理・管理を行います。
+                  //-         dt 5.個人情報の開示
+                  //-         dd 弊社では、下記の場合を除き個人情報を開示することはありません。<br>・集計および分析等により得られたものを、個人を識別または特定できない態様にて提携先等第三者に開示または提供する場合<br>・任意に「利用者」等の同意を得た上で個人情報を開示または利用する場合・裁判所の発する令状その他裁判所の決定、命令または法令に基づき開示する場合<br>・検察・警察・監督官庁からの適法・適式な手順により情報の照会があった場合<br>・プロバイダー責任法（正称：特定電気通信役務提供者の損害賠償責任の制限及び発信者情報の開示に関する法律）第4条に該当する請求があった場合
+                  //-         dt 6.個人情報の訂正、利用停止、削除の手続き
+                  //-         dd 弊社は、お客様ご本人より個人情報の開示、訂正、利用停止、削除のご依頼があった場合、ご本人様であることを確認させていただいた上で、お手続きをさせていただきます。ご依頼は、お問い合わせ窓口よりお申し出下さい。
+                  //-         dt 7.個人情報保護法に関する利用原則及び禁止事項
+                  //-         dd 個人情報の利用制限<br>弊社における個人情報の利用は、業務の目的の範囲内で、権限を与えられた者のみが、行うものとします。<br>●個人情報に関する禁止事項<br>・サービス・商品などのご紹介<br>・個人情報の利用目的外での利用は行いません。個人情報の所定の利用場所からの持ち出し、外部への送信など、個人情報の漏洩行為について万全の措置をとります。<br>・弊社従業員に対し、就業中及びならびに、退職後において、個人情報に関する守秘義務を履行させます。<br>・以下の各事項に関する個人情報の取得、利用、提供については行いません。<br>思想、宗教、人種・民族、身体障害・精神障害、犯罪歴など社会的差別に関する事項、保健医療・性生活関連事項、勤労者の団体権・団体行為の関連事項、示威行為・請願権など政治的権利行使に関連事項
+                  //-         dt 8.その他
+                  //-         dd 弊社は、今後も個人情報保護に万全を期すべく、以上の方針を今後実務の動向を踏まえ適宜改定してまいります。その場合は、全ての更新はこのページにてお知らせしますことをご了承ください。
+                  //-   .c-f-pp.js-inview(data-inview="fade-top")
+                  //-     div 
+                  //-         span.mwform-radio-field.horizontal-item
+                  //-           label
+                  //-             input(type="checkbox")
+                  //-             span.mwform-radio-field-text プライバシーポリシーに同意する
+
+                  //-   .p-contact__btn.js-inview(data-inview="fade-top")
+                  //-     a(href="") 入力内容を確認する 
+
+            include /elements/footer
+
+
+    include /elements/body-append
