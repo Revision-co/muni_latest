@@ -20,7 +20,7 @@
       margin: 3rem auto;
       display: grid;
       grid-template-columns: 1fr 2fr;
-      grid-template-rows: 1fr,1.5fr,1fr,1fr,1fr,1fr;
+      grid-template-rows: 1fr,1.5fr,repeat(4,1fr);
       li{
         @include font(1.6, 500,  0.05, 7.5rem);
         border-bottom: 1px solid #B4B4B4;

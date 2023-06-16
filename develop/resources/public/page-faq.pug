@@ -50,10 +50,16 @@ html(lang="ja")
 
           .c-inner
             include /elements/header
-            .p-faq-inner.js-inview-each.js-inview
+            .p-faq-inner.c-i-inner.js-inview-each.js-inview
               .p-faq-inner__title.en.js-inview(data-inview="fade-top") Q&A
                 span よくある質問
-              p.p-faq-inner__table.js-inview(data-inview="fade-top")
-                
+              ul.p-faq-inner__pagelink.js-inview(data-inview="fade-top")
+                li
+                  a(href!="#area-1") 予約について
+                li
+                  a(href!="#area-2") 支払いについて
+                li
+                  a(href!="#area-3") 施設について
+
             include /elements/footer
     include /elements/body-append
