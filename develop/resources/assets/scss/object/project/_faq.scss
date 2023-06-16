@@ -1,7 +1,8 @@
 .p-faq {
   font-family: 'Noto Sans JP', sans-serif;
   &-inner{
-    margin: 15rem 6rem 10rem 3rem;
+    width: 100%;
+    margin: 15rem auto 10rem;
     &__title{
       font-family: 'futura-pt', sans-serif;
       font-size: 3.6rem;
@@ -13,7 +14,75 @@
 
     }
     &__pagelink{
+      padding: 4.78rem 1.8rem 5.31rem 2.2rem;
       display: flex;
+      li{
+        @include font(1.6,700,0.05,1.6rem);
+        &:nth-child(2){
+          padding: 0 2rem 0 2.1rem;
+        }
+        a{
+          color: #325537;
+          position: relative;
+          &::before{
+            position: absolute;
+            content: "";
+            bottom: -100%;
+            left:49%;
+            background-color: #325537;
+            height: 2.5px;
+            width: 10px;
+            transform: rotate(-45deg);
+          }
+          &::after{
+            position: absolute;
+            content: "";
+            bottom: -100%;
+            right: 47%;
+            background-color: #325537;
+            height: 2.5px;
+            width: 10px;
+            // rotate: 45%;
+            transform: rotate(45deg);
+          }
+          &:hover{
+            opacity: 0.5;
+            transition: .5s;
+          }
+        }
+      }
+    }
+    &__contain{
+      &-wrap{
+        li{
+          border-bottom: 1px solid #325537;
+          &:nth-child(1){
+            border-top: 1px solid #325537;
+          }
+        }
+        .c-acc{
+          border: none;
+          margin-top: 0;
+          margin-left: 4rem;
+          @include font(1.4,700,0.05,2.5rem);
+          .question{
+            width: 24rem;
+            position: relative;
+            &::before{
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: -4rem;
+              content: "Q";
+              @include font(2.5,700,0.05,2.5rem);
+              color: #325537;
+            }
+          }
+          .answer{
+            width: 24rem;
+          }
+        }
+      }
     }
   }
 }
