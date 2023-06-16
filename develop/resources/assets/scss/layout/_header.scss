@@ -31,9 +31,9 @@
 
 .u-header {
   position: relative;
-  height: 5rem;
+  padding: 4rem 4rem 3rem;
   @media (--large){
-    padding: 0;
+    padding: 4rem 4rem 1rem;
   }
   &::before {
     position: absolute;
@@ -58,8 +58,8 @@
     }
   }
   .hamburger {
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    // border-left: 1px solid #fff;
+    // border-bottom: 1px solid #fff;
   }
 }
 
@@ -149,6 +149,7 @@
   top: 7rem;
   right: 0;
   background-color: #EDE872;
+  z-index: 100;
   a {
     display: flex;
     justify-content: center;

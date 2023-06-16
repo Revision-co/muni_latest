@@ -32,8 +32,10 @@
   }
 
   p {
-    @include font(1.2, 700, 0.05, 1.4);
+    @include font(1.2, 700, 0.05, 1.5);
     color: #222222;
+    display: block;
+    margin-top: 5px;
   }
 }
 

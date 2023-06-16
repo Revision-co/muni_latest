@@ -1,3 +1,115 @@
 .c-acc {
+  border-top: 1px solid #325537;
+  border-right: 1px solid #325537;
+  border-bottom: 1px solid #325537;
+  border-left: 1px solid #325537;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  @media (--large){
+    &:hover {
+      .c-acc__head {
+        p {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
 
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-title {
+      p {
+        transition: .3s;
+        * {
+          color: #222222;
+        }
+        &.name {
+          @include font(1.5, 700, 0.05, 1.4);
+        }
+        &.price {
+          @include font(2.4, 700, 0.03, 1.4);
+        }
+        &.text {
+          @include font(1.2, 700, 0.05, 1.4);
+        }
+        &.fs20 {
+          @include font(2, 700, 0.06, 2);
+        }
+        span {
+          @include font(1.6, 700, 0.05, 1.4);
+        }
+      }
+    }
+
+    span {
+      position: relative;
+      &.arrow {
+        display: block;
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+        background-color: #325537;
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%) rotate(-90deg);
+          transition: .3s;
+        }
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 2rem;
+    display: none;
+    &:first-child {
+      display: block !important;
+    }
+    li {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      &:nth-of-type(n + 2){
+        margin-top: 0.5rem;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        right: 4.7rem;
+        background: url(../images/common/dot.png) no-repeat center center / cover;
+        width: 6.5rem;
+        height: 2px;
+        
+      }
+      &.none {
+        &::before {
+          display: none;
+        }
+      }
+      p {
+        @include font(1.5, 700, 0.05, 1.4);
+        color: #628667;
+      }
+    }
+  }
+}
+
+.close {
+  span {
+    &.arrow {
+      svg {
+        transform: translate(-50%,-50%) rotate(90deg);
+      }
+    }
+  }
+}
+
+.open {
+  display: block;
 }
