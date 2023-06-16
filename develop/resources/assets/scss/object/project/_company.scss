@@ -1,0 +1,45 @@
+
+.p-company {
+  font-family: 'Noto Sans JP', sans-serif;
+  &-inner{
+    width: 100%;
+    margin: 15rem auto 10rem;
+    &__title{
+      font-family: 'futura-pt', sans-serif;
+      font-size: 3.6rem;
+      span{
+        display: block;
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+
+    }
+    &__table{
+      width: 90%;
+      height: 45.5rem;
+      margin: 3rem auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr,1.5fr,repeat(4,1fr);
+      li{
+        @include font(1.6, 500,  0.05, 7.5rem);
+        border-bottom: 1px solid #B4B4B4;
+        &:nth-child(odd){
+          color: #325537;
+          font-weight: 700;
+        }
+        &:nth-child(4){
+          height: 10rem;
+          padding-top: 2rem;
+          line-height: 3rem;
+        }
+        
+        &:nth-child(3){
+          height: 10rem;
+          line-height: 10rem;
+        }
+      }
+    }
+  }
+}
+// body * { outline: 2px solid red!important; } /* red */

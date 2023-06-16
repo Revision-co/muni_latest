@@ -1,0 +1,19 @@
+.p-faq {
+  font-family: 'Noto Sans JP', sans-serif;
+  &-inner{
+    margin: 15rem 6rem 10rem 3rem;
+    &__title{
+      font-family: 'futura-pt', sans-serif;
+      font-size: 3.6rem;
+      span{
+        display: block;
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+
+    }
+    &__pagelink{
+      display: flex;
+    }
+  }
+}
