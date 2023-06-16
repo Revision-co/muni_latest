@@ -1,0 +1,59 @@
+doctype html
+html(lang="ja")
+  head
+    include /elements/head-property
+    include /elements/head-assets
+    //- include /mixin/meta
+    //- +meta({
+    //-     title:"website title"
+    //- })
+    |<?php wp_head(); ?>
+  body
+    include /elements/body-preppend
+
+    .l-main.p-faq
+      main
+        .s-pc
+          .p-fixedEle
+            .slider
+              .slider-img.slider-img-01
+              .slider-img.slider-img-02
+
+            .p-logo
+              include ../assets/pug/svg/logo.svg
+
+            //- .p-insta 
+            //-   include ../assets/pug/svg/insta.svg
+
+            .p-anchor 
+              a(href!="<?php echo home_url( '/' ); ?>#concept").en Concept
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#plan").en Plan
+              br
+              a(href!="<?php echo home_url( '/' ); ?>news/").en News
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#access").en Access
+              //- br
+              //- a(href!="<?php echo home_url( '/' ); ?>#qa").en faq
+              br
+              a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
+              br
+              .p-anchor__contact
+                a(href!="<?php echo home_url( '/' ); ?>contact/")
+                  .p-anchor__contact-wrap
+                    p.en RESARVE
+                    include ../assets/pug/svg/ic_reserve_green.svg
+                  span ご予約
+            .p-cr.en © cobble
+
+          .c-inner
+            include /elements/header
+            .p-faq-inner.js-inview-each.js-inview
+              .p-faq-inner__title.en.js-inview(data-inview="fade-top") Q&A
+                span よくある質問
+              p.p-faq-inner__table.js-inview(data-inview="fade-top")
+                
+            include /elements/footer
+    include /elements/body-append
