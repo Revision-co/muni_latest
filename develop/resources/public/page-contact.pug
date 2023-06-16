@@ -30,14 +30,24 @@ html(lang="ja")
               br
               a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
               br
+              a(href!="<?php echo home_url( '/' ); ?>plan").en Plan
+              br
               a(href!="<?php echo home_url( '/' ); ?>news/").en News
               br
               a(href!="<?php echo home_url( '/' ); ?>#access").en Access
+              //- br
+              //- a(href!="<?php echo home_url( '/' ); ?>#qa").en Q&A
               br
               a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
+              br
+              .p-anchor__contact
+                a(href!="<?php echo home_url( '/' ); ?>contact/")
+                  .p-anchor__contact-wrap
+                    p.en RESARVE
+                    include ../assets/pug/svg/ic_reserve_green.svg
+                  span ご予約
 
             .p-cr.en © cobble
-
 
           .c-inner
             include /elements/header              

@@ -30,19 +30,29 @@ html(lang="ja")
               br
               a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
               br
+              a(href!="<?php echo home_url( '/' ); ?>plan").en Plan
+              br
               a(href!="<?php echo home_url( '/' ); ?>news/").en News
               br
               a(href!="<?php echo home_url( '/' ); ?>#access").en Access
+              //- br
+              //- a(href!="<?php echo home_url( '/' ); ?>#qa").en Q&A
               br
               a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
-
+              br
+              .p-anchor__contact
+                a(href!="<?php echo home_url( '/' ); ?>contact/")
+                  .p-anchor__contact-wrap
+                    p.en RESARVE
+                    include ../assets/pug/svg/ic_reserve_green.svg
+                  span ご予約
             .p-cr.en © cobble
 
 
           .c-inner
             include /elements/header              
             .p-lawer-inner             
-              .c-news.js-inview-each.js-inview 
+              .c-news.b-a-none.js-inview-each.js-inview 
                 .c-i-inner
                   .c-news__title.en.js-inview(data-inview="fade-top") NEWS
                     span お知らせ
@@ -122,19 +132,25 @@ html(lang="ja")
                       | <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
                       li 
                         a(href!="<?php the_permalink(); ?>")
-                          .left-content 
-                            .date.en <?php echo the_time('Y.m'); ?>
-                            .day.en <?php echo the_time('d'); ?>
-                          .right-content   
-                            .cat 
-                              |<?php 
-                              |$cat = get_the_terms($post->ID, "news_cat");
-                              |foreach($cat as $val => $value): ?>
-                              |  <?php if($val === array_key_first($cat)): ?>
-                              |    <?php echo $value -> name; ?>
-                              |  <?php endif; ?>
-                              |<?php endforeach; ?>
-                            .title <?php the_title(); ?>      
+                          .top-img
+                            |<?php if (get_the_post_thumbnail_url()) : ?>
+                            img(src!="<?php echo get_the_post_thumbnail_url(); ?>")
+                            |<?php else: ?>
+                            img(src!="<?php echo get_template_directory_uri(); ?>/common/images/common/cobble.jpg")
+                            |<?php endif; ?>
+                          .content-wrap
+                            .left-content 
+                              .date.en <?php echo the_time('Y.m.d'); ?>
+                            .right-content
+                              .right-content__cat 
+                                |<?php 
+                                |$cat = get_the_terms($post->ID, "news_cat");
+                                |foreach($cat as $val => $value): ?>
+                                |  <?php if($val === array_key_first($cat)): ?>
+                                |    <?php echo $value -> name; ?>
+                                |  <?php endif; ?>
+                                |<?php endforeach; ?>
+                              .title <?php the_title(); ?>      
                       |<?php endwhile; ?>
 
                     .c-news__pagenav 

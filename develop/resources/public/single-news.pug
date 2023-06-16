@@ -30,11 +30,22 @@ html(lang="ja")
               br
               a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
               br
+              a(href!="<?php echo home_url( '/' ); ?>plan").en Plan
+              br
               a(href!="<?php echo home_url( '/' ); ?>news/").en News
               br
               a(href!="<?php echo home_url( '/' ); ?>#access").en Access
+              //- br
+              //- a(href!="<?php echo home_url( '/' ); ?>#qa").en Q&A
               br
               a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
+              br
+              .p-anchor__contact
+                a(href!="<?php echo home_url( '/' ); ?>contact/")
+                  .p-anchor__contact-wrap
+                    p.en RESARVE
+                    include ../assets/pug/svg/ic_reserve_green.svg
+                  span ご予約
 
             .p-cr.en © cobble
 
@@ -42,9 +53,8 @@ html(lang="ja")
           .c-inner
             include /elements/header              
             .p-lawer-inner             
-              .c-news-desc.js-inview-each.js-inview 
+              .c-news-desc.news-detail.js-inview-each.js-inview 
                 .c-i-inner
-                  .c-news-desc__title.js-inview(data-inview="fade-top") <?php the_title(); ?>
                   .c-news-desc__sub.js-inview(data-inview="fade-top") 
                     .date <?php echo the_time('Y.m.d'); ?>
                     .cat
@@ -55,6 +65,13 @@ html(lang="ja")
                       |    <?php echo $value -> name; ?>
                       |  <?php endif; ?>
                       |<?php endforeach; ?>
+                  .c-news-desc__title.js-inview(data-inview="fade-top") <?php the_title(); ?>
+                  .news-detail-img.js-inview(data-inview="fade-top")
+                    |<?php if (get_the_post_thumbnail_url()) : ?>
+                    img(src!="<?php echo get_the_post_thumbnail_url(); ?>")
+                    |<?php else: ?>
+                    img(src!="<?php echo get_template_directory_uri(); ?>/common/images/common/cobble.jpg")
+                    |<?php endif; ?>
                   .c-news-desc__inner.js-inview(data-inview="fade-top") 
                     |<?php the_content(); ?>
                   .c-news-desc__btn.js-inview(data-inview="fade-top") 
