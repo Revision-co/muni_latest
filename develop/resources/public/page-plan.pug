@@ -19,8 +19,8 @@ html(lang="ja")
               .slider-img.slider-img-01
               .slider-img.slider-img-02
 
-            //- .p-logo
-              //- include ../assets/pug/svg/logo.svg
+            .p-logo
+              include ../assets/pug/svg/logo.svg
 
             //- .p-insta 
             //-   include ../assets/pug/svg/insta.svg
@@ -41,9 +41,9 @@ html(lang="ja")
               a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
               br
               .p-anchor__contact
-                a(href!="<?php echo home_url( '/' ); ?>contact/")
+                a(href!="https://reserva.be/munibbq/aikotoba" target="_blank")
                   .p-anchor__contact-wrap
-                    p.en RESARVE
+                    p.en RESERVE
                     include ../assets/pug/svg/ic_reserve_green.svg
                   span ご予約
 
@@ -59,13 +59,13 @@ html(lang="ja")
                 h1.en PLAN
                 small プラン
               .p-plan__heading-btn.js-inview(data-inview="fade-top")
-                //- a(href="") ACTIVITY
-                p BBQ
+                //- a(href="").en ACTIVITY
+                p.en BBQ
             section
               .s-bbq.js-inview-each.js-inview 
                 .c-u-inner
                   .s-bbq__title.js-inview(data-inview="fade-top")
-                    h2
+                    h2.en
                       |BBQ
                   .s-bbq__text.js-inview(data-inview="fade-top")
                     p
@@ -79,34 +79,12 @@ html(lang="ja")
                     p セットプラン
                   .s-bbq__item.js-accordion.js-inview(data-inview="fade-top")
                     .c-acc
-                      .c-acc__head.a-trigger.close
-                        .c-acc__head-title
-                          p.name 栃木満喫スタンダードプラン
-                          p.price
-                            |￥4,000
-                            span (tax)
-                        span.arrow
-                          include ../assets/pug/svg/ic-arrow-white.svg
-                      ul.c-acc__list.a-area.open
-                        li 
-                          p 牛串
-                          p 2本
-                        li 
-                          p 豚串
-                          p 2本
-                        li 
-                          p 鶏串
-                          p 2本
-                        li 
-                          p 野菜串
-                          p 2本
-                    .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
-                          p.name 肉＆海鮮プラン
-                          p.price
-                            |￥4,500
-                            span (tax)
+                          p.name 栃木満喫スタンダードプラン
+                          p.price.en
+                            |￥4,000
+                            span.noto (tax)
                         span.arrow
                           include ../assets/pug/svg/ic-arrow-white.svg
                       ul.c-acc__list.a-area
@@ -117,7 +95,29 @@ html(lang="ja")
                           p 豚串
                           p 2本
                         li 
-                          p 鶏串
+                          p 鳥串
+                          p 1本
+                        li 
+                          p 野菜串
+                          p 1本
+                    .c-acc
+                      .c-acc__head.a-trigger
+                        .c-acc__head-title
+                          p.name 肉＆海鮮プラン
+                          p.price.en
+                            |￥4,500
+                            span.noto (tax)
+                        span.arrow
+                          include ../assets/pug/svg/ic-arrow-white.svg
+                      ul.c-acc__list.a-area
+                        li 
+                          p 牛串
+                          p 2本
+                        li 
+                          p 豚串
+                          p 2本
+                        li 
+                          p 鳥串
                           p 1本
                         li 
                           p 野菜串
@@ -129,9 +129,9 @@ html(lang="ja")
                       .c-acc__head.a-trigger
                         .c-acc__head-title
                           p.name 栃木満喫ボリュームプラン
-                          p.price
+                          p.price.en
                             |￥5,000
-                            span (tax)
+                            span.noto (tax)
                         span.arrow
                           include ../assets/pug/svg/ic-arrow-white.svg
                       ul.c-acc__list.a-area
@@ -142,7 +142,7 @@ html(lang="ja")
                           p 豚串
                           p 2本
                         li 
-                          p 鶏串
+                          p 鳥串
                           p 1本
                         li 
                           p 野菜串
@@ -172,11 +172,11 @@ html(lang="ja")
                           include ../assets/pug/svg/ic-arrow-white.svg
                       ul.c-acc__list.a-area
                         li.none
-                          p 宇都宮焼きそば
+                          p 宇都宮焼きそば（2人前)
                         li.none
-                          p グルメ餃子バーガー
+                          p 特製バンズのグルメ餃子バーガー
                         li.none 
-                          p 大谷石窯ピザ
+                          p 特製生地の大谷石窯ピザ
                     .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
@@ -185,20 +185,48 @@ html(lang="ja")
                           include ../assets/pug/svg/ic-arrow-white.svg
                       ul.c-acc__list.a-area
                         li.none  
-                          p スーパーロングウインナー
+                          p 霜降高原牛串　1本
                         li.none 
-                          p 大谷産とうもろこし
+                          p とちぎゆめポーク串　1本
                         li.none  
-                          p 肉巻きおにぎり
+                          p 那須鶏串　1本
+                        li.none  
+                          p 骨付きフランクフルト　1本
+                        li.none  
+                          p 霜降高原牛バラ　100ｇ
+                        li.none  
+                          p 那須豚スペアリブ　100ｇ
+                        li.none  
+                          p 季節の野菜盛　1人前
+                        li.none  
+                          p 有頭海老　1尾
+                        li.none  
+                          p 殻付きホタテ　1枚
+                        li.none  
+                          p イイダコ串　1本
+                        li.none  
+                          p イカ串　1本
+                        li.none  
+                          p ぐるぐるウインナー　300ｇ
+                        li.none  
+                          p 大谷産とうもろこし　1本
+                        li.none  
+                          p 肉巻きおにぎり　4個
                         li.none  
                           p じゃがバター
                         li.none  
-                          p ガーリックライス
+                          p ガーリックライス　2人前
                         li.none  
-                          p スキレットスモア
+                          p バターコーンアルミ焼き
+                        li.none  
+                          p チョコとマシュマロのスキレットスモア
                         li.none  
                           p ポップコーン
-                    .c-acc
+                        li.none  
+                          p バナナキャラメリゼ
+                        li.none  
+                          p ソフトクリーム
+                    //- .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
                           p.fs20 単品メニュー(プラン内追加)
@@ -247,15 +275,9 @@ html(lang="ja")
                         li.none  
                           p 生ビール
                         li.none 
-                          p キリン一番搾りサーバー（3Ｌ）
-                        li.none  
-                          p 各瓶ビール
-                        li.none  
                           p ハイボール
                         li.none  
-                          p 各種サワー
-                        li.none  
-                          p 各種リキュール（ジン、カシス、ピーチ、ウォッカ等）
+                          p 極上レモンサワー
                     .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
@@ -264,15 +286,21 @@ html(lang="ja")
                           include ../assets/pug/svg/ic-arrow-white.svg
                       ul.c-acc__list.a-area
                         li.none  
-                          p オレンジ
+                          p コカコーラ
                         li.none 
-                          p コーラ
-                        li.none  
                           p ジンジャーエール
                         li.none  
-                          p カルピス
+                          p オレンジジュース
                         li.none  
-                          p グレープフルーツ
+                          p りんごジュース
+                        li.none  
+                          p グレープフルーツジュース
+                        li.none  
+                          p 烏龍茶
+                        li.none  
+                          p ハタ紘泉　瓶ラムネ　200ml
+                        li.none  
+                          p とちおとめデザートドリンク
                   //- .s-bbq__link.js-inview(data-inview="fade-top")
                   //-   a(href="" target="_blank") ACTIVITY PLANを見る
 

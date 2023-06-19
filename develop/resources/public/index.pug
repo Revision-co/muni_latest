@@ -43,7 +43,7 @@ html(lang="ja")
               .p-anchor__contact
                 a(href!="https://reserva.be/munibbq/aikotoba" target="_blank")
                   .p-anchor__contact-wrap
-                    p.en RESARVE
+                    p.en RESERVE
                     include ../assets/pug/svg/ic_reserve_green.svg
                   span ご予約
 
@@ -70,9 +70,9 @@ html(lang="ja")
                     img(src!='<?php echo get_template_directory_uri(); ?>/common/images/top/mv_deco05.png', alt='')
                 .p-top-desc__text.en.js-inview(data-inview="fade-top")
                   |Let’s rock it!<br>OYA stone village
-                  span 北関東最大級！石の里・大谷のBBQビレッジ
+                  span.noto 北関東最大級！石の里・大谷のBBQビレッジ
                 .p-top-desc__news.js-inview(data-inview="fade-top")
-                  .p-top-desc__news-title NEWS
+                  .p-top-desc__news-title.en NEWS
                   | <?php
                   |  $tax_query = '';
                   |  if( !empty($_GET["cat"]) && $_GET['cat'] ) {
@@ -104,11 +104,11 @@ html(lang="ja")
                   span コンセプト
                 .p-top-concept__mainTxt.js-inview(data-inview="fade-top") 大自然を五感で堪能！<br>全天候型アウトドアフィールド
                 .p-top-concept__text.js-inview(data-inview="fade-top") 
-                  p 人里離れた景勝地「大谷」で過ごす非日常。<br>切り立った岩肌と木々を望む絶景の里で<br>仲間と最高の思い出をつくりませんか？
+                  p 人里離れた景勝地「大谷」で過ごす非日常。<br>切り立った岩肌と木々を望む絶景の里で<br>最高の思い出をつくりませんか？
                 //- .p-top-concept__link.js-inview(data-inview="fade-top") 
                 //-   .c-btn01
                 //-     a(href="")
-                //-       p VIWE ALL
+                //-       p.en VIWE ALL
                 //-       span
                 //-         include ../assets/pug/svg/arrow-white.svg
             .p-top-facility.js-inview-each.js-inview 
@@ -132,7 +132,7 @@ html(lang="ja")
                 //- .p-top-facility__link.js-inview(data-inview="fade-top") 
                 //-   .c-btn02
                 //-     a(href="")
-                //-       p VIWE ALL
+                //-       p.en VIWE ALL
                 //-       span
                 //-         include ../assets/pug/svg/arrow-white.svg
               .p-top-facility__cell.js-inview(data-inview="fade-top")
@@ -150,7 +150,7 @@ html(lang="ja")
 
             #plan.p-top-plan.js-inview-each.js-inview 
               .p-top-plan__inner.c-i-inner
-                .p-top-plan__title.js-inview(data-inview="fade-top") PLAN
+                .p-top-plan__title.en.js-inview(data-inview="fade-top") PLAN
                   span 料金プラン
                 .p-top-plan__mainTxt.js-inview(data-inview="fade-top") レンタル充実、手ぶらでOK！<br>楽しみ方が選べる豊富なプラン
                 .p-top-plan__text.js-inview(data-inview="fade-top") 
@@ -158,7 +158,7 @@ html(lang="ja")
                 .p-top-plan__link.js-inview(data-inview="fade-top") 
                   .c-btn01
                     a(href!="<?php echo home_url( '/' ); ?>plan/")
-                      p VIWE ALL
+                      p.en VIWE ALL
                       span
                         include ../assets/pug/svg/arrow-white.svg
                 .p-top-plan__img.js-inview(data-inview="fade-top") 
@@ -210,8 +210,8 @@ html(lang="ja")
 
                 .p-top-news__btn.en.js-inview(data-inview="fade-top") 
                   .c-btn02
-                    a(href="")
-                      p VIWE ALL
+                    a(href!="<?php echo home_url( '/' ); ?>news/")
+                      p.en VIWE ALL
                       span
                         include ../assets/pug/svg/arrow-white.svg
             
@@ -229,7 +229,7 @@ html(lang="ja")
 
                 .p-top-access__list.js-inview(data-inview="fade-top") 
                   .content 
-                    p 栃木県宇都宮市大谷町字盗人ヶ入909番6
+                    p 栃木県宇都宮市大谷町909　大谷資料館東側隣接
                   .content 
                     p TEL：028-666-0579
                       //- br
@@ -237,7 +237,7 @@ html(lang="ja")
                 //- .p-top-access__link.js-inview(data-inview="fade-top") 
                 //-   .c-btn01
                 //-     a(href="")
-                //-       p VIWE ALL
+                //-       p.en VIWE ALL
                 //-       span
                 //-         include ../assets/pug/svg/arrow-white.svg
             
