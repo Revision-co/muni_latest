@@ -1,0 +1,126 @@
+doctype html
+html(lang="ja")
+  head
+    include /elements/head-property
+    include /elements/head-assets
+    //- include /mixin/meta
+    //- +meta({
+    //-     title:"website title"
+    //- })
+    |<?php wp_head(); ?>
+  body
+    include /elements/body-preppend
+
+    .l-main.p-fa
+      main
+        .s-pc
+          .p-fixedEle
+            .slider
+              .slider-img.slider-img-01
+              .slider-img.slider-img-02
+
+            .p-logo
+              include ../assets/pug/svg/logo.svg
+
+            //- .p-insta 
+            //-   include ../assets/pug/svg/insta.svg
+
+            .p-anchor 
+              a(href!="<?php echo home_url( '/' ); ?>#concept").en Concept
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
+              br
+              a(href!="<?php echo home_url( '/' ); ?>planbbq").en Plan
+              br
+              a(href!="<?php echo home_url( '/' ); ?>news/").en News
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#access").en Access
+              //- br
+              //- a(href!="<?php echo home_url( '/' ); ?>#qa").en Q&A
+              br
+              a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
+              br
+              .p-anchor__contact
+                a(href!="https://reserva.be/munibbq/aikotoba" target="_blank")
+                  .p-anchor__contact-wrap
+                    p.en RESERVE
+                    include ../assets/pug/svg/ic_reserve_green.svg
+                  span ご予約
+
+            .p-cr.en © cobble
+
+          .c-inner 
+            include /elements/header
+            .p-fa__heading.js-inview-each.js-inview 
+              .c-ttl01.js-inview(data-inview="fade-top")
+                h1.en FACILITY
+                small 施設
+            .c-u-inner 
+              .p-fa__heading-text 
+                h2 
+                  |cobble OYA stone villageを
+                  br
+                  |満喫できる<span>3つ</span>のコンテンツ
+                p 
+                  |開放感あふれるcobble〜OYA stone village〜には、旬の食材を味わえるBBQはもちろんのこと、小さなお子様も楽しめるトレジャーハントや岩肌を感じられるクライミング、大自然の中でリフレッシュできる屋外サウナがあります。すべての人が楽しめる、全天候型総合体験施設です。
+              .p-fa__heading-img 
+                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/img01.jpg', alt='')
+                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/img02.jpg', alt='')
+                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/deco01.png', alt='')
+            section 
+              .c-u-inner 
+                .p-fa-play 
+                  .p-fa-play__title 
+                    .c-ttl03 
+                      h3 PLAY
+                      p 遊ぶ
+                  .p-fa-play__text 
+                    p 
+                      |トレジャーハントやクライミングなど、小さなお子様から大人まで楽しめるアクティビティが満載！
+                      br
+                      |採石跡ならではのダイナミックなロケーションで心地よい風を感じながら、日常では得られないアウトドアを満喫できます。
+                      br
+                      |家族・カップル・友達みんなと好きなスタイルで、大谷の大自然をお楽しみください。
+            section 
+              .p-fa-eat 
+                .c-u-inner 
+                  .p-fa-eat__title 
+                    .c-ttl03.c-white
+                      h3 EAT
+                      p 食べる
+                  .p-fa-eat__deco 
+                    img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/deco02.png', alt='')
+                  .p-fa-eat__img 
+                    img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/img03.jpg', alt='')
+                  .p-fa-eat__text 
+                    p 
+                      |地域の「食」を届ける発信地として、この土地の美味しいものと出会える機会を提供しています。 地元栃木県でとれた新鮮な野菜やお肉をそろえたBBQセットのご注文がおすすめです。 BBQに必要な備品を豊富に取り揃えているので、手ぶらで気軽に楽しめます。屋根付きのBBQ会場は急な雨でも安心です。
+              section 
+                .p-fa-enjoy
+                  .c-u-inner
+                    .p-fa-enjoy__title 
+                      .c-ttl03 
+                        h3 ENJOY
+                        p 過ごす
+                    .p-fa-enjoy__deco
+                      img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/deco03.png', alt='')
+                    .p-fa-enjoy__img 
+                      img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/img04.jpg', alt='')
+                      img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/img05.jpg', alt='')
+                    .p-fa-enjoy__text 
+                      p 
+                        |屋外サウナで日常を忘れ癒しの時を過ごしたり、大好きなペットと自然の中で思いっきり遊んだり。人それぞれ違った楽しみ方ができます。
+                        br
+                        |「UNIQUE SPACE in LOCAL」この場所ならではの魅力を様々な感性で体験していただくことで、唯一無二の思い出を作ることができます。
+              section 
+                .p-fa-bottom
+                  .p-fa-bottom__head
+                    img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/img06.jpg', alt='')
+                  .p-fa-bottom__img 
+                    img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/img07.jpg', alt='')
+                    img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/deco04.png', alt='')
+                    img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/img08.jpg', alt='')
+                    img(src!='<?php echo get_template_directory_uri(); ?>/common/images/facility/deco05.png', alt='')
+            
+            include /elements/footer
+    include /elements/body-append

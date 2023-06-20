@@ -39,3 +39,53 @@
   }
 }
 
+.c-ttl02 {
+  margin-top: 10rem;
+  &-wrap {
+    display: flex;
+    h3 {
+      @include font(2.4, 500, 0.05, 1);
+      color: #222222;
+    }
+
+    span {
+      display: block;
+      @include font(1.2, 700, 0.05, 1.4);
+      color: #fff;
+      background-color: #B70000;
+      padding: 0.5rem 1rem;
+      margin-left: 1rem;
+    }
+  }
+
+  p {
+    @include font(1.2, 700, 0.05, 1.5);
+    color: #222222;
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+.c-ttl03 {
+  h3 {
+    @include font(3.6, 500, 0.05, 1);
+    color: #222222;
+  }
+
+  p {
+    @include font(1.2, 700, 0.05, 1.5);
+    color: #222222;
+    display: block;
+    margin-top: 5px;
+  }
+}
+.c-white {
+  h3 {
+    color: #fff;
+  }
+  p {
+    color: #fff;
+  }
+}
+
+
