@@ -32,7 +32,7 @@ html(lang="ja")
               br
               a(href!="<?php echo home_url( '/' ); ?>planbbq").en Plan
               br
-              a(href!="<?php echo home_url( '/' ); ?>news/").en News
+              a(href!="<?php echo home_url( '/' ); ?>news").en News
               br
               a(href!="<?php echo home_url( '/' ); ?>#access").en Access
               //- br
@@ -52,7 +52,7 @@ html(lang="ja")
 
           .c-inner
             include /elements/header              
-            .p-lawer-inner             
+            .p-lawer-inner.p-none
               .c-news-desc.news-detail.js-inview-each.js-inview 
                 .c-i-inner
                   .c-news-desc__sub.js-inview(data-inview="fade-top") 
@@ -74,8 +74,85 @@ html(lang="ja")
                     |<?php endif; ?>
                   .c-news-desc__inner.js-inview(data-inview="fade-top") 
                     |<?php the_content(); ?>
+                  .page-navi.js-inview(data-inview="fade-top") 
+                    :php
+                      $prev_post = get_previous_post();
+                      if( !empty( $prev_post ) ) :
+                        $url = get_permalink( $prev_post->ID );
+                    a(href!="<?php echo get_permalink( $prev_post->ID ); ?>").page-navi__prev
+                      .page-navi__arrow
+                      .page-navi__prev-txt.pc
+                        |PREV
+                    :php
+                      else:
+                    a(href!="<?php echo get_permalink( $prev_post->ID ); ?>").page-navi__prev
+                      .page-navi__arrow
+                      .page-navi__prev-txt.pc
+                        |PREV
+                    :php
+                      endif;
+
+                    :php
+                      $next_post = get_next_post();
+                      if( !empty( $next_post ) ) :
+                    a(href!="<?php echo get_permalink( $next_post->ID ); ?>").page-navi__next
+                      .page-navi__next-txt.pc
+                        |NEXT
+                      .page-navi__arrow.arrow-reverse
+                    :php
+                      else:
+                    a(href!="<?php echo get_permalink( $next_post->ID ); ?>").page-navi__next.unable-link
+                      .page-navi__next-txt.pc
+                        |NEXT
+                      .page-navi__arrow.arrow-reverse
+                    :php
+                      endif;
                   .c-news-desc__btn.js-inview(data-inview="fade-top") 
-                    a(href!="<?php echo home_url( '/' ); ?>news/") 一覧へ戻る                                                 
+                    a(href!="<?php echo home_url( '/' ); ?>news/") 一覧へ戻る
+
+                .s-news-bottom.js-inview(data-inview="fade-top") 
+                  .c-i-inner
+                    .s-news-bottom__title ほかの最新記事を見る
+                    .s-news-bottom__container 
+                      | <?php
+                      |  $tax_query = '';
+                      |  if( !empty($_GET["cat"]) && $_GET['cat'] ) {
+                      |   $tax_query = array('taxonomy' => 'news_cat','field' => 'name','terms' => $_GET['cat']);
+                      |  }
+                      |  $args = array(
+                      |   'post_type' => 'news', // 投稿タイプのスラッグを指定
+                      |   'posts_per_page' => 4, // 投稿件数の指定
+                      |   'paged' => $paged,
+                      |   'tax_query' => array(
+                      |     $tax_query,
+                      |   )
+                      |  );
+                      |  $the_query = new WP_Query($args); if($the_query->have_posts()): ?>
+                      ul.s-news-bottom__list
+                        | <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+                        li.s-news-bottom__item
+                          a(href!="<?php the_permalink(); ?>")
+                            .s-news-bottom__item-img
+                              |<?php if (get_the_post_thumbnail_url()) : ?>
+                              img(src!="<?php echo get_the_post_thumbnail_url(); ?>")
+                              |<?php else: ?>
+                              img(src!="<?php echo get_template_directory_uri(); ?>/common/images/common/cobble.jpg")
+                              |<?php endif; ?>
+                            .left-content 
+                              .date.en <?php echo the_time('Y.m.d'); ?>
+                              .cat 
+                                |<?php 
+                                |$cat = get_the_terms($post->ID, "news_cat");
+                                |foreach($cat as $val => $value): ?>
+                                |  <?php if($val === array_key_first($cat)): ?>
+                                |    <?php echo $value -> name; ?>
+                                |  <?php endif; ?>
+                                |<?php endforeach; ?>
+                            .right-content   
+                              .title <?php the_title(); ?>        
+                        |<?php endwhile; ?>
+                      |<?php endif; ?>
+
             include /elements/footer
 
 

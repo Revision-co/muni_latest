@@ -1,3 +1,45 @@
 .c-pagination {
 
 }
+
+.page-navi {
+  // margin-top: 5rem
+  display: flex;
+  width: 22rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem auto 0;
+  &__prev {
+    display: flex;
+    align-items: center;
+    
+    &-txt {
+      @include font(1.7, 500, 0.1, 1.4);
+      color: #325537;
+    }
+  }
+
+  &__arrow {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0 0.5rem;
+    border-left: 1px solid #325537;
+    border-bottom: 1px solid #325537;
+    transform: rotate(45deg);
+  }
+
+  &__next {
+    display: flex;
+    align-items: center;
+
+    &-txt {
+      @include font(1.7, 500, 0.1, 1.4);
+      color: #325537;
+    }
+  }
+}
+
+.arrow-reverse {
+  transform: rotate(-135deg);
+}

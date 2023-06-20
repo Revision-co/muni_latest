@@ -152,18 +152,18 @@ html(lang="ja")
                                 |<?php endforeach; ?>
                               .title <?php the_title(); ?>      
                       |<?php endwhile; ?>
-
-                    .c-news__pagenav 
-                      |<?php
-                      |  if( function_exists('wp_pagenavi') ) {
-                      |    wp_pagenavi(array('query' => $the_query));
-                      |  }
-                      |?>
-                      |<?php else: ?>
-                      p
-                        |該当するお知らせはありません。
-                      |<?php endif; ?>
-                      |<?php wp_reset_postdata(); ?>
+                  
+                  .c-news__pagenav 
+                    |<?php
+                    |  if( function_exists('wp_pagenavi') ) {
+                    |    wp_pagenavi(array('query' => $the_query));
+                    |  }
+                    |?>
+                    |<?php else: ?>
+                    p
+                      |該当するお知らせはありません。
+                    |<?php endif; ?>
+                    |<?php wp_reset_postdata(); ?>
 
                   //- #tabEvent.c-news__list
                   //-   | <?php 

@@ -611,7 +611,7 @@
       &__btn {
         width: 20rem;
         height: 4rem;
-        margin: 3rem auto 0;
+        margin: 6rem auto 0;
         font-size: 1.4rem;
         font-weight: bold;
   
@@ -637,4 +637,136 @@
       }
     }
   }
+}
+
+
+.s-news-bottom {
+  position: relative;
+  margin-top: 4rem;
+  padding-bottom: 10rem;
+  background-color: #628667;
+  bottom: -10rem;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    top: -13rem;
+    left: 50%;
+    z-index: -1;
+    width: 100%;
+    height: 13.6rem;
+    content: "";
+    background: url(../images/top/news_deco_after.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(-50%) translateY(3rem) scale(-1, 1);
+  }
+
+  &__title {
+    @include font(1.8, 700, 0.05, 1.4);
+    color: #fff;
+  }
+
+  &__container {
+  
+  }
+  
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 2rem;
+    margin: 1.5rem auto 0;
+    padding-top: 3rem;
+    border-top: 1px solid #fff;
+
+    li {
+      padding-bottom: 2rem;
+      a {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        @media (--large) {
+          &:hover {
+            &::before {
+              background: #fff;
+              border: 0.1rem solid #325537;
+            }
+            &::after {
+              border-color: #325537;
+            }
+            .top-img {
+              img {
+                transform: scale(1.05);
+              }
+            }
+            .left-content {
+              opacity: 0.7;
+            }
+            .right-content {
+              opacity: 0.7;
+            }
+          }
+        }
+
+        .top-img {
+          width: 19rem;
+          height: auto;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+          }
+        }
+
+        .left-content {
+          display: flex;
+          align-items: center;
+          margin-top: 1rem;
+          transition: .3s;
+          .date {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-right: 1rem;
+          }
+          .cat {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            border: 0.1rem solid #fff;
+          }
+        }
+
+        .right-content {
+          width: 100%;
+          transition: .3s;
+
+          .title {
+            margin-top: 0.8rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            line-height: 2;
+            color: #fff;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+  
+    &-img {
+      
+    }
+  }
+}
+
+.p-none {
+  padding-bottom: 0 !important;
 }
