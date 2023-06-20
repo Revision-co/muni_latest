@@ -295,7 +295,8 @@
           p {
             @include font(2.8, 500, 0.05, 1.4);
             color: #fff;
-            transition: .3s
+            transition: .3s;
+            font-family: futura-pt, sans-serif;
           }
         }
 

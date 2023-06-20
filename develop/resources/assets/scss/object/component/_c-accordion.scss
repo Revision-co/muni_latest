@@ -73,20 +73,26 @@
       position: relative;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       &:nth-of-type(n + 2){
-        margin-top: 0.5rem;
+        margin-top: 0.8rem;
       }
       &::before {
         position: absolute;
         content: "";
         top: 50%;
         transform: translateY(-50%);
-        right: 4.7rem;
+        right: 6.5rem;
         background: url(../images/common/dot.png) no-repeat center center / cover;
-        width: 6.5rem;
+        width: 7rem;
         height: 2px;
-        
       }
+      &.short {
+        &::before {
+          width: 3.5rem;
+        }
+      }
+
       &.none {
         &::before {
           display: none;
