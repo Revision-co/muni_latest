@@ -3,14 +3,14 @@
   font-family: 'Noto Sans JP', sans-serif;
   &-inner{
     width: 100%;
-    margin: 15rem auto 10rem;
+    margin: 15rem auto 21rem;
     &__title{
       font-family: 'futura-pt', sans-serif;
       font-size: 3.6rem;
       span{
         display: block;
         font-size: 1.2rem;
-        opacity: 0.8;
+        color: #222;
       }
 
     }
@@ -35,7 +35,7 @@
         }
         &:nth-child(3){
           height: 10rem;
-          line-height: 10rem;
+          line-height: 8.5rem;
         }
       }
     }

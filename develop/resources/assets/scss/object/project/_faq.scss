@@ -8,9 +8,8 @@
       font-size: 3.6rem;
       span{
         display: block;
-        // font-size: 1.2rem;
-        @include font(1.2,500,0.05,1.6rem);
-        opacity: 0.8;
+        color:#222;
+        @include font(1.2,500,0.1,1.6rem);
       }
 
     }
@@ -18,32 +17,25 @@
       padding: 4.78rem 1.8rem 0 2.2rem;
       display: flex;
       li{
-        @include font(1.6,700,0.05,1.6rem);
+        @include font(1.6,700,0.09,1.6rem);
         &:nth-child(2){
           padding: 0 2rem 0 2.1rem;
         }
         a{
+          display: block;
+          height: 4rem;
           color: #325537;
           position: relative;
           &::before{
             position: absolute;
             content: "";
-            bottom: -100%;
-            left:49%;
-            background-color: #325537;
-            height: 2.5px;
+            bottom: 0;
+            left:50%;
+            height: 10px;
             width: 10px;
-            transform: rotate(-45deg);
-          }
-          &::after{
-            position: absolute;
-            content: "";
-            bottom: -100%;
-            right: 47%;
-            background-color: #325537;
-            height: 2.5px;
-            width: 10px;
-            transform: rotate(45deg);
+            border-bottom: solid 2px #325537;
+            border-right: solid 2px #325537;
+            transform: rotate(45deg) translateX(-50%) translateX(-2px);
           }
           &:hover{
             opacity: 0.5;
@@ -56,7 +48,7 @@
       width: 90%;
       margin: 0 auto;
       .title{
-          @include font(2.4,700,0.05,2.5rem);
+          @include font(2.4,700,0.1,2.5rem);
           color: #325537;
           padding:9.2rem 0 1.9rem;
       }
