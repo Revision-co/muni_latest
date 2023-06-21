@@ -2,7 +2,7 @@
   font-family: 'Noto Sans JP', sans-serif;
   &-inner{
     width: 100%;
-    margin: 15rem auto 10rem;
+    margin: 15rem auto 15rem;
     &__title{
       font-family: 'futura-pt', sans-serif;
       font-size: 3.6rem;
@@ -70,24 +70,23 @@
         .c-acc{
           border: none;
           margin-top: 0;
-          margin-left: 4rem;
-          @include font(1.4,700,0.05,2.5rem);
-          .question, .answer{
-            width: 24rem;
-            position: relative;
-            &::before{
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              left: -4rem;
-              content: "Q";
-              @include font(2.5,700,0.05,2.5rem);
+          @include font(1.4,700,0.1,2.5rem);
+          &__head-title, .flex{
+            width: 81.5%;
+            display: flex;
+            span{
+              @include font(2.5,700,0.1,5rem);
+              padding-right: 1.4rem;
               color: #325537;
             }
           }
-          .answer::before{
-            content: "A";
+          &__list{
+            opacity: 0.7;
+            p{
+              color: #325537;
+            }
           }
+
         }
       }
     }
