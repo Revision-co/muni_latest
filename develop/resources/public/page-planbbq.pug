@@ -59,7 +59,7 @@ html(lang="ja")
                 h1.en PLAN
                 small プラン
               .p-plan__heading-btn.js-inview(data-inview="fade-top")
-                //- a(href="").en ACTIVITY
+                a(href!="<?php echo home_url('/')?>planactivity").en ACTIVITY
                 p.en BBQ
             section
               .s-bbq.js-inview-each.js-inview 
@@ -340,8 +340,8 @@ html(lang="ja")
                         li
                           p ハタ紘泉 瓶ラムネ
                           p ¥330
-                  //- .s-bbq__link.js-inview(data-inview="fade-top")
-                  //-   a(href="" target="_blank") ACTIVITY PLANを見る
+                  .s-bbq__link.js-inview(data-inview="fade-top")
+                    a(href!="<?php echo home_url('/')?>planactivity") ACTIVITY PLANを見る
 
             include /elements/footer
     include /elements/body-append
