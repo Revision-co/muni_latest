@@ -14,7 +14,7 @@
 
     }
     &__pagelink{
-      padding: 4.78rem 1.8rem 5.31rem 2.2rem;
+      padding: 4.78rem 1.8rem 0 2.2rem;
       display: flex;
       li{
         @include font(1.6,700,0.05,1.6rem);
@@ -42,7 +42,6 @@
             background-color: #325537;
             height: 2.5px;
             width: 10px;
-            // rotate: 45%;
             transform: rotate(45deg);
           }
           &:hover{
@@ -53,6 +52,13 @@
       }
     }
     &__contain{
+      width: 90%;
+      margin: 0 auto;
+      .title{
+          @include font(2.4,700,0.05,2.5rem);
+          color: #325537;
+          padding:9.2rem 0 1.9rem;
+      }
       &-wrap{
         li{
           border-bottom: 1px solid #325537;
@@ -65,7 +71,7 @@
           margin-top: 0;
           margin-left: 4rem;
           @include font(1.4,700,0.05,2.5rem);
-          .question{
+          .question, .answer{
             width: 24rem;
             position: relative;
             &::before{
@@ -78,10 +84,15 @@
               color: #325537;
             }
           }
-          .answer{
-            width: 24rem;
+          .answer::before{
+            content: "A";
           }
         }
+      }
+    }
+    #area-1{
+      .title{
+        padding-top: 7rem;
       }
     }
   }
