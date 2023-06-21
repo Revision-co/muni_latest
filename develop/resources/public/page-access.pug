@@ -1,0 +1,155 @@
+doctype html
+html(lang="ja")
+  head
+    include /elements/head-property
+    include /elements/head-assets
+    //- include /mixin/meta
+    //- +meta({
+    //-     title:"website title"
+    //- })
+    |<?php wp_head(); ?>
+  body
+    include /elements/body-preppend
+
+    .l-main.p-access
+      main
+        .s-pc
+          .p-fixedEle
+            .slider
+              .slider-img.slider-img-01
+              .slider-img.slider-img-02
+
+            .p-logo
+              include ../assets/pug/svg/logo.svg
+
+            //- .p-insta 
+            //-   include ../assets/pug/svg/insta.svg
+
+            .p-anchor 
+              a(href!="<?php echo home_url( '/' ); ?>#concept").en Concept
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
+              br
+              a(href!="<?php echo home_url( '/' ); ?>planbbq").en Plan
+              br
+              a(href!="<?php echo home_url( '/' ); ?>news/").en News
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#access").en Access
+              //- br
+              //- a(href!="<?php echo home_url( '/' ); ?>#qa").en Q&A
+              br
+              a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
+              br
+              .p-anchor__contact
+                a(href!="https://reserva.be/munibbq/aikotoba" target="_blank")
+                  .p-anchor__contact-wrap
+                    p.en RESERVE
+                    include ../assets/pug/svg/ic_reserve_green.svg
+                  span ご予約
+
+            .p-cr.en © cobble
+
+          .c-inner 
+            include /elements/header
+            .p-access__heading.js-inview-each.js-inview 
+              .c-ttl01.js-inview(data-inview="fade-top")
+                h1.en ACCESS
+                small アクセス
+            .c-u-inner
+              section 
+              .s-top.js-inview-each.js-inview 
+                .s-top__img01.js-inview(data-inview="fade-top") 
+                  img(src!="<?php echo get_template_directory_uri(); ?>/common/images/top/img-map.png", alt="地図")
+                .s-top__map.js-inview(data-inview="fade-top") 
+                  a(href="https://goo.gl/maps/X6Dg1hPZC8uycNna7" target="_blank") 
+                    span.en Google
+                    |マップはこちら
+                    include ../assets/pug/svg/ic_link-black.svg
+                .s-top__list.js-inview(data-inview="fade-top") 
+                  .content 
+                    p 栃木県宇都宮市大谷町909 大谷資料館東側隣接
+                  .content 
+                    p TEL：028-666-0579
+                .s-top__img02
+                  img(src!='<?php echo get_template_directory_uri(); ?>/common/images/access/img01.jpg', alt='').js-inview(data-inview="fade-top") 
+                  img(src!='<?php echo get_template_directory_uri(); ?>/common/images/access/img01.jpg', alt='').js-inview(data-inview="fade-top") 
+                section.js-inview-each.js-inview 
+                  .s-car
+                    .s-car__title.js-inview(data-inview="fade-top") 
+                      span 
+                        img(src!='<?php echo get_template_directory_uri(); ?>/common/images/access/icon01.png', alt='')
+                      h2 高速道路でのアクセス
+                    .s-car__text.js-inview(data-inview="fade-top") 
+                      p 高速道路をご利用の方は、東北自動車道もしくは北関東自動車道よりお越しいただけます。
+                    .s-car__time.js-inview(data-inview="fade-top") 
+                      .s-car__time-container 
+                        .s-car__time-group01
+                          span 東北自動車道
+                          .s-car__time-group01-content
+                            .car-wrap 
+                              p 宇都宮IC
+                              p 約<span>12</span>分
+                            .car-wrap 
+                              p 鹿沼IC
+                              p 約<span>20</span>分
+                        .s-car__time-group02
+                          span 北関東自動車道
+                          .s-car__time-group02-content
+                            .car-wrap 
+                              p 宇都宮上三川IC
+                              p 約<span>40</span>分
+                            .car-wrap 
+                              p 壬生IC
+                              p 約<span>30</span>分
+                      .s-car__time-square
+                        img(src!='<?php echo get_template_directory_uri(); ?>/common/images/access/logo.png', alt='')
+                      .s-car__bottom.js-inview(data-inview="fade-top") 
+                        .s-car__bottom-port
+                          img(src!='<?php echo get_template_directory_uri(); ?>/common/images/access/icon-p.png', alt='')
+                          p 駐車場をご利用の方
+                    .s-car__bottom__text.js-inview(data-inview="fade-top") 
+                      p 
+                        |大谷資料館駐車場
+                        br
+                        |住所：宇都宮市大谷町909（cobbleより徒歩約5分）をご利用下さい。
+                        br
+                        |※繁忙期は一部利用制限がある可能性がございます。
+                section
+                  .s-bus.u-mb-15.js-inview-each.js-inview 
+                    .s-bus__title.js-inview(data-inview="fade-top") 
+                      span 
+                        img(src!='<?php echo get_template_directory_uri(); ?>/common/images/access/icon02.png', alt='')
+                      h2 路線バスでのアクセス
+                    .s-bus__text.js-inview(data-inview="fade-top") 
+                      p 
+                        |JR宇都宮駅西口6番乗場から大谷・立岩行きに乗車し約30分。
+                        br
+                        |東武宇都宮駅からは、東武駅前バス停で大谷・立岩行きに乗車し約20分。
+                        br
+                        |資料館入口で下車して、徒歩約5分です。
+                    .s-bus__link.js-inview(data-inview="fade-top") 
+                      a(href="" target="_blank") 
+                        p バスの時刻はこちら
+                        img(src!='<?php echo get_template_directory_uri(); ?>/common/images/access/icon-link.png', alt='')
+                    .s-bus__time.js-inview(data-inview="fade-top") 
+                      .s-bus__time-top 
+                        .s-bus__time-top-content
+                          .bus-wrap 
+                            p JR宇都宮駅西口
+                            p 6番乗り場<br>（大谷・立岩行）
+                            p 約<span>30</span>分
+                          .bus-wrap 
+                            p 東武宇都宮駅
+                            p 東武駅前バス停<br>（大谷・立岩行）
+                            p 約<span>20</span>分
+                      .s-bus__time-center 
+                        p 資料館入口
+                        p 約<span>5</span>分
+                        p 徒歩
+                      .s-bus__time-square
+                        img(src!='<?php echo get_template_directory_uri(); ?>/common/images/access/logo.png', alt='')
+            
+            
+            
+            include /elements/footer
+    include /elements/body-append
