@@ -71,9 +71,9 @@
           border: none;
           margin-top: 0;
           @include font(1.4,700,0.1,2.5rem);
-          &__head-title, &__list{
-            display: flex;
+          &__head-title, .flex{
             width: 81.5%;
+            display: flex;
             span{
               @include font(2.5,700,0.1,5rem);
               padding-right: 1.4rem;
