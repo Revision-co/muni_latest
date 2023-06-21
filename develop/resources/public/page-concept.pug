@@ -1,0 +1,99 @@
+doctype html
+html(lang="ja")
+  head
+    include /elements/head-property
+    include /elements/head-assets
+    //- include /mixin/meta
+    //- +meta({
+    //-     title:"website title"
+    //- })
+    |<?php wp_head(); ?>
+  body
+    include /elements/body-preppend
+
+    .l-main.p-concept
+      main
+        .s-pc
+          .p-fixedEle
+            .slider
+              .slider-img.slider-img-01
+              .slider-img.slider-img-02
+
+            .p-logo
+              include ../assets/pug/svg/logo.svg
+
+            //- .p-insta 
+            //-   include ../assets/pug/svg/insta.svg
+
+            .p-anchor 
+              a(href!="<?php echo home_url( '/' ); ?>#concept").en Concept
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
+              br
+              a(href!="<?php echo home_url( '/' ); ?>planbbq").en Plan
+              br
+              a(href!="<?php echo home_url( '/' ); ?>news/").en News
+              br
+              a(href!="<?php echo home_url( '/' ); ?>#access").en Access
+              //- br
+              //- a(href!="<?php echo home_url( '/' ); ?>#qa").en Q&A
+              br
+              a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
+              br
+              .p-anchor__contact
+                a(href!="https://reserva.be/munibbq/aikotoba" target="_blank")
+                  .p-anchor__contact-wrap
+                    p.en RESERVE
+                    include ../assets/pug/svg/ic_reserve_green.svg
+                  span ご予約
+
+            .p-cr.en © cobble
+
+          .c-inner 
+            include /elements/header
+            .p-concept__heading.js-inview-each.js-inview 
+              .c-ttl01.js-inview(data-inview="fade-top")
+                h1.en CONCEPT
+                small コンセプト
+            .c-u-inner.js-inview-each.js-inview 
+              .p-concept__heading-text.js-inview(data-inview="fade-top")
+                h2 
+                  |大自然を五感で堪能する
+                  br
+                  |石の里「大谷」のアウトドア<br>フィールド
+                p 
+                  |人里離れた国の景勝地「大谷」。
+                  <br>
+                  |切り立った薄緑色の岩肌と勇ましい木々を望む独特の光景は私たちに心地よい非日常感とフレッシュな時間をもたらしてくれます。
+                  br 
+                  |風の吹くまま気の向くまま五感で自然を楽しめる憩いの場所です。
+              .p-concept__heading-img01.js-inview(data-inview="fade-top")
+                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/concept/img01.jpg', alt='')
+              .p-concept__heading-img02.js-inview(data-inview="fade-top")
+                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/concept/img02.jpg', alt='')
+            section.js-inview-each.js-inview.u-mb-15
+              .c-u-inner 
+                .p-concept-body
+                  .p-concept-body__title.js-inview(data-inview="fade-top")
+                    h3 都市と地方、ヒトと場所をつなぐみんなの笑顔が集う場所
+                  .p-concept-body__text.js-inview(data-inview="fade-top")
+                    p 
+                      |都心から約2時間。
+                      br
+                      |街の喧騒を忘れ、時間に追わることなく、年齢、性別、居住地などあらゆるボーダーを超えて楽しめる場所。観光客も地元の方も気軽にふれあえる唯一無二のコミュニティスポットです。
+                  .p-concept-body__img.js-inview(data-inview="fade-top")
+                    img(src!='<?php echo get_template_directory_uri(); ?>/common/images/concept/img03.jpg', alt='')
+                  .p-concept-body__title.js-inview(data-inview="fade-top")
+                    h3 
+                      |街の資産を活かし、育てる
+                      br
+                      |cobble〜OYA stone village〜に込められた魅力。
+                  .p-concept-body__text.js-inview(data-inview="fade-top")
+                    p 
+                      |「遊ぶ、食べる、過ごす」仲間と過ごす豊かな時間を通じてこの場所の魅力をもっと知ってほしいと願っています。
+                      br
+                      |長い歴史を持つ原風景に人々と文化が集い、
+                      br
+                      |新しい価値と感動が生まれる場所を築いていきます。
+            include /elements/footer
+    include /elements/body-append
