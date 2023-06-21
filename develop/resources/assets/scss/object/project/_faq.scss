@@ -9,7 +9,7 @@
       span{
         display: block;
         color:#222;
-        @include font(1.2,500,0.1,1.6rem);
+        @include font(1.2,700,0.1,1.6rem);
       }
 
     }
@@ -19,7 +19,7 @@
       li{
         @include font(1.6,700,0.09,1.6rem);
         &:nth-child(2){
-          padding: 0 2rem 0 2.1rem;
+          padding: 0 2rem 0 2.1rem; 
         }
         a{
           display: block;

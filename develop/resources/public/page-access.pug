@@ -26,17 +26,17 @@ html(lang="ja")
             //-   include ../assets/pug/svg/insta.svg
 
             .p-anchor 
-              a(href!="<?php echo home_url( '/' ); ?>#concept").en Concept
+              a(href!="<?php echo home_url( '/' ); ?>concept").en Concept
               br
-              a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
+              a(href!="<?php echo home_url( '/' ); ?>facility").en Facility
               br
               a(href!="<?php echo home_url( '/' ); ?>planbbq").en Plan
               br
               a(href!="<?php echo home_url( '/' ); ?>news/").en News
               br
-              a(href!="<?php echo home_url( '/' ); ?>#access").en Access
-              //- br
-              //- a(href!="<?php echo home_url( '/' ); ?>#qa").en Q&A
+              a(href!="<?php echo home_url( '/' ); ?>access").en Access
+              br
+              a(href!="<?php echo home_url( '/' ); ?>faq").en Q&A
               br
               a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
               br
@@ -128,7 +128,7 @@ html(lang="ja")
                         br
                         |資料館入口で下車して、徒歩約5分です。
                     .s-bus__link.js-inview(data-inview="fade-top") 
-                      a(href="" target="_blank") 
+                      a(href="http://kantobus.info/timetable/result/?no=1&de=3&f_from_type=1&f_from_genre=&f_from=%E3%81%86%E3%81%A4%E3%81%AE%E3%81%BF%E3%82%84%E3%81%88%E3%81%8D" target="_blank") 
                         p バスの時刻はこちら
                         img(src!='<?php echo get_template_directory_uri(); ?>/common/images/access/icon-link.png', alt='')
                     .s-bus__time.js-inview(data-inview="fade-top") 

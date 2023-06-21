@@ -26,17 +26,17 @@ html(lang="ja")
             //-   include ../assets/pug/svg/insta.svg
 
             .p-anchor 
-              a(href!="<?php echo home_url( '/' ); ?>#concept").en Concept
+              a(href!="<?php echo home_url( '/' ); ?>concept").en Concept
               br
-              a(href!="<?php echo home_url( '/' ); ?>#facility").en Facility
+              a(href!="<?php echo home_url( '/' ); ?>facility").en Facility
               br
               a(href!="<?php echo home_url( '/' ); ?>planbbq").en Plan
               br
               a(href!="<?php echo home_url( '/' ); ?>news").en News
               br
-              a(href!="<?php echo home_url( '/' ); ?>#access").en Access
-              //- br
-              //- a(href!="<?php echo home_url( '/' ); ?>#qa").en Q&A
+              a(href!="<?php echo home_url( '/' ); ?>access").en Access
+              br
+              a(href!="<?php echo home_url( '/' ); ?>faq").en Q&A
               br
               a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
               br
@@ -98,19 +98,19 @@ html(lang="ja")
                   .p-top-desc__scroll.en 
                     |SCROLL
 
-            #concept.p-top-concept.js-inview-each.js-inview  
+            .p-top-concept.js-inview-each.js-inview  
               .c-i-inner
                 .p-top-concept__title.en.js-inview(data-inview="fade-top") CONCEPT
                   span コンセプト
                 .p-top-concept__mainTxt.js-inview(data-inview="fade-top") 大自然を五感で堪能！<br>全天候型アウトドアフィールド
                 .p-top-concept__text.js-inview(data-inview="fade-top") 
                   p 人里離れた景勝地「大谷」で過ごす非日常。<br>切り立った岩肌と木々を望む絶景の里で<br>最高の思い出をつくりませんか？
-                //- .p-top-concept__link.js-inview(data-inview="fade-top") 
-                //-   .c-btn01
-                //-     a(href="")
-                //-       p.en VIEW ALL
-                //-       span
-                //-         include ../assets/pug/svg/arrow-white.svg
+                .p-top-concept__link.js-inview(data-inview="fade-top") 
+                  .c-btn01
+                    a(href!="<?php echo home_url( '/' ); ?>concept")
+                      p.en VIEW ALL
+                      span
+                        include ../assets/pug/svg/arrow-white.svg
             .p-top-facility.js-inview-each.js-inview 
               .p-top-facility__cell.js-inview(data-inview="fade-top")
                 .p-top-facility__img 
@@ -122,19 +122,19 @@ html(lang="ja")
                   p.js-fadeup.js-inview(data-inview="fade-top") 
                     span アウトドアフィールド
 
-              #facility.c-i-inner
+              .c-i-inner
                 .p-top-facility__title.en.js-inview(data-inview="fade-top") FACILITY
                   span 施設紹介
                 .p-top-facility__mainTxt.js-inview(data-inview="fade-top") 好きなスタイルで<br>笑顔あふれるひとときを
 
                 .p-top-facility__text.js-inview(data-inview="fade-top") 
                   p 開放感あふれるcobble〜OYA stone village〜には、旬の食材を味わえるBBQはもちろんのこと、小さなお子様も楽しめるトレジャーハントや岩肌を感じられるクライミング、大自然の中でリフレッシュできる屋外サウナがあります。すべての人が楽しめる、全天候型総合体験施設です。
-                //- .p-top-facility__link.js-inview(data-inview="fade-top") 
-                //-   .c-btn02
-                //-     a(href="")
-                //-       p.en VIEW ALL
-                //-       span
-                //-         include ../assets/pug/svg/arrow-white.svg
+                .p-top-facility__link.js-inview(data-inview="fade-top") 
+                  .c-btn02
+                    a(href!="<?php echo home_url( '/' ); ?>facility")
+                      p.en VIEW ALL
+                      span
+                        include ../assets/pug/svg/arrow-white.svg
               .p-top-facility__cell.js-inview(data-inview="fade-top")
                 .p-top-facility__pct
                   img(src!="<?php echo get_template_directory_uri(); ?>/common/images/top/img-facility01.png", alt="みんなで食べるとやっぱり楽しい。")
@@ -148,7 +148,7 @@ html(lang="ja")
                   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/top/img-facility05.jpg', alt='')
                   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/top/img-facility06.jpg', alt='')
 
-            #plan.p-top-plan.js-inview-each.js-inview 
+            .p-top-plan.js-inview-each.js-inview 
               .p-top-plan__inner.c-i-inner
                 .p-top-plan__title.en.js-inview(data-inview="fade-top") PLAN
                   span 料金プラン
@@ -164,7 +164,7 @@ html(lang="ja")
                 .p-top-plan__img.js-inview(data-inview="fade-top") 
                   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/top/plan-img.png', alt='')
             
-            #news.c-news.js-inview-each.js-inview 
+            .c-news.js-inview-each.js-inview 
               .c-i-inner
                 .c-news__title.en.js-inview(data-inview="fade-top") NEWS
                   span お知らせ
@@ -215,7 +215,7 @@ html(lang="ja")
                       span
                         include ../assets/pug/svg/arrow-white.svg
             
-            #access.p-top-access.js-inview-each.js-inview 
+            .p-top-access.js-inview-each.js-inview 
               .c-i-inner
                 .p-top-access__title.en.js-inview(data-inview="fade-top") ACCESS
                   span アクセス
@@ -229,17 +229,17 @@ html(lang="ja")
 
                 .p-top-access__list.js-inview(data-inview="fade-top") 
                   .content 
-                    p 栃木県宇都宮市大谷町909　大谷資料館東側隣接
+                    p 栃木県宇都宮市大谷町909 大谷資料館東側隣接
                   .content 
                     p TEL：028-666-0579
-                      //- br
-                      //- |FAX：028-666-0579
-                //- .p-top-access__link.js-inview(data-inview="fade-top") 
-                //-   .c-btn01
-                //-     a(href="")
-                //-       p.en VIEW ALL
-                //-       span
-                //-         include ../assets/pug/svg/arrow-white.svg
+                      br
+                      |FAX：028-666-0579
+                .p-top-access__link.js-inview(data-inview="fade-top") 
+                  .c-btn01
+                    a(href!="<?php echo home_url( '/' ); ?>access")
+                      p.en VIEW ALL
+                      span
+                        include ../assets/pug/svg/arrow-white.svg
             
             .p-top-reserve.js-inview-each.js-inview 
               .p-top-reserve__inner.c-i-inner
