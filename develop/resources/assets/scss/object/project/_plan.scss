@@ -69,14 +69,6 @@
     ul {
     
       li {
-        justify-content: initial;
-        &::before {
-          display: none;
-        }
-        &:nth-of-type(n + 2){
-          margin-top: 0;
-        }
-
         // 単品メニュー
         ul {
           display: grid;
@@ -86,6 +78,9 @@
           li {
             flex-direction: column;
             align-items: flex-start;
+            &:nth-of-type(n + 2){
+              margin-top: 0;
+            }
             .item-img {
               width: 100%;
               height: auto;

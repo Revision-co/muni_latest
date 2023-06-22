@@ -45,7 +45,7 @@
       }
     }
     &__contain{
-      width: 90%;
+      width: 93%;
       margin: 0 auto;
       .title{
           @include font(2.4,700,0.1,2.5rem);
@@ -63,15 +63,27 @@
           border: none;
           margin-top: 0;
           @include font(1.4,700,0.1,2.5rem);
-          &__head-title, .flex{
-            width: 81.5%;
+          &__head-title {
+            width: 85%;
             display: flex;
+            align-items: center;
             span{
               @include font(2.5,700,0.1,5rem);
               padding-right: 1.4rem;
               color: #325537;
             }
           }
+          .flex {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            span{
+              @include font(2.5,700,0.1,5rem);
+              padding-right: 1.4rem;
+              color: #325537;
+            }
+          }
+
           &__list{
             opacity: 0.7;
             p{
