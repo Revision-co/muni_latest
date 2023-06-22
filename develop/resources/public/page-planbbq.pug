@@ -71,7 +71,7 @@ html(lang="ja")
                     p
                       |BBQサイトをご利用の方はお1人様1セットプランのご予約をお願いいたします。
                       br
-                      |利用時間はお1人様3時間までとなります。
+                      |利用時間はお1人様2時間までとなります。
                       br
                       |※平日限定ランチメニューをご希望の方につきましては、セットプランのご予約の必要はございませんが、お席のご予約をしていただくとご案内がスムーズです。
                   .c-ttl02.u-mt-6.js-inview(data-inview="fade-top")
@@ -163,19 +163,35 @@ html(lang="ja")
                           p.text 実際に調理を体験いただけます。
                         span.arrow
                           include ../assets/pug/svg/ic-arrow-white.svg
-                      ul.c-acc__list.a-area
+                      ul.c-acc__list.a-area.s-bbq__item-list
                         li
-                          p 鉄板ガーリックライス2人前<br>（鉄板代含）
-                          p ¥990
-                        li.short
-                          p 特製バンズのグルメ餃子バーガー<br>（鉄板代含）
-                          p ¥1,100
+                          .item-img
+                            span 1
+                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
+                          .text-wrap
+                            p 鉄板ガーリックライス2人前<br>（鉄板代含）
+                            p ¥990
                         li
-                          p 宇都宮焼きそば 2人前<br>(鉄板代含)
-                          p ¥1,320
+                          .item-img
+                            span 2
+                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
+                          .text-wrap.short
+                            p 特製バンズのグルメ餃子バーガー<br>（鉄板代含）
+                            p ¥1,100
                         li
-                          p 特製生地の大谷石窯ピザ<br>（石窯利用代含)
-                          p ¥1,650
+                          .item-img
+                            span 3
+                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
+                          .text-wrap
+                            p 宇都宮焼きそば 2人前<br>(鉄板代含)
+                            p ¥1,320
+                        li
+                          .item-img
+                            span 4
+                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
+                          .text-wrap
+                            p 特製生地の大谷石窯ピザ<br>（石窯利用代含)
+                            p ¥1,650
                     .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
@@ -184,68 +200,112 @@ html(lang="ja")
                           include ../assets/pug/svg/ic-arrow-white.svg
                       ul.c-acc__list.a-area
                         li
-                          p 霜降高原牛串　1本
-                          p ¥1,650
-                        li
-                          p とちぎゆめポーク串　1本
-                          p ¥660
-                        li 
-                          p 那須鶏串　1本
-                          p ¥550
-                        li 
-                          p 骨付きフランクフルト　1本
-                          p ¥330
-                        li.short
-                          p 栃木県産3種の肉盛合せ<br>（霧降高原牛・ゆめポーク・那須鶏）
-                          p ¥2,750
-                        li 
-                          p 霧降高原牛カルビ 100ｇ
-                          p ¥1,100
-                        li 
-                          p 那須豚スペアリブ 100ｇ
-                          p ¥550
-                        li 
-                          p 季節の野菜盛 1人前
-                          p ¥770
-                        li 
-                          p 有頭海老 1尾
-                          p ¥770
-                        li 
-                          p 殻付きホタテ 1枚
-                          p ¥605
-                        li 
-                          p イイダコ串（4匹）1本
-                          p ¥550
-                        li 
-                          p 丸ごとイカ串 1本
-                          p ¥770
-                        li.short
-                          p 小野口さんのとうもろこし 1本
-                          p ¥770
-                        li 
-                          p 肉巻きおにぎり 2個
-                          p ¥550
-                        li 
-                          p 焼きおにぎり 2個
-                          p ¥385
-                        li 
-                          p バターコーンアルミ焼き
-                          p ¥660
-                        li.short
-                          p ゴロゴロとちおとめOYAフロート
-                          p ¥880
-                        li.none
-                          p チョコとマシュマロのスキレットスモア<br>（2～3人分）
-                          p ¥1,320
-                        li 
-                          p ポップコーン
-                          p ¥550
-                        li 
-                          p バナナキャラメリゼ
-                          p ¥385
-                        li 
-                          p バニラアイス
-                          p ¥198
+                          ul
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 霜降高原牛串 1本
+                              p ¥1,650
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p とちぎゆめポーク串 1本
+                              p ¥660
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 那須鶏串 1本
+                              p ¥550
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 骨付きフランクフルト 1本
+                              p ¥330
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 栃木県産3種の肉盛合せ<br>（霧降高原牛・ゆめポーク・那須鶏）
+                              p ¥2,750
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 霧降高原牛カルビ 100g
+                              p ¥1,100
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 那須豚スペアリブ 100g
+                              p ¥550
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 季節の野菜盛 1人前
+                              p ¥770
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 有頭海老 1尾
+                              p ¥770
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 殻付きホタテ 1枚
+                              p ¥605
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p イイダコ串（4匹）1本
+                              p ¥550
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 丸ごとイカ串 1本
+                              p ¥770
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 小野口さんのとうもろこし 1本
+                              p ¥770
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 肉巻きおにぎり 2個
+                              p ¥550
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p 焼きおにぎり 2個
+                              p ¥385
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p バターコーンアルミ焼き
+                              p ¥660
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p ゴロゴロとちおとめOYAフロート
+                              p ¥880
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p チョコとマシュマロのスキレットスモア<br>（2～3人分）
+                              p ¥1,320
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p ポップコーン
+                              p ¥550
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p バナナキャラメリゼ
+                              p ¥385
+                            li
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p バニラアイス
+                              p ¥198
                     .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title

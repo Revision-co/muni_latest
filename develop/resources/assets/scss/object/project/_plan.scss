@@ -66,8 +66,105 @@
       }
     }
 
+    ul {
+    
+      li {
+        justify-content: initial;
+        &::before {
+          display: none;
+        }
+        &:nth-of-type(n + 2){
+          margin-top: 0;
+        }
+
+        // 単品メニュー
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          gap: 2rem;
+          margin-top: 1.5rem;
+          li {
+            flex-direction: column;
+            align-items: flex-start;
+            .item-img {
+              width: 100%;
+              height: auto;
+              img {
+                width: 100%;
+                height: auto;
+              }
+            }
+            p {
+              font-size: 1.3rem;
+              &:nth-of-type(n + 2){
+                display: block;
+                margin-left: auto;
+                margin-top: 0.3rem;
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+
     &__item {
       
+      // アコーディオン内画像ありver
+      &-list {
+        li {
+          flex-direction: column;
+          &:nth-of-type(n + 2){
+            margin-top: 2rem;
+          }
+
+          &::before {
+            display: none;
+          }
+          .item-img {
+            span {
+              position: relative;
+              top: 1.5rem;
+              left: 0;
+              padding: 0.5rem 1.3rem;
+              background-color: #325537;
+              color: #fff;
+              border-radius: 50%;
+              font-size: 2.4rem;
+              font-family: futura-pt, sans-serif;
+            }
+            img {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+          }
+
+          .text-wrap {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 0.5rem;
+            &::before {
+              position: absolute;
+              content: "";
+              top: 50%;
+              transform: translateY(-50%);
+              right: 6.5rem;
+              background: url(../images/common/dot.png) no-repeat center center / cover;
+              width: 7rem;
+              height: 2px;
+            }
+            &.short {
+              &::before {
+                width: 3.5rem;
+              }
+            }
+          }
+        }
+      }
     }
     &__img01 {
       margin-top: 5rem;
