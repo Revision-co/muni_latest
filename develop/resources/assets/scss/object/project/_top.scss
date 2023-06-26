@@ -635,6 +635,7 @@
       right: 4rem;
       display: flex;
       flex-direction: row-reverse;
+      height: 25rem;
 
       p {
         display: block;
@@ -659,6 +660,8 @@
           position: relative;
           z-index: 1;
           display: inline-block;
+          height: fit-content;
+          height: fit-content;
           padding: 1rem;
           letter-spacing: 0.2em;
           background: #fff;
