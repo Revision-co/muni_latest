@@ -100,6 +100,8 @@ html(lang="ja")
                           p 骨付ソーセージ
                         li.none
                           p 季節の野菜盛ハーフ
+                        li.u-mt-2
+                          img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/standard.jpg', alt='')
                     .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
@@ -125,6 +127,8 @@ html(lang="ja")
                           p 季節の野菜盛ハーフ
                         li.none
                           p 牛カルビ
+                        li.u-mt-2
+                          img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/volume.jpg', alt='')
                     .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
@@ -166,29 +170,25 @@ html(lang="ja")
                       ul.c-acc__list.a-area.s-bbq__item-list
                         li
                           .item-img
-                            span 1
-                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
-                          .text-wrap
-                            p 鉄板ガーリックライス2人前<br>（鉄板代含）
-                            p ¥990
-                        li
-                          .item-img
-                            span 2
-                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
+                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-05.jpg', alt='')
                           .text-wrap.short
                             p 特製バンズのグルメ餃子バーガー<br>（鉄板代含）
                             p ¥1,100
                         li
                           .item-img
-                            span 3
-                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
+                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-03.jpg', alt='')
                           .text-wrap
                             p 宇都宮焼きそば 2人前<br>(鉄板代含)
                             p ¥1,320
                         li
-                          .item-img
-                            span 4
-                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
+                          //- .item-img
+                          //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
+                          .text-wrap
+                            p 鉄板ガーリックライス2人前<br>（鉄板代含）
+                            p ¥990
+                        li
+                          //- .item-img
+                          //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
                           .text-wrap
                             p 特製生地の大谷石窯ピザ<br>（石窯利用代含)
                             p ¥1,650
@@ -199,111 +199,80 @@ html(lang="ja")
                         span.arrow
                           include ../assets/pug/svg/ic-arrow-white.svg
                       ul.c-acc__list.a-area
-                        li
-                          ul
-                            li
+                        li.none
+                          ul.top-list
+                            li.none
                               .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-01.jpg', alt='')
+                              p ゴロゴロとちおとめOYAフロート
+                              p ¥880
+                            li.none
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-02.jpg', alt='')
+                              p チョコとマシュマロのスキレットスモア<br>（2～3人分）
+                              p ¥1,320
+                            li.none
+                              .item-img
+                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-04.jpg', alt='')
+                              p 肉巻きおにぎり 2個
+                              p ¥550
+                        li.none
+                          ul.bottom-list
+                            li
                               p 霜降高原牛串 1本
                               p ¥1,650
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p とちぎゆめポーク串 1本
                               p ¥660
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p 那須鶏串 1本
                               p ¥550
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p 骨付きフランクフルト 1本
                               p ¥330
-                            li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                            li.short
                               p 栃木県産3種の肉盛合せ<br>（霧降高原牛・ゆめポーク・那須鶏）
                               p ¥2,750
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p 霧降高原牛カルビ 100g
                               p ¥1,100
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p 那須豚スペアリブ 100g
                               p ¥550
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p 季節の野菜盛 1人前
                               p ¥770
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p 有頭海老 1尾
                               p ¥770
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p 殻付きホタテ 1枚
                               p ¥605
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p イイダコ串（4匹）1本
                               p ¥550
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p 丸ごとイカ串 1本
                               p ¥770
-                            li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                            li.short
                               p 小野口さんのとうもろこし 1本
                               p ¥770
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
-                              p 肉巻きおにぎり 2個
-                              p ¥550
-                            li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p 焼きおにぎり 2個
                               p ¥385
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
+                              p じゃがバター
+                              p ¥660
+                            li
                               p バターコーンアルミ焼き
                               p ¥660
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
-                              p ゴロゴロとちおとめOYAフロート
-                              p ¥880
-                            li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
-                              p チョコとマシュマロのスキレットスモア<br>（2～3人分）
-                              p ¥1,320
-                            li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p ポップコーン
                               p ¥550
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p バナナキャラメリゼ
                               p ¥385
                             li
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img04.jpg', alt='')
                               p バニラアイス
                               p ¥198
                     .c-acc

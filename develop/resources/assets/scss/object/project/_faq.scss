@@ -16,8 +16,9 @@
     &__pagelink{
       padding: 4.78rem 1.8rem 0 2.2rem;
       display: flex;
+      justify-content: space-around;
       li{
-        @include font(1.6,700,0.09,1.6rem);
+        @include font(1.5,700,0.05,1.6rem);
         &:nth-child(2){
           padding: 0 2rem 0 2.1rem; 
         }
@@ -91,6 +92,13 @@
             }
           }
 
+          .align-none {
+            align-items: start;
+
+            span {
+              line-height: 1.4;
+            }
+          }
         }
       }
     }

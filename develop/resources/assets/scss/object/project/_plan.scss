@@ -69,8 +69,7 @@
     ul {
     
       li {
-        // 単品メニュー
-        ul {
+        .top-list {
           display: grid;
           grid-template-columns: repeat(2,1fr);
           gap: 2rem;
@@ -99,6 +98,10 @@
               }
             }
           }
+        }
+
+        .bottom-list {
+          width: 100%;
         }
       }
     }
@@ -194,7 +197,7 @@
     }
 
     &__link {
-      width: 22rem;
+      width: 23.5rem;
       margin: 5rem auto;
       a {
         @include font(1.6, 700, 0.08, 1.4);

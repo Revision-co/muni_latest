@@ -121,7 +121,7 @@
     }
     &__title {
       color: #FFFFFF;
-      margin-top: 4rem;
+      margin-top: 3rem;
       h3 {
         @include font(2.4, 700, 0.05, 1.4);
         color: #FFFFFF;
@@ -153,6 +153,7 @@
     margin-top: 15rem;
 
     &__title {
+      margin-top: 3rem;
       h3 {
         @include font(2.4, 700, 0.05, 1.4);
         color: #222222;
@@ -168,7 +169,7 @@
     }
 
     &__text {
-      margin-top: 3rem;
+      margin-top: 2rem;
       p {
         @include font(1.4, 700, 0.05, 2);
         color: #222222;
@@ -209,7 +210,7 @@
     }
     &__title {
       color: #FFFFFF;
-      margin-top: 4rem;
+      margin-top: 3rem;
       h3 {
         @include font(2.4, 700, 0.05, 1.4);
         color: #FFFFFF;
@@ -241,6 +242,7 @@
     margin-top: 15rem;
 
     &__title {
+      margin-top: 3rem;
       h3 {
         @include font(2.4, 700, 0.05, 1.4);
         color: #222222;
@@ -256,7 +258,7 @@
     }
 
     &__text {
-      margin-top: 3rem;
+      margin-top: 2rem;
       p {
         @include font(1.4, 700, 0.05, 2);
         color: #222222;

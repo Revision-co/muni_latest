@@ -36,7 +36,7 @@ html(lang="ja")
               br
               a(href!="<?php echo home_url( '/' ); ?>access").en Access
               br
-              a(href!="<?php echo home_url( '/' ); ?>faq").en faq
+              a(href!="<?php echo home_url( '/' ); ?>faq").en Q&A
               br
               a(href!="<?php echo home_url( '/' ); ?>contact/").en Contact
               br
@@ -57,8 +57,6 @@ html(lang="ja")
                 li
                   a(href!="#area-1") 予約について
                 li
-                  a(href!="#area-2") 支払いについて
-                li
                   a(href!="#area-3") 施設について
               .p-faq-inner__contain#area-1.js-inview(data-inview="fade-top")
                 p.title 予約について
@@ -73,131 +71,84 @@ html(lang="ja")
                           span.arrow
                             include ../assets/pug/svg/ic-arrow-white.svg
                         .c-acc__list.a-area
-                          .flex
+                          .flex.align-none
                             span A
-                            p 60日前から可能です。
+                            p 60日前～3日前まで予約可能です。<br>シーズン中の土日祝日や夏休みの時期は大変混み合いますのでお早めにお申し込みください。
                     li
                       .c-acc
                         .c-acc__head.a-trigger
                           .c-acc__head-title
                             span Q
-                            p 人数が確定していないのですが席を抑えておくことはできますか？
+                            p 人数が確定していないのですが席の確保は可能ですか？
                           span.arrow
                             include ../assets/pug/svg/ic-arrow-white.svg
                         .c-acc__list.a-area
-                          .flex
+                          .flex.align-none
                             span A
-                            p 人数確定後の予約となり仮押さえはお受けしておりません。
+                            p 仮押さえ等は受け付けておりません。<br>人数変更は予約日の3日前まで可能です。変更の際は予約完了メールをご利用ください。
                     li
                       .c-acc
                         .c-acc__head.a-trigger
                           .c-acc__head-title
                             span Q
-                            p キャンセル待ちはしてますか？
+                            p キャンセル待ちはしていますか？
                           span.arrow
                             include ../assets/pug/svg/ic-arrow-white.svg
                         .c-acc__list.a-area
                           .flex
                             span A
-                            p キャンセル待ちはお受けしておりません。
+                            p キャンセル待ちは受け付けておりません。
                     li
                       .c-acc
                         .c-acc__head.a-trigger
                           .c-acc__head-title
                             span Q
-                            p 場所のみの貸し出しはしてますか？
+                            p 予約プランの当日変更は可能ですか？
                           span.arrow
                             include ../assets/pug/svg/ic-arrow-white.svg
                         .c-acc__list.a-area
-                          .flex
+                          .flex.align-none
                             span A
-                            p 場所のみの貸し出しはお受けしておりません。
+                            p 当日の変更は受け付けておりません。<br>変更をご希望の際はご利用予定日の3日前までにお問い合わせください。
                     li
                       .c-acc
                         .c-acc__head.a-trigger
                           .c-acc__head-title
                             span Q
-                            p １日通しての利用はできますか？
+                            p 人数変更は可能ですか？
                           span.arrow
                             include ../assets/pug/svg/ic-arrow-white.svg
                         .c-acc__list.a-area
-                          .flex
+                          .flex.align-none
                             span A
-                            p 貸し切りプランもご用意しております。<br>（別途料金発生、要問合せ）
+                            p ご利用予定の3日前までは可能です。<br>予約完了メールまたはお電話でご相談ください。
                     li
                       .c-acc
                         .c-acc__head.a-trigger
                           .c-acc__head-title
                             span Q
-                            p 宿泊プランはありますか？
+                            p オプションの追加や変更は可能ですか？
                           span.arrow
                             include ../assets/pug/svg/ic-arrow-white.svg
                         .c-acc__list.a-area
-                          .flex
+                          .flex.align-none
                             span A
-                            p 宿泊プランはございません。
+                            p オプション内容に異なります。<br>予約完了メールまたはお電話でお問い合わせください。
                     li
                       .c-acc
                         .c-acc__head.a-trigger
                           .c-acc__head-title
                             span Q
-                            p 予約プランの変更は当日でもできますか？
+                            p 子ども料金はかかりますか？
                           span.arrow
                             include ../assets/pug/svg/ic-arrow-white.svg
                         .c-acc__list.a-area
-                          .flex
+                          .flex.align-none
                             span A
-                            p 当日の変更は行っておりません。
-                    li
-                      .c-acc
-                        .c-acc__head.a-trigger
-                          .c-acc__head-title
-                            span Q
-                            p 人数変更はいつまでできますか？
-                          span.arrow
-                            include ../assets/pug/svg/ic-arrow-white.svg
-                        .c-acc__list.a-area
-                          .flex
-                            span A
-                            p ご利用予定日の3日前までとなります。
-                    li
-                      .c-acc
-                        .c-acc__head.a-trigger
-                          .c-acc__head-title
-                            span Q
-                            p オプション追加はいつまでできますか？
-                          span.arrow
-                            include ../assets/pug/svg/ic-arrow-white.svg
-                        .c-acc__list.a-area
-                          .flex
-                            span A
-                            p オプション内容により異なりますので、事前にお問合せください。
-                    li
-                      .c-acc
-                        .c-acc__head.a-trigger
-                          .c-acc__head-title
-                            span Q
-                            p 利用時間の変更や延長は出来ますか？
-                          span.arrow
-                            include ../assets/pug/svg/ic-arrow-white.svg
-                        .c-acc__list.a-area
-                          .flex
-                            span A
-                            p 当日の利用状況により承れない可能性がございます。延長の場合はお一人2,000円を頂きます。
-                    li
-                      .c-acc
-                        .c-acc__head.a-trigger
-                          .c-acc__head-title
-                            span Q
-                            p 席の指定はできますか？
-                          span.arrow
-                            include ../assets/pug/svg/ic-arrow-white.svg
-                        .c-acc__list.a-area
-                          .flex
-                            span A
-                            p 席の指定は出来かねます。
-              .p-faq-inner__contain#area-2.js-inview(data-inview="fade-top")
-                p.title 支払いについて
+                            p BBQプランでは小学6年生以下のお子様には料金は発生いたしません。<br>ただし、備品のレンタルもございませんので、お子様用のお箸・お皿は当日受付にてご購入ください。
+
+              .p-faq-inner__contain.js-inview(data-inview="fade-top")
+                p.title#area-3 施設について
                 .p-faq-inner__contain-wrap.js-accordion
                   ul
                     li
@@ -205,22 +156,49 @@ html(lang="ja")
                         .c-acc__head.a-trigger
                           .c-acc__head-title
                             span Q
-                            p 子供の料金はかかりますか？
+                            p 場所のみの貸出はしていますか？
                           span.arrow
                             include ../assets/pug/svg/ic-arrow-white.svg
                         .c-acc__list.a-area
-                          .flex
+                          .flex.align-none
                             span A
-                            p 
-                              |料金が発生するのは中学生以上のお子様になります。
-                              br
-                              |ただし、BBQでは小学生以下の備品等のご用意はございません。
-                              br
-                              |お子様分のお箸・お皿等は、当日受付にてご購入ください。
-              .p-faq-inner__contain#area-3.js-inview(data-inview="fade-top")
-                p.title 施設について
-                .p-faq-inner__contain-wrap.js-accordion
-                  ul
+                            p 場所のみの貸出はしておりません。<br>PLANページからご希望のプランをお選びください。
+                    li
+                      .c-acc
+                        .c-acc__head.a-trigger
+                          .c-acc__head-title
+                            span Q
+                            p 貸し切りはできますか？
+                          span.arrow
+                            include ../assets/pug/svg/ic-arrow-white.svg
+                        .c-acc__list.a-area
+                          .flex.align-none
+                            span A
+                            p 貸し切りプランもご用意しておりますので、お気軽にお問い合わせください（別途料金発生いたします）。
+                    li
+                      .c-acc
+                        .c-acc__head.a-trigger
+                          .c-acc__head-title
+                            span Q
+                            p 宿泊はできますか？
+                          span.arrow
+                            include ../assets/pug/svg/ic-arrow-white.svg
+                        .c-acc__list.a-area
+                          .flex.align-none
+                            span A
+                            p 宿泊プランはございません。<br>お近くの宿泊施設のご案内は可能ですので、お気軽にご相談ください。
+                    li
+                      .c-acc
+                        .c-acc__head.a-trigger
+                          .c-acc__head-title
+                            span Q
+                            p 利用時間の変更や延長はできますか？
+                          span.arrow
+                            include ../assets/pug/svg/ic-arrow-white.svg
+                        .c-acc__list.a-area
+                          .flex.align-none
+                            span A
+                            p 当日の利用状況により承れない可能性がございます。<br>延長の場合はお一人2,000円をいただきます。
                     li
                       .c-acc
                         .c-acc__head.a-trigger
@@ -230,9 +208,9 @@ html(lang="ja")
                           span.arrow
                             include ../assets/pug/svg/ic-arrow-white.svg
                         .c-acc__list.a-area
-                          .flex
+                          .flex.align-none
                             span A
-                            p 大谷資料館様の駐車場をご利用ください。
+                            p 専用の駐車場はございません。<br>大谷資料館様の駐車場をご利用ください。
 
 
             include /elements/footer

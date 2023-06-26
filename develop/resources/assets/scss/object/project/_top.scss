@@ -314,8 +314,9 @@
         &:first-child {
           position: relative;
           width: 32rem;
-          height: 14rem;
+          height: 15rem;
           z-index: 1;
+          transform: rotate(1deg);
         }
         &:last-child {
           position: relative;
@@ -329,8 +330,8 @@
 
     &__img02 {
       position: relative;
-      top: -3rem;
-      left: -2rem;
+      top: 2rem;
+      left: -4rem;
       display: flex;
       align-items: end;
       z-index: 1;
@@ -344,7 +345,7 @@
         }
         &:last-child {
           position: relative;
-          left: -2rem;
+          left: 0;
           width: 7.5rem;
           height: 10rem;
           z-index: 10;
@@ -881,7 +882,7 @@
 
     &__img {
       position: absolute;
-      top: 2.5rem;
+      top: 4.5rem;
       right: 2.5rem;
       width: 18rem;
       height: 16rem;
