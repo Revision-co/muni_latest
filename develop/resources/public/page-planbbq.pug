@@ -69,11 +69,13 @@ html(lang="ja")
                       |BBQ
                   .s-bbq__text.js-inview(data-inview="fade-top")
                     p
-                      |BBQサイトをご利用の方はお1人様1セットプランのご予約をお願いいたします。
+                      |BBQサイトをご利用で中学生以上のお客様はお一人様1プランのご予約をお願いいたします。
                       br
-                      |利用時間はお1人様2時間までとなります。
+                      |また、席のみのご予約も可能です（中学生以上のお客様はお一人様毎の1フード1ドリンクオーダー制）。
                       br
-                      |※平日限定ランチメニューをご希望の方につきましては、セットプランのご予約の必要はございませんが、お席のご予約をしていただくとご案内がスムーズです。
+                      |なお、BBQサイトのご利用時間はお一人様2時間まで（有料にて延長可）となります。
+                      br
+                      |※当日のお受付も可能ですが、当サイトよりお席のご予約をしていただくとご案内がスムーズです。
                   .c-ttl02.u-mt-6.js-inview(data-inview="fade-top")
                     .c-ttl02-wrap
                       h3.en SET PLAN
@@ -91,18 +93,19 @@ html(lang="ja")
                           include ../assets/pug/svg/ic-arrow-white.svg
                       ul.c-acc__list.a-area
                         li 
-                          p 霧降高原牛串
-                          p 1本
+                          p 霧降高原牛
+                          p 80g
                         li 
-                          p とちぎゆめポーク串
+                          p とちぎゆめポーク
+                          p 80g
+                        li
+                          p 骨付フランクフルト
                           p 1本
-                        li.none
-                          p 骨付ソーセージ
                         li.none
                           p 季節の野菜盛ハーフ
-                        li.u-mt-2
-                          img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/standard.jpg', alt='')
-                    .c-acc
+                        //- li.u-mt-2
+                        //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/standard.jpg', alt='')
+                    //- .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
                           p.name 栃木満喫ボリュームプラン
@@ -140,16 +143,16 @@ html(lang="ja")
                           include ../assets/pug/svg/ic-arrow-white.svg
                       ul.c-acc__list.a-area
                         li 
-                          p 霧降高原牛串
-                          p 1本
+                          p 霧降高原牛 
+                          p 80g
                         li 
-                          p とちぎゆめポーク串
-                          p 1本
+                          p とちぎゆめポーク
+                          p 80g
                         li 
                           p エビ、ホタテ、イイダコ串
                           p 1本
                         li.none
-                          p 骨付ソーセージ
+                          p 季節の野菜盛ハーフ
                   .s-bbq__img01.js-inview(data-inview="fade-top")
                     img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/img01.jpg', alt='')
                     img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/img02.jpg', alt='')
@@ -158,12 +161,17 @@ html(lang="ja")
                     .c-ttl02-wrap
                       h3.en OPTION MENU
                     p オプションメニュー
-                    p 当日現地にてご注文ください。
+                    p
+                      |当日現地にてご注文ください。
+                      br
+                      |セットプランの注文が必須ではない小学生以下のお子様には、
+                      br
+                      |各種オプショオンメニューのご注文をおすすめします。
                   .s-bbq__item.js-accordion.js-inview(data-inview="fade-top")
                     .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
-                          p.fs20 調理メニュー
+                          p.fs20 体験メニュー
                           p.text 実際に調理を体験いただけます。
                         span.arrow
                           include ../assets/pug/svg/ic-arrow-white.svg
@@ -206,26 +214,26 @@ html(lang="ja")
                                 img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-01.jpg', alt='')
                               p ゴロゴロとちおとめOYAフロート
                               p ¥880
-                            li.none
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-02.jpg', alt='')
-                              p チョコとマシュマロのスキレットスモア<br>（2～3人分）
-                              p ¥1,320
-                            li.none
-                              .item-img
-                                img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-04.jpg', alt='')
-                              p 肉巻きおにぎり 2個
-                              p ¥550
+                            //- li.none
+                            //-   .item-img
+                            //-     img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-02.jpg', alt='')
+                            //-   p チョコとマシュマロのスキレットスモア<br>（2～3人分）
+                            //-   p ¥1,320
+                            //- li.none
+                            //-   .item-img
+                            //-     img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-04.jpg', alt='')
+                            //-   p 肉巻きおにぎり 2個
+                            //-   p ¥550
                         li.none
                           ul.bottom-list
                             li
-                              p 霜降高原牛串 1本
+                              p 霧降高原牛 80g
                               p ¥1,650
                             li
-                              p とちぎゆめポーク串 1本
+                              p とちぎゆめポーク 80g
                               p ¥660
                             li
-                              p 那須鶏串 1本
+                              p 那須鶏 80g
                               p ¥550
                             li
                               p 骨付きフランクフルト 1本
@@ -233,12 +241,6 @@ html(lang="ja")
                             li.short
                               p 栃木県産3種の肉盛合せ<br>（霧降高原牛・ゆめポーク・那須鶏）
                               p ¥2,750
-                            li
-                              p 霧降高原牛カルビ 100g
-                              p ¥1,100
-                            li
-                              p 那須豚スペアリブ 100g
-                              p ¥550
                             li
                               p 季節の野菜盛 1人前
                               p ¥770
@@ -258,6 +260,9 @@ html(lang="ja")
                               p 小野口さんのとうもろこし 1本
                               p ¥770
                             li
+                              p 肉巻きおにぎり 2個
+                              p ¥550
+                            li
                               p 焼きおにぎり 2個
                               p ¥385
                             li
@@ -266,6 +271,9 @@ html(lang="ja")
                             li
                               p バターコーンアルミ焼き
                               p ¥660
+                            li.none
+                              p チョコとマシュマロのスキレットスモア<br>（2～3人分）
+                              p ¥1,320
                             li
                               p ポップコーン
                               p ¥550
@@ -275,17 +283,17 @@ html(lang="ja")
                             li
                               p バニラアイス
                               p ¥198
-                    .c-acc
-                      .c-acc__head.a-trigger
-                        .c-acc__head-title
-                          p.fs20 平日限定ランチメニュー
-                          p.text お席の予約をするとご案内がスムーズです。
-                        span.arrow
-                          include ../assets/pug/svg/ic-arrow-white.svg
-                      ul.c-acc__list.a-area
-                        li
-                          p 特製お任せランチプレート
-                          p ¥1,650
+                    //- .c-acc
+                    //-   .c-acc__head.a-trigger
+                    //-     .c-acc__head-title
+                    //-       p.fs20 平日限定ランチメニュー
+                    //-       p.text お席の予約をするとご案内がスムーズです。
+                    //-     span.arrow
+                    //-       include ../assets/pug/svg/ic-arrow-white.svg
+                    //-   ul.c-acc__list.a-area
+                    //-     li
+                    //-       p 特製お任せランチプレート
+                    //-       p ¥1,650
                     //- .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
@@ -341,34 +349,50 @@ html(lang="ja")
                         li
                           p 極上レモンサワー
                           p ¥660
+                        li
+                          p ノンアルコールビール
+                          p ¥550
                     .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
                           p.fs20 ソフトドリンク
                         span.arrow
                           include ../assets/pug/svg/ic-arrow-white.svg
-                      ul.c-acc__list.a-area
+                      ul.c-acc__list.a-area.s-bbq__item-list
+                        li.none
+                          .item-img
+                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-01.jpg', alt='')
+                          .text-wrap.short
+                            p ゴロゴロとちおとめOYAフロート 
+                            p ¥880
                         li
-                          p コカコーラ
-                          p ¥495
+                          .text-wrap
+                            p コカコーラ
+                            p ¥495
                         li
-                          p ジンジャーエール
-                          p ¥495
+                          .text-wrap
+                            p ジンジャーエール
+                            p ¥495
                         li
-                          p オレンジジュース
-                          p ¥440
+                          .text-wrap
+                            p オレンジジュース
+                            p ¥440
                         li
-                          p りんごジュース
-                          p ¥440
+                          .text-wrap
+                            p りんごジュース
+                            p ¥440
                         li
-                          p グレープフルーツジュース
-                          p ¥440
+                          .text-wrap
+                            p グレープフルーツジュース
+                            p ¥440
                         li
-                          p 烏龍茶
-                          p ¥440
+                          .text-wrap
+                            p 烏龍茶
+                            p ¥440
                         li
-                          p ハタ紘泉 瓶ラムネ
-                          p ¥330
+                          .text-wrap
+                            p ハタ紘泉 瓶ラムネ 200ml
+                            p ¥330
                   .s-bbq__link.js-inview(data-inview="fade-top")
                     a(href!="<?php echo home_url('/')?>planactivity") ACTIVITY PLANを見る
 

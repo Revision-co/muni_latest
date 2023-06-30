@@ -6,10 +6,11 @@
     z-index: 1;
 
     &-text {
-      margin-top: 4rem;
+      width: fit-content;
+      margin: 4rem auto 0;
       h2 {
-        display: block;
-        width: 115%;
+        display: inline;
+        width: 100%;
         @include font(2.4, 700, 0.04, 1.4);
         color: #222222;
 
