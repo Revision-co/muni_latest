@@ -146,12 +146,53 @@ html(lang="ja")
                         .c-acc__list.a-area
                           .flex.align-none
                             span A
-                            p BBQセットプランをご利用の際には、中学生以上のお子様は1名につき1プランをご注文ください。
+                            p 
+                              |BBQをご利用の際は中学生以上のお子様に大人と同じ料金プランが発生します。
+                              br
+                              |BBQセットプランをご利用の際には、1名につき1プランをご注文ください。
+                              br
+                              |席のみのご利用の場合、1フード1ドリンクオーダーをお願いしております。持ち込み不可ですのでご注意ください。
 
               .p-faq-inner__contain.js-inview(data-inview="fade-top")
                 p.title#area-3 施設について
                 .p-faq-inner__contain-wrap.js-accordion
                   ul
+                    li
+                      .c-acc
+                        .c-acc__head.a-trigger
+                          .c-acc__head-title
+                            span Q
+                            p 飲食物の持ち込みは可能ですか？
+                          span.arrow
+                            include ../assets/pug/svg/ic-arrow-white.svg
+                        .c-acc__list.a-area
+                          .flex.align-none
+                            span A
+                            p 未就学児のお子様の分のみ飲食物の持ち込みは可能です。
+                    li
+                      .c-acc
+                        .c-acc__head.a-trigger
+                          .c-acc__head-title
+                            span Q
+                            p 備品は何がありますか？
+                          span.arrow
+                            include ../assets/pug/svg/ic-arrow-white.svg
+                        .c-acc__list.a-area
+                          .flex.align-none
+                            span A
+                            p BBQグリル、木炭、木炭用トング1本、食材用トング１本、着火剤、軍手を各テーブルに配置させていただきます。紙皿、割り箸、焼き肉のタレ、塩コショウ、お手拭き、ゴミ袋等の備品は会場内の備品棚に備え付けておりますのでご自由にお使いください。
+                    li
+                      .c-acc
+                        .c-acc__head.a-trigger
+                          .c-acc__head-title
+                            span Q
+                            p ゴミは持ち帰りですか？
+                          span.arrow
+                            include ../assets/pug/svg/ic-arrow-white.svg
+                        .c-acc__list.a-area
+                          .flex.align-none
+                            span A
+                            p ゴミは所定の方法で施設内で処分ください。
                     li
                       .c-acc
                         .c-acc__head.a-trigger
@@ -211,7 +252,7 @@ html(lang="ja")
                         .c-acc__list.a-area
                           .flex.align-none
                             span A
-                            p 専用の駐車場はございません。<br>大谷資料館様の駐車場をご利用ください。
+                            p cobbleに隣接の専用駐車場（大谷資料館東側）をご利用ください。
 
 
             include /elements/footer
