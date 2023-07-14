@@ -29,9 +29,9 @@
           position: absolute;
           top: 7rem;
           left: 50%;
-          transform: translateX(-50%);
           width: 36rem;
           opacity: 1;
+          transform: translateX(-50%);
         }
       }
 
@@ -102,7 +102,6 @@
     z-index: 1000;
     width: 15.2rem;
     transform: translate(-50%, -50%);
-    z-index: 1000;
 
     svg {
       width: 100%;
@@ -156,52 +155,60 @@
     }
 
     &__contact {
-      background-color: #fff;
       padding: 1rem 1.65rem;
       margin-top: 2rem;
+      background-color: #fff;
       border: 1px solid #fff;
-      transition: .3s;
+      transition: 0.3s;
+
       &-wrap {
         display: flex;
         align-items: center;
+
         p {
           @include font(1.4, 500, 0.1, 1.4);
-          color: #628667;
+
           margin-right: 1rem;
-          transition: .3s
+          color: #628667;
+          transition: 0.3s;
         }
 
         svg {
-          
+
         }
       }
+
       span {
         @include font(1, 700, 0.1, 1.4);
-        color: #628667;
+
         display: block;
+        color: #628667;
         text-align: center;
-        transition: .3s;
+        transition: 0.3s;
       }
 
-      @media (--large){
+      @media (--large) {
         &:hover {
           background-color: transparent;
+
           .p-anchor__contact-wrap {
             p {
               color: #fff;
             }
-    
+
             svg {
               g {
                 path {
                   fill: #fff;
                 }
+
                 rect {
                   fill: #fff;
                 }
               }
             }
           }
+
           span {
             color: #fff;
           }
@@ -297,37 +304,44 @@
 .p-top {
   &-desc {
     position: relative;
+    z-index: 1;
     padding-bottom: 13rem;
     background-color: #325537;
-    z-index: 1;
 
     &__head {
-      padding-top: 5rem;
       display: flex;
-      height: 20rem;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 100%;
+      height: 6rem;
+      padding-top: 6rem;
     }
 
     &__img01 {
       position: relative;
-      display: flex;
-      flex-direction: column;
       top: -10rem;
       left: -1rem;
       z-index: 10;
+      display: flex;
+      flex-direction: column;
+
       img {
         &:first-child {
           position: relative;
+          z-index: 1;
           width: 32rem;
           height: 15rem;
-          z-index: 1;
           transform: rotate(1deg);
         }
+
         &:last-child {
           position: relative;
-          top: -0.6rem;
-          width: 16rem;
-          height: 15rem;
+          top: 5.4rem;
+          left: 3rem;
           z-index: 10;
+          width: 14rem;
+          height: auto;
+          transform: scaleX(-1);
         }
       }
     }
@@ -336,33 +350,38 @@
       position: relative;
       top: 2rem;
       left: -4rem;
+      z-index: 1;
       display: flex;
       align-items: end;
-      z-index: 1;
+
       img {
         object-fit: contain;
+
         &:first-child {
           position: relative;
+          z-index: 1;
           width: 20rem;
           height: 16rem;
-          z-index: 1;
         }
+
         &:last-child {
           position: relative;
-          left: 0;
-          width: 7.5rem;
-          height: 10rem;
+          top: 2rem;
+          left: 4rem;
           z-index: 10;
+          width: 6.5rem;
+          height: 10rem;
+          transform: scaleX(-1);
         }
       }
     }
 
     &__text {
-      margin-top: 1rem;
       padding: 2.6rem 0 4rem;
+      margin-top: 1rem;
       font-size: 5rem;
-      color: #fff;
       font-weight: 500;
+      color: #fff;
 
       span {
         display: block;
@@ -440,17 +459,20 @@
       display: flex;
       align-items: center;
       background-color: #fff;
+
       &-title {
         position: relative;
-        @include font(1.6, 500, 0.1, 1.4);
+        padding: 1rem 4rem 1rem 1.4rem;
         color: #fff;
         background-color: #628667;
-        padding: 1rem 4rem 1rem 1.4rem;
+
+        @include font(1.6, 500, 0.1, 1.4);
+
         &::before {
           position: absolute;
-          content: "";
           top: 0;
           right: 0;
+          content: "";
           border-top: 2rem solid transparent;
           border-right: 2rem solid #fff;
           border-bottom: 2.25rem solid #fff;
@@ -460,36 +482,42 @@
 
       &-item {
         width: 100%;
+
         a {
           display: flex;
           align-items: center;
+          width: 100%;
+
           // background-color: #fff;
           padding-top: 1.1rem;
           padding-bottom: 1.15rem;
-          width: 100%;
+
           .date {
             @include font(1.4, 500, 0, 1.4);
-            color: #222222;
+
             margin-left: 0.5rem;
-            transition: .3s;
+            color: #222;
+            transition: 0.3s;
           }
 
           .text {
             @include font(1.4, 700, 0.05, 1.4);
-            color: #222222;
-            margin-left: 1.5rem;
+
             width: 17.5rem; /* 省略せずに表示するサイズを指定 */
-            white-space: nowrap;
+            margin-left: 1.5rem;
             overflow: hidden;
+            color: #222;
             text-overflow: ellipsis;
-            transition: .3s;
+            white-space: nowrap;
+            transition: 0.3s;
           }
 
-          @media (--large){
+          @media (--large) {
             &:hover {
               .date {
                 opacity: 0.7;
               }
+
               .text {
                 opacity: 0.7;
               }
@@ -502,8 +530,8 @@
 
   &-concept {
     position: relative;
-    padding-top: 2rem;
     z-index: 1;
+    padding-top: 2rem;
 
     @media (--mobile) {
       padding-top: 4rem;
@@ -525,9 +553,9 @@
     &__title {
       position: relative;
       font-size: 3.6rem;
+      font-weight: 500;
       color: #222;
       letter-spacing: 0.05em;
-      font-weight: 500;
 
       &::after {
         position: absolute;
@@ -584,18 +612,18 @@
     }
 
     &__link {
-      margin-top: 3rem;
       width: fit-content;
+      margin-top: 3rem;
       margin-left: auto;
     }
   }
 
   &-facility {
     position: relative;
+    z-index: 1;
     padding-bottom: 6rem;
     margin-top: 6rem;
     background-color: #628667;
-    z-index: 1;
 
     &::after {
       position: absolute;
@@ -665,7 +693,6 @@
           z-index: 1;
           display: inline-block;
           height: fit-content;
-          height: fit-content;
           padding: 1rem;
           letter-spacing: 0.2em;
           background: #fff;
@@ -679,12 +706,13 @@
 
     &__title {
       position: relative;
+      z-index: 10;
       padding-top: 1rem;
       font-size: 3.6rem;
+      font-weight: 500;
       color: #fff;
       letter-spacing: 0.05em;
-      z-index: 10;
-      font-weight: 500;
+
       &::after {
         position: absolute;
         top: -11rem;
@@ -733,8 +761,8 @@
     }
 
     &__link {
-      margin-top: 3rem;
       width: fit-content;
+      margin-top: 3rem;
       margin-left: auto;
     }
 
@@ -785,20 +813,23 @@
 
     &__bottom {
       position: relative;
-      margin-top: 2rem;
       z-index: 10;
+      margin-top: 2rem;
+
       img {
         position: relative;
         object-fit: contain;
+
         &:first-child {
           top: 7rem;
           width: 26rem;
           height: 22rem;
         }
+
         &:last-child {
+          right: -2rem;
           width: 20rem;
           height: 23rem;
-          right: -2rem;
         }
       }
     }
@@ -807,6 +838,7 @@
   .c-news {
     &__title {
       font-weight: 500;
+
       &::after {
         position: absolute;
         top: 50%;
@@ -823,16 +855,16 @@
 
   &-plan {
     position: relative;
-    background-color: #fff;
     padding-top: 10rem;
+    background-color: #fff;
 
     &__title {
       position: relative;
       padding-top: 1rem;
       font-size: 3.6rem;
-      color: #222222;
-      letter-spacing: 0.05em;
       font-weight: 500;
+      color: #222;
+      letter-spacing: 0.05em;
 
       &::after {
         position: absolute;
@@ -859,7 +891,7 @@
       font-size: 2.4rem;
       font-weight: 900;
       line-height: 1.5;
-      color: #222222;
+      color: #222;
       letter-spacing: 0.1em;
     }
 
@@ -873,7 +905,7 @@
         font-size: 1.5rem;
         font-weight: bold;
         line-height: 2;
-        color: #222222;
+        color: #222;
 
         &:nth-of-type(n + 2) {
           margin-top: 3rem;
@@ -882,8 +914,8 @@
     }
 
     &__link {
-      margin-top: 3rem;
       width: fit-content;
+      margin-top: 3rem;
       margin-left: auto;
     }
 
@@ -900,16 +932,16 @@
     background-color: #628667;
 
     &__btn {
-      margin-top: 3rem;
       width: fit-content;
+      margin-top: 3rem;
       margin-left: auto;
     }
   }
 
   &-access {
     position: relative;
-    padding-bottom: 5rem;
     padding-top: 15rem;
+    padding-bottom: 5rem;
     background-color: #fff;
 
     @media (--mobile) {
@@ -922,9 +954,9 @@
       position: relative;
       z-index: 1;
       font-size: 3.6rem;
-      color: #222222;
-      letter-spacing: 0.05em;
       font-weight: 500;
+      color: #222;
+      letter-spacing: 0.05em;
 
       &::after {
         position: absolute;
@@ -958,20 +990,22 @@
       a {
         position: relative;
         padding-bottom: 0.5rem;
-        color: #222222;
         font-weight: 700;
+        color: #222;
+
         &::before {
-          content: '';
           position: absolute;
-          width: 100%;
-          height: 1px;
-          background-color: #222222;
           bottom: -3px;
           left: 0;
-          transform-origin: right;
+          width: 100%;
+          height: 1px;
+          content: "";
+          background-color: #222;
+          transition: transform 0.3s ease-in-out;
           transform: scaleX(0);
-          transition: transform .3s ease-in-out;
+          transform-origin: right;
         }
+
         svg {
           margin-left: 0.7rem;
         }
@@ -979,8 +1013,8 @@
         @media (--large) {
           &:hover {
             &::before {
-              transform-origin: left;
               transform: scaleX(1);
+              transform-origin: left;
             }
           }
         }
@@ -1056,8 +1090,8 @@
           font-size: 1.5rem;
           font-weight: bold;
           line-height: 2;
+          color: #222;
           letter-spacing: 0.03em;
-          color: #222222;
 
           &:nth-of-type(n + 2) {
             margin-top: 0.8rem;
@@ -1114,17 +1148,18 @@
     }
 
     &__link {
-      margin-top: 3rem;
       width: fit-content;
+      margin-top: 3rem;
       margin-left: auto;
     }
   }
 
   &-reserve {
     position: relative;
-    background-color: #628667;
-    margin-top: 10rem;
     padding-bottom: 5rem;
+    margin-top: 10rem;
+    background-color: #628667;
+
     &::before {
       position: absolute;
       top: -13rem;
@@ -1138,16 +1173,19 @@
       background-size: cover;
       transform: translateX(-50%) translateY(3rem) scaleX(-1);
     }
+
     &__inner {
-    
+
     }
+
     &__title {
       position: relative;
       z-index: 1;
       font-size: 3.6rem;
+      font-weight: 500;
       color: #fff;
       letter-spacing: 0.05em;
-      font-weight: 500;
+
       &::after {
         position: absolute;
         top: 50%;
@@ -1159,6 +1197,7 @@
         background-size: cover;
         transform: translate(-50%, -50%) translateX(-3rem) translateY(-1rem);
       }
+
       span {
         display: block;
         margin-top: 0.5rem;
@@ -1167,6 +1206,7 @@
         color: #fff;
       }
     }
+
     &__text {
       p {
         width: 35.8rem;
@@ -1180,41 +1220,47 @@
 
     &__link {
       margin-top: 3rem;
+
       a {
-        background-color: #325537;
-        border: 2px solid #325537;
         display: flex;
-        padding: 2.7rem 0;
-        justify-content: center;
         flex-direction: column;
         align-items: center;
-        transition: .3s;
+        justify-content: center;
+        padding: 2.7rem 0;
         font-weight: 500;
+        background-color: #325537;
+        border: 2px solid #325537;
+        transition: 0.3s;
+
         .wrap {
           display: flex;
           align-items: center;
+
           svg {
-            margin-right: 2rem;
             display: block;
             width: 3rem;
             height: 3rem;
+            margin-right: 2rem;
           }
+
           p {
             @include font(2.8, 500, 0.05, 1.4);
+
             color: #fff;
-            transition: .3s
+            transition: 0.3s;
           }
         }
 
         span {
           display: block;
-          @include font(1.4, 700, 0.05, 1.4);
-          color: #fff;
-          transition: .3s;
           margin-top: 1rem;
+          color: #fff;
+          transition: 0.3s;
+
+          @include font(1.4, 700, 0.05, 1.4);
         }
 
-        @media (--large){
+        @media (--large) {
           &:hover {
             background-color: #fff;
 
@@ -1222,11 +1268,13 @@
               p {
                 color: #325537;
               }
+
               svg {
                 g {
                   path {
                     fill: #325537;
                   }
+
                   rect {
                     fill: #325537;
                   }
@@ -1303,9 +1351,9 @@
       bottom: -2.5rem;
       z-index: 3;
       font-size: 4rem;
+      font-weight: 500;
       color: #fff;
       letter-spacing: 0.1em;
-      font-weight: 500;
 
       ul {
         display: flex;
