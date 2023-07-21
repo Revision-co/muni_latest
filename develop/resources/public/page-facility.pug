@@ -31,7 +31,7 @@ html(lang="ja")
               br
               a(href!="<?php echo home_url( '/' ); ?>facility").en Facility
               br
-              a(href!="<?php echo home_url( '/' ); ?>planbbq").en Plan
+              a(href!="<?php echo home_url( '/' ); ?>planactivity").en Plan
               br
               a(href!="<?php echo home_url( '/' ); ?>news/").en News
               br
@@ -80,6 +80,8 @@ html(lang="ja")
                       |採石跡ならではのダイナミックなロケーションで心地よい風を感じながら、日常では得られないアウトドアを満喫できます。
                       br
                       |家族・カップル・友達みんなと好きなスタイルで、大谷の大自然をお楽しみください。
+                  .p-fa-play__btn.js-inview(data-inview="fade-top")
+                    a(href!="<?php echo home_url('/')?>planactivity") ACTIVITY PLANを見る
             section.js-inview-each.js-inview 
               .p-fa-eat 
                 .c-u-inner 
@@ -94,6 +96,8 @@ html(lang="ja")
                   .p-fa-eat__text.js-inview(data-inview="fade-top")
                     p 
                       |地域の「食」を届ける発信地として、この土地の美味しいものと出会える機会を提供しています。 地元栃木県でとれた新鮮な野菜やお肉をそろえたBBQセットのご注文がおすすめです。 BBQに必要な備品を豊富に取り揃えているので、手ぶらで気軽に楽しめます。屋根付きのBBQ会場は急な雨でも安心です。
+                  .p-fa-eat__btn.js-inview(data-inview="fade-top")
+                    a(href!="<?php echo home_url('/')?>planbbq") BBQ PLANを見る
               section.js-inview-each.js-inview 
                 .p-fa-enjoy
                   .c-u-inner

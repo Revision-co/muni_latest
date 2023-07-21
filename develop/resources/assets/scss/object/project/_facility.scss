@@ -44,8 +44,9 @@
         }
 
         &:nth-of-type(2){
-          right: -3rem;
-          width: 18rem;
+          top: -4rem;
+          right: -2rem;
+          width: 16rem;
           height: auto;
         }
 
@@ -76,6 +77,28 @@
         @include font(1.4, 700, 0.05, 2);
         color: #222222;
         margin-top: 1.5rem;
+      }
+    }
+
+    &__btn {
+      width: 23.5rem;
+      margin: 5rem auto;
+      a {
+        @include font(1.6, 700, 0.08, 1.4);
+        color: #fff;
+        text-align: center;
+        padding: 1.6rem 0;
+        width: 100%;
+        background-color: #325537;
+        display: block;
+        border: 1px solid #325537;
+        transition: .3s;
+        @media (--large){
+          &:hover {
+            background-color: #fff;
+            color: #325537;
+          }
+        }
       }
     }
   }
@@ -145,6 +168,28 @@
       p {
         @include font(1.4, 700, 0.05, 2);
         color: #FFFFFF;
+      }
+    }
+
+    &__btn {
+      width: 23.5rem;
+      margin: 5rem auto;
+      a {
+        @include font(1.6, 700, 0.08, 1.4);
+        color: #fff;
+        text-align: center;
+        padding: 1.6rem 0;
+        width: 100%;
+        background-color: #325537;
+        display: block;
+        border: 1px solid #325537;
+        transition: .3s;
+        @media (--large){
+          &:hover {
+            background-color: #fff;
+            color: #325537;
+          }
+        }
       }
     }
   }
