@@ -69,20 +69,16 @@ html(lang="ja")
                       |BBQ
                   .s-bbq__text.js-inview(data-inview="fade-top")
                     p
-                      |BBQサイトをご利用で中学生以上のお客様はお一人様1プランのご予約をお願いいたします。
-                      br
-                      |また、席のみのご予約も可能です（中学生以上のお客様はお一人様毎の1フード1ドリンクオーダー制）。
-                      br
-                      |なお、BBQサイトのご利用時間はお一人様2時間まで（有料にて延長可）となります。
-                      br
-                      |※当日のお受付も可能ですが、当サイトよりお席のご予約をしていただくとご案内がスムーズです。
-                      br
-                      |※未就学児のお子様分の飲食物の持ち込みは可能です。
+                      |【手ぶらプラン】<br>cobble自慢の栃木県産の食材でBBQをお楽しみいただけます。手ぶらプランをご利用の際には、中学生以上のお客様1名につき1プランをご注文ください。なお、手ぶらプランをご利用の場合、未就学児分を除き、食べ物、飲み物のお持ち込みはご遠慮いただいております。お持ち込みでのBBQをご希望の方には、持ち込みプランをご用意しております。
+                    p 
+                      |【持ち込みプラン】<br>お好きな食材、飲み物をお持ち込みのうえ、BBQをお楽しみいただけます。BBQグリル、炭、その他必要な備品は施設にてご用意しております。
+                    p 
+                      |【留意事項】<br>※BBQサイトのご利用時間は一卓あたり2時間まで（有料にて延長可・2,200円/卓）となります。<br>※当日のお受付も可能ですが、当サイトよりお席のご予約をしていただくとご案内がスムーズです。<br>※未就学児のお子様分の飲食物の持ち込みは可能です。
                   .c-ttl02.u-mt-6.js-inview(data-inview="fade-top")
                     .c-ttl02-wrap
-                      h3.en SET PLAN
-                      span 要予約
-                    p セットプラン
+                      h3.en 手ぶらプラン
+                      span 予約可
+                    //- p セットプラン
                   .s-bbq__item.js-accordion.js-inview(data-inview="fade-top")
                     .c-acc
                       .c-acc__head.a-trigger
@@ -90,7 +86,7 @@ html(lang="ja")
                           p.name 栃木満喫スタンダードプラン
                           p.price.en
                             |¥3,300
-                            span.noto (tax)
+                            span.noto (tax)/人
                         span.arrow
                           include ../assets/pug/svg/ic-arrow-white.svg
                       ul.c-acc__list.a-area
@@ -140,7 +136,7 @@ html(lang="ja")
                           p.name 肉＆海鮮プラン
                           p.price.en
                             |¥4,400
-                            span.noto (tax)
+                            span.noto (tax)/人
                         span.arrow
                           include ../assets/pug/svg/ic-arrow-white.svg
                       ul.c-acc__list.a-area
@@ -158,16 +154,15 @@ html(lang="ja")
                     .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
-                          p.name 席のみプラン
+                          p.name 持ち込みプラン
                           p.price.en
-                            |¥0
+                            |￥5,500
+                            span.noto (tax)/卓（最大6名）
                         span.arrow
                           include ../assets/pug/svg/ic-arrow-white.svg
                       ul.c-acc__list.a-area
                         li.none
-                          p 席のみのご利用を希望される方へのプランです。
-                        li.none
-                          p 中学生以上のお客様はお一人様あたり1フード1ドリンクのオーダー制となります。
+                          p お客様がお持ち込みいただいた食材・お飲み物にてBBQをお楽しみいただけます。BBQグリル、炭、他必要な備品は施設のものをご使用いただけます。
 
                   .s-bbq__img01.js-inview(data-inview="fade-top")
                     img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/img01.jpg', alt='食材の画像')
@@ -184,38 +179,38 @@ html(lang="ja")
                       br
                       |各種オプショオンメニューのご注文をおすすめします。
                   .s-bbq__item.js-accordion.js-inview(data-inview="fade-top")
-                    .c-acc
-                      .c-acc__head.a-trigger
-                        .c-acc__head-title
-                          p.fs20 体験メニュー
-                          p.text 実際に調理を体験いただけます。
-                        span.arrow
-                          include ../assets/pug/svg/ic-arrow-white.svg
-                      ul.c-acc__list.a-area.s-bbq__item-list
-                        li
-                          .item-img
-                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-05.jpg', alt='特製バンズのグルメ餃子バーガー')
-                          .text-wrap.short
-                            p 特製バンズのグルメ餃子バーガー<br>（鉄板代含）
-                            p ¥1,100
-                        li
-                          .item-img
-                            img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-03.jpg', alt='宇都宮焼きそば')
-                          .text-wrap
-                            p 宇都宮焼きそば 2人前<br>(鉄板代含)
-                            p ¥1,320
-                        li
-                          //- .item-img
-                          //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
-                          .text-wrap
-                            p 鉄板ガーリックライス2人前<br>（鉄板代含）
-                            p ¥990
-                        li
-                          //- .item-img
-                          //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
-                          .text-wrap
-                            p 特製生地の大谷石窯ピザ<br>（石窯利用代含)
-                            p ¥1,650
+                    //- .c-acc
+                    //-   .c-acc__head.a-trigger
+                    //-     .c-acc__head-title
+                    //-       p.fs20 体験メニュー
+                    //-       p.text 実際に調理を体験いただけます。
+                    //-     span.arrow
+                    //-       include ../assets/pug/svg/ic-arrow-white.svg
+                    //-   ul.c-acc__list.a-area.s-bbq__item-list
+                    //-     li
+                    //-       .item-img
+                    //-         img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-05.jpg', alt='特製バンズのグルメ餃子バーガー')
+                    //-       .text-wrap.short
+                    //-         p 特製バンズのグルメ餃子バーガー<br>（鉄板代含）
+                    //-         p ¥1,100
+                    //-     li
+                    //-       .item-img
+                    //-         img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu-03.jpg', alt='宇都宮焼きそば')
+                    //-       .text-wrap
+                    //-         p 宇都宮焼きそば 2人前<br>(鉄板代含)
+                    //-         p ¥1,320
+                    //-     li
+                    //-       //- .item-img
+                    //-       //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
+                    //-       .text-wrap
+                    //-         p 鉄板ガーリックライス2人前<br>（鉄板代含）
+                    //-         p ¥990
+                    //-     li
+                    //-       //- .item-img
+                    //-       //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/bbq/menu_img01.jpg', alt='')
+                    //-       .text-wrap
+                    //-         p 特製生地の大谷石窯ピザ<br>（石窯利用代含)
+                    //-         p ¥1,650
                     .c-acc
                       .c-acc__head.a-trigger
                         .c-acc__head-title
@@ -243,6 +238,12 @@ html(lang="ja")
                         li.none
                           ul.bottom-list
                             li
+                              p 宇都宮焼きそば 2人前
+                              p ¥1,320
+                            li
+                              p 鉄板ガーリックライス2人前
+                              p ¥990
+                            li
                               p 霧降高原牛 80g
                               p ¥1,650
                             li
@@ -267,13 +268,7 @@ html(lang="ja")
                               p 殻付きホタテ 1枚
                               p ¥605
                             li
-                              p イイダコ串（4匹）1本
-                              p ¥550
-                            li
                               p 丸ごとイカ串 1本
-                              p ¥770
-                            li.short
-                              p 小野口さんのとうもろこし 1本
                               p ¥770
                             li
                               p 肉巻きおにぎり 2個
@@ -290,9 +285,6 @@ html(lang="ja")
                             li
                               p ポップコーン
                               p ¥550
-                            li
-                              p バナナキャラメリゼ
-                              p ¥385
                             li
                               p バニラアイス
                               p ¥198

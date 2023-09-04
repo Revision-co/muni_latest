@@ -182,6 +182,7 @@
     margin-top: 15rem;
     background-color: #628667;
     padding-top: 1rem;
+    padding-bottom: 0.5rem;
     &::before {
       position: absolute;
       top: -13rem;
@@ -237,38 +238,38 @@
     }
   }
 
-  .s-sauna {
-    position: relative;
-    margin-top: 15rem;
+  // .s-sauna {
+  //   position: relative;
+  //   margin-top: 15rem;
 
-    &__title {
-      margin-top: 3rem;
-      h3 {
-        @include font(2.4, 700, 0.05, 1.4);
-        color: #222222;
-      }
-    }
+  //   &__title {
+  //     margin-top: 3rem;
+  //     h3 {
+  //       @include font(2.4, 700, 0.05, 1.4);
+  //       color: #222222;
+  //     }
+  //   }
 
-    &__img {
-      margin-top: 1.5rem;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
+  //   &__img {
+  //     margin-top: 1.5rem;
+  //     img {
+  //       width: 100%;
+  //       height: 100%;
+  //     }
+  //   }
 
-    &__text {
-      margin-top: 2rem;
-      p {
-        @include font(1.4, 700, 0.05, 2);
-        color: #222222;
-      }
-    }
-  }
+  //   &__text {
+  //     margin-top: 2rem;
+  //     p {
+  //       @include font(1.4, 700, 0.05, 2);
+  //       color: #222222;
+  //     }
+  //   }
+  // }
 
   &__link {
     width: 22rem;
-    margin: 10rem auto 15rem;
+    margin: 5rem auto 5rem;
     a {
       @include font(1.6, 700, 0.08, 1.4);
       color: #fff;
