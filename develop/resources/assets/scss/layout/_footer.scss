@@ -15,7 +15,7 @@
 .l-footer {
   position: relative;
   padding-top: 8rem;
-  padding-bottom: 4rem;
+  padding-bottom: 8rem;
   background-color: #325537;
   z-index: 1;
 
@@ -61,14 +61,24 @@
     }
   }
 
-  &-contact {
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     margin-top: 6rem;
+    padding: 0 4rem;
+  }
+
+  &-contact,
+  &-insta {
+    width: 48%;
     a {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 40rem;
+      width: 100%;
       height: 12rem;
       margin: 0 auto;
       color: #fff;
@@ -89,12 +99,15 @@
       }
 
       svg {
-        width: 3rem;
-        margin-right: 0.3rem;
+        width: 2.4rem;
+        margin-bottom: 1rem;
       }
 
       .title {
-        font-size: 2.8rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 2.1rem;
         font-weight: 500;
       }
 
@@ -202,6 +215,88 @@
     font-size: 1.2rem;
     color: #fff;
     text-align: center;
+  }
+
+  &__scrollBanner {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -6rem;
+      width: 48rem;
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+      transition: .5s;
+      &.is-scroll {
+        bottom: 0;
+      }
+      
+    a {
+      display: flex;
+      width: 50%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      transition: .3s;
+      background-color: #FFFFFF;
+      border-top: 1px solid #325537;
+      &:nth-of-type( 2 ){
+        border-left: 1px solid #325537;
+      }
+      @media (--large){
+        &:hover {
+          background-color: #628667;
+          p {
+            &::before {
+              background: url(./../images/common/icon-insta-hov.png) no-repeat center center / contain;
+            }
+          }
+          svg {
+            g {
+              path {
+                fill: #fff;
+              }
+
+              rect {
+                fill: #fff;
+              }
+            }
+          }
+          p {
+            color: #fff;
+          }
+        }
+      }
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      p {
+        display: block;
+        @include font(1.6, 700, 0.05, 1.4);
+        color: #222222;
+        padding-left: 1rem;
+      }
+      &:nth-of-type( 2 ){
+        p {
+          position: relative;
+          padding-left: 3rem;
+          &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: url(./../images/common/icon-insta.png) no-repeat center center / contain;
+            transition: .3s;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -335,6 +430,167 @@
           }
         }
       }
+    }
+
+    &__time {
+      margin-top: 4.5rem;
+
+      h3 {
+        @include font(1.6, 700, 0.05, 1.4);
+        color: #325537;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 0.8rem 0;
+        &:nth-of-type( 2 ){
+          margin-top: 3rem;
+        }
+      }
+      
+      &-area {
+        display: flex;
+        align-items: center;
+        background-color: #446949;
+        
+        p {
+          display: block;
+          width: 50%;
+          @include font(1.4, 700, 0.05, 1.4);
+          color: #FFFFFF;
+          text-align: center;
+          height: 100%;
+          padding: 0.8rem 0;
+
+          &:nth-of-type( 2 ){
+            border-left: 1px solid #95B199;
+          }
+        }
+      }
+
+      &-detail {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #95B199;
+
+        p {
+          display: block;
+          width: 50%;
+          @include font(1.4, 700, 0.05, 1.4);
+          color: #FFFFFF;
+          text-align: center;
+          height: 100%;
+          padding: 0.8rem 0;
+
+          &:nth-of-type( 2 ){
+            border-left: 1px solid #95B199;
+            padding-left: 3rem;
+            text-align: left;
+            line-height: 1.6;
+          }
+        }
+      }
+
+      &-time {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #95B199;
+
+        p {
+          display: block;
+          width: 50%;
+          @include font(1.4, 700, 0.05, 1.4);
+          color: #FFFFFF;
+          text-align: center;
+          height: 100%;
+          padding: 0.8rem 0;
+
+          &:nth-of-type( 2 ){
+            border-left: 1px solid #95B199;
+            line-height: 1.6;
+          }
+
+          span {
+            @include font(1.2, 700, 0.05, 1.4);
+          }
+        }
+      }
+
+      &-area02 {
+        display: flex;
+        align-items: start;
+        background-color: #446949;
+        border-bottom: 1px solid #95B199;
+        
+        p {
+          display: block;
+          width: 50%;
+          @include font(1.4, 700, 0.05, 1.4);
+          color: #FFFFFF;
+          text-align: center;
+          height: 100%;
+          padding: 0.9rem 0;
+          padding-left: 2.6rem;
+          &:nth-of-type( 2 ){
+            text-align: left;
+          }
+        }
+      }
+
+      &-detail02 {
+        display: flex;
+        align-items: start;
+        border-bottom: 1px solid #95B199;
+
+        p {
+          display: block;
+          width: 50%;
+          @include font(1.4, 700, 0.05, 1.4);
+          color: #FFFFFF;
+          text-align: center;
+          height: 100%;
+          padding: 0.9rem 0;
+          
+          &:nth-of-type( 2 ){
+            text-align: left;
+            line-height: 1.6;
+            padding: 0.6rem 0;
+            padding-left: 2.6rem;
+          }
+        }
+      }
+
+      &-time02 {
+        display: flex;
+        align-items: start;
+        border-bottom: 1px solid #95B199;
+
+        p {
+          display: block;
+          width: 50%;
+          @include font(1.4, 700, 0.05, 1.4);
+          color: #FFFFFF;
+          text-align: center;
+          height: 100%;
+          padding: 0.9rem 0;
+          
+          &:nth-of-type( 2 ){
+            text-align: left;
+            line-height: 1.6;
+            padding: 0.6rem 0;
+            padding-left: 2.6rem;
+          }
+
+          span {
+            @include font(1.2, 700, 0.05, 1.4);
+          }
+        }
+      }
+    }
+
+    .bgGreeen {
+      background-color: #446949 !important;
+    }
+    .bgNone {
+      background-color: #628667 !important;
     }
   }
 }

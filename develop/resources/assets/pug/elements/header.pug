@@ -4,15 +4,15 @@ header.l-header.js-header
   .l-header-logo 
     a(href!="<?php echo home_url( '/' ); ?>") 
       include ../svg/logo.svg
-
+  .l-header-sns.sp
+    a(href!="https://reserva.be/munibbq/aikotoba" target="_blank") 
+      img(src!='<?php echo get_template_directory_uri(); ?>/common/images/common/time-icon.png', alt='カレンダーアイコン')
+    a(href!="https://www.instagram.com/cobble_oya.stone.village/" target="_blank") 
+      img(src!='<?php echo get_template_directory_uri(); ?>/common/images/common/insta-icon.png', alt='インスタグラムアイコン')
   .hamburger
     span
     span
     span
-  .reserve.sp
-    a(href="https://reserva.be/munibbq/aikotoba" target="_blank")
-      include ../svg/ic_reserve_green.svg
-      p.en 予約
   nav.globalMenuSp
     div
       ul
@@ -33,24 +33,28 @@ header.l-header.js-header
         .nav__contact
           a(href!="https://reserva.be/munibbq/aikotoba" target="_blank")
             .nav__contact-wrap
-              p.en RESERVE
-              include ../svg/ic_reserve_green.svg
-            span ご予約
+              include ../svg/ic_reserve_orange.svg
+              p ご予約はこちら
+            span 
+        .nav__insta
+          a(href!="https://www.instagram.com/cobble_oya.stone.village/" target="_blank")
+            .nav__insta-wrap
+              p Instagram
 :php
   else :
 header.l-header.js-header.u-header
   .l-header-logo 
     a(href!="<?php echo home_url( '/' ); ?>") 
       include ../svg/logo.svg
-
+  .l-header-sns.sp
+    a(href!="https://reserva.be/munibbq/aikotoba" target="_blank") 
+      img(src!='<?php echo get_template_directory_uri(); ?>/common/images/common/time-icon.png', alt='カレンダーアイコン')
+    a(href!="https://www.instagram.com/cobble_oya.stone.village/" target="_blank") 
+      img(src!='<?php echo get_template_directory_uri(); ?>/common/images/common/insta-icon.png', alt='インスタグラムアイコン')
   .hamburger
     span
     span
     span
-  .reserve.sp
-    a(href="https://reserva.be/munibbq/aikotoba" target="_blank")
-      include ../svg/ic_reserve_green.svg
-      p.en 予約
   nav.globalMenuSp
     div
       ul
@@ -73,9 +77,14 @@ header.l-header.js-header.u-header
         .nav__contact
           a(href!="https://reserva.be/munibbq/aikotoba" target="_blank")
             .nav__contact-wrap
-              p.en RESERVE
-              include ../svg/ic_reserve_green.svg
-            span ご予約
+              include ../svg/ic_reserve_orange.svg
+              p ご予約はこちら
+            span 
+        .nav__insta
+          a(href!="https://www.instagram.com/cobble_oya.stone.village/" target="_blank")
+            .nav__insta-wrap
+              p Instagram
+
 :php
   endif;
     

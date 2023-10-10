@@ -4,12 +4,19 @@ footer.l-footer.js-footer
   .l-footer__logo 
     a(href!="<?php echo home_url( '/' ); ?>") 
       include ../svg/logo.svg
-  .l-footer-contact 
-    a(href!="<?php echo home_url( '/' ); ?>contact/") 
-      .title.en 
-        include ../svg/ic_mail.svg
-        |CONTACT 
-      .text お問い合わせはこちら
+  .l-footer__wrap
+    .l-footer-contact 
+      a(href!="<?php echo home_url( '/' ); ?>contact/") 
+        .title.en 
+          include ../svg/ic_mail.svg
+          |CONTACT 
+        .text お問い合わせ
+    .l-footer-insta
+      a(href!="https://www.instagram.com/cobble_oya.stone.village/" target="_blank") 
+        .title.en 
+          include ../svg/ic_mail.svg
+          |INSTAGRAM
+        .text インスタグラム
 
   .l-footer-nav
     ul 
@@ -34,8 +41,16 @@ footer.l-footer.js-footer
       li.en
         a(href!="<?php echo home_url( '/' ); ?>company/") COMPANY
   .l-footer-copyright Copyright © cobble
+.l-footer__scrollBanner.sp
+  a(href!="https://reserva.be/munibbq/aikotoba" target="_blank")
+    include ../svg/ic_reserve_orange.svg
+    p ご予約はこちら
+  a(href!="https://www.instagram.com/cobble_oya.stone.village/" target="_blank") 
+    p Instagram
+
 :php
   else :
+
 footer.l-footer.js-footer.u-footer 
   .u-footer-reserve.js-inview-each.js-inview 
     .u-footer-reserve__inner.c-i-inner
@@ -49,15 +64,44 @@ footer.l-footer.js-footer.u-footer
             include ../svg/new_icon-reserve.svg
             p.en RESERVE
           span ご予約はこちらから
+        .u-footer-reserve__time.js-inview(data-inview="fade-top") 
+          h3 営業時間
+          .u-footer-reserve__time-area 
+            p.u-bgGreeen 飲食エリア
+            p.u-bgGreeen アトラクションエリア
+          .u-footer-reserve__time-detail
+            p BBQ
+            p OYA STONE HUNT<br>OYA ROCK CLIMBING<br>OYA DINOSAUR HUNT
+          .u-footer-reserve__time-time
+            p 11:00〜17:00
+            p 11:00〜17:00<br>
+              span ※土日祝日のみ10:30オープン
+          h3 定休日
+          .u-footer-reserve__time-area02
+            p.u-bgGreeen 5月～8月
+            p.u-bgNone 無休
+          .u-footer-reserve__time-detail02
+            p.u-bgGreeen 3～4月、9月～11月
+            p 火曜日定休
+          .u-footer-reserve__time-time02
+            p.u-bgGreeen 12月～2月
+            p 土日祝日のみ営業
   .l-footer__logo 
     a(href!="<?php echo home_url( '/' ); ?>")
       include ../svg/logo.svg
-  .l-footer-contact 
-    a(href!="<?php echo home_url( '/' ); ?>contact/") 
-      .title.en 
-        include ../svg/ic_mail.svg
-        |CONTACT 
-      .text お問い合わせはこちら
+  .l-footer__wrap
+    .l-footer-contact 
+      a(href!="<?php echo home_url( '/' ); ?>contact/") 
+        .title.en 
+          include ../svg/ic_mail.svg
+          |CONTACT 
+        .text お問い合わせ
+    .l-footer-insta
+      a(href!="https://www.instagram.com/cobble_oya.stone.village/" target="_blank") 
+        .title.en 
+          include ../svg/ic_mail.svg
+          |INSTAGRAM
+        .text インスタグラム
 
   .l-footer-nav
     ul 
@@ -82,5 +126,12 @@ footer.l-footer.js-footer.u-footer
       li.en
         a(href!="<?php echo home_url( '/' ); ?>company/") COMPANY
   .l-footer-copyright Copyright © cobble
+.l-footer__scrollBanner.sp
+  a(href!="https://reserva.be/munibbq/aikotoba" target="_blank")
+    include ../svg/ic_reserve_orange.svg
+    p ご予約はこちら
+  a(href!="https://www.instagram.com/cobble_oya.stone.village/" target="_blank") 
+    p Instagram
+
 :php
   endif;

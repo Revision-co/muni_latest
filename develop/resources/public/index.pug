@@ -23,9 +23,6 @@ html(lang="ja")
             .p-logo
               include ../assets/pug/svg/logo.svg
 
-            //- .p-insta 
-            //-   include ../assets/pug/svg/insta.svg
-
             .p-anchor 
               a(href!="<?php echo home_url( '/' ); ?>concept").en Concept
               br
@@ -44,9 +41,12 @@ html(lang="ja")
               .p-anchor__contact
                 a(href!="https://reserva.be/munibbq/aikotoba" target="_blank")
                   .p-anchor__contact-wrap
-                    p.en RESERVE
-                    include ../assets/pug/svg/ic_reserve_green.svg
-                  span ご予約
+                    include ../assets/pug/svg/ic_reserve_orange.svg
+                    p ご予約はこちら
+              .p-anchor__insta
+                a(href!="https://www.instagram.com/cobble_oya.stone.village/" target="_blank")
+                  .p-anchor__insta-wrap
+                    p Instagram
 
             .p-cr.en © cobble
 
@@ -250,6 +250,29 @@ html(lang="ja")
                       include ../assets/pug/svg/new_icon-reserve.svg
                       p.en RESERVE
                     span ご予約はこちらから
+                .p-top-reserve__time.js-inview(data-inview="fade-top") 
+                  h3 営業時間
+                  .p-top-reserve__time-area 
+                    p 飲食エリア
+                    p アトラクションエリア
+                  .p-top-reserve__time-detail
+                    p BBQ
+                    p OYA STONE HUNT<br>OYA ROCK CLIMBING<br>OYA DINOSAUR HUNT
+                  .p-top-reserve__time-time
+                    p 11:00〜17:00
+                    p 11:00〜17:00<br>
+                      span ※土日祝日のみ10:30オープン
+                  h3 定休日
+                  .p-top-reserve__time-area02
+                    p 5月～8月
+                    p.bgNone 無休
+                  .p-top-reserve__time-detail02
+                    p.bgGreeen 3～4月、9月～11月
+                    p 火曜日定休
+                  .p-top-reserve__time-time02
+                    p.bgGreeen 12月～2月
+                    p 土日祝日のみ営業
+                  
 
             .p-top-bbq.js-inview-each.js-inview 
               .p-top-bbq__img.js-inview(data-inview="fade-top")   
