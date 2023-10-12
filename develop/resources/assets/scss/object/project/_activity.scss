@@ -126,6 +126,11 @@
         @include font(2.4, 700, 0.05, 1.4);
         color: #FFFFFF;
       }
+
+      p {
+        @include font(2, 700, 0.05, 1.4);
+        color: #FFFFFF;
+      }
     }
 
     &__img {
@@ -148,7 +153,7 @@
     }
   }
 
-  .s-climbing {
+  .s-dinosaur {
     position: relative;
     margin-top: 15rem;
 
@@ -156,6 +161,10 @@
       margin-top: 3rem;
       h3 {
         @include font(2.4, 700, 0.05, 1.4);
+        color: #222222;
+      }
+      p {
+        @include font(2, 700, 0.05, 1.4);
         color: #222222;
       }
     }
@@ -177,12 +186,10 @@
     }
   }
 
-  .s-shop {
+  .s-climbing {
     position: relative;
     margin-top: 15rem;
     background-color: #628667;
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
     &::before {
       position: absolute;
       top: -13rem;
@@ -210,11 +217,47 @@
       transform: translateX(-50%) translateY(13rem) scaleY(-1);
     }
     &__title {
-      color: #FFFFFF;
       margin-top: 3rem;
       h3 {
         @include font(2.4, 700, 0.05, 1.4);
-        color: #FFFFFF;
+        color: #fff;
+      }
+      p {
+        @include font(2, 700, 0.05, 1.4);
+        color: #fff;
+      }
+    }
+
+    &__img {
+      margin-top: 1.5rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__text {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      p {
+        @include font(1.4, 700, 0.05, 2);
+        color: #fff;
+      }
+    }
+  }
+
+  .s-shop {
+    position: relative;
+    margin-top: 15rem;
+    background-color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    &__title {
+      color: #222222;
+      margin-top: 3rem;
+      h3 {
+        @include font(2.4, 700, 0.05, 1.4);
+        color: #222222;
       }
     }
 
@@ -233,7 +276,7 @@
       margin-top: 2rem;
       p {
         @include font(1.4, 700, 0.05, 2);
-        color: #FFFFFF;
+        color: #222222;
       }
     }
   }
@@ -287,6 +330,19 @@
         }
       }
     }
+  }
+}
+
+.color-white {
+  // background-color: #fff !important;
+  color: #fff !important;
+}
+
+.border-white {
+  border: 1px solid #fff !important;
+
+  .arrow {
+    background-color: #fff !important;
   }
 }
 

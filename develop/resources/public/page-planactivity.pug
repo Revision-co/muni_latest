@@ -86,6 +86,7 @@ html(lang="ja")
                     //- .swiper-pagination
                   .s-treasure__title.js-inview(data-inview="fade-top")
                     h3 OYA STONE HUNT
+                    p (大谷ストーンハント)
                   .s-treasure__text.js-inview(data-inview="fade-top")
                     p   
                       |日本有数の採石地「大谷」には、まだ誰も見つけていない秘石が眠っているはずです。みなさんにはストーンハンターになっていただき、大谷の謎を解き明かし、隠された秘石を見つけ出していただきます。子供はもちろん、大人も夢中になって楽しめるアクティビティです。
@@ -93,6 +94,29 @@ html(lang="ja")
                       |【料金】
                       br
                       |こども・おとな（1名・10分）：770円（税込）
+                      br
+                      |※事前のご予約は不要です。
+            section.js-inview-each.js-inview 
+              .s-dinosaur
+                .c-u-inner.swiper.js-inview(data-inview="fade-top")
+                  .swiper-wrapper
+                    .s-dinosaur__img.swiper-slide
+                      img(src!='<?php echo get_template_directory_uri(); ?>/common/images/activity/img05.jpg', alt='ダイナソーハント')
+                    //- .s-dinosaur__img.swiper-slide
+                    //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/activity/img02.jpg', alt='')
+                    //- .s-dinosaur__img.swiper-slide
+                    //-   img(src!='<?php echo get_template_directory_uri(); ?>/common/images/activity/img03.jpg', alt='')
+                    //- .swiper-pagination
+                  .s-dinosaur__title.js-inview(data-inview="fade-top")
+                    h3 OYA DINOSAUR HUNT
+                    p (大谷ダイナソーハント)
+                  .s-dinosaur__text.js-inview(data-inview="fade-top")
+                    p   
+                      |採石場跡地での恐竜・化石発掘体験です。本物さながらの発掘道具で、恐竜の卵や石を砕け!なんと出てくる化石は本物!何が出てくるかな!?こどもはもちろんおとなも大興奮のアクティビティです。
+                    p.u-mt-1
+                      |【料金】
+                      br
+                      |こども・おとな（1名）：550円（税込）
                       br
                       |※事前のご予約は不要です。
               section.js-inview-each.js-inview 
@@ -109,9 +133,40 @@ html(lang="ja")
                         //- .swiper-pagination.pagination-color
                     .s-climbing__title.js-inview(data-inview="fade-top")
                       h3 OYA ROCK CLIMBING
+                      p (大谷ロッククライミング)
                     .s-climbing__text.js-inview(data-inview="fade-top")
                       p 
-                        |大谷石の岩壁を登りてっぺんを目指しましょう！大谷石独特の感触をぜひその手で体験してみてください。cobbleでしか体験できない、採石跡を活かした大谷石クライミングは無料でご利用いただけます。
+                        |大谷石を活用した全６ステージからなる本格ロッククライミング体験は、まさにcobbleならではのアクティビティです。
+                      p.u-mt-1
+                        |【料金】
+                        br
+                        |こども・おとな（1名）：770円（税込）
+                        br
+                        |※事前のご予約は不要です。
+                    .c-acc.border-white.js-inview(data-inview="fade-top")
+                      .c-acc__head.a-trigger
+                        .c-acc__head-title
+                          p.name.color-white コンプリートパック
+                          p.price.en.color-white
+                            |￥1,650
+                            span.noto.color-white (tax)/名
+                        span.arrow
+                          include ../assets/pug/svg/ic-arrow-green.svg
+                      ul.c-acc__list.a-area
+                        li.none
+                          p.color-white ストーンハント、ダイナソーハント、ロッククライミングを全てお楽しみいただけるパックです。通常料金と比較し、440円お得になります。
+                    .c-acc.border-white.js-inview(data-inview="fade-top")
+                      .c-acc__head.a-trigger
+                        .c-acc__head-title
+                          p.name.color-white ダブルパック
+                          p.price.en.color-white
+                            |￥1,100
+                            span.noto.color-white (tax)/名
+                        span.arrow
+                          include ../assets/pug/svg/ic-arrow-green.svg
+                      ul.c-acc__list.a-area
+                        li.none
+                          p.color-white ストーンハント、ダイナソーハント、ロッククライミングのうちどれか２つをお選びいただけます。通常料金と比較し、最大440円お得になります。
               section.js-inview-each.js-inview 
                 .s-shop
                   .c-u-inner
